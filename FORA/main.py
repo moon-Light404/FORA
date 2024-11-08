@@ -195,6 +195,7 @@ def main():
 
         
         if n % int(50) == 0:
+            # print("---------------------Target Loss:---------------------------")
             print("---------------------Target Loss:---------------------------")
             target_celoss, target_acc = cla_test(target_splitnn, None, test_dataloader, device, args.dataset)
             print("---------------------Pseudo Loss:---------------------------")
