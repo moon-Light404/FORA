@@ -1,0 +1,1 @@
+print(list(range(11))[10:0:-2])
