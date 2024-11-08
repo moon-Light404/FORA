@@ -1,0 +1,4 @@
+*.code-workspace
+FORA/data/
+dev
+__pycache__
