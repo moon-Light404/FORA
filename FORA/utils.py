@@ -114,6 +114,7 @@ def pseudo_training(target_splitnn, target_invmodel, target_invmodel_optimizer,
     target_invmodel_optimizer.zero_grad()
     target_inv_input = target_splitnn_intermidiate.detach()
     target_inv_output = target_invmodel(target_inv_input) 
+    # target_invmodel直接对私有原始数据进行重构
     target_inv_loss = F.mse_loss(target_inv_output,target_data)
     target_inv_loss.backward()
     target_invmodel_optimizer.step()
@@ -131,12 +132,12 @@ def pseudo_training(target_splitnn, target_invmodel, target_invmodel_optimizer,
     pseudo_output = pseudo_model(shadow_data)
 
     # MK-MMD Loss,训练mkmmd模型
-    mkmmd_loss.train()
-    target = target_splitnn_intermidiate.detach().view(pseudo_output.size(0),-1)
-    source = pseudo_output.view(pseudo_output.size(0),-1)
-    mkmmd_loss_item = mkmmd_loss(target,source)
-    if n % 20 == 0:
-        print('MK_MMD Loss: {}'.format(mkmmd_loss_item))
+    # mkmmd_loss.train()
+    # target = target_splitnn_intermidiate.detach().view(pseudo_output.size(0),-1)
+    # source = pseudo_output.view(pseudo_output.size(0),-1)
+    # mkmmd_loss_item = mkmmd_loss(target,source)
+    # if n % 20 == 0:
+    #     print('MK_MMD Loss: {}'.format(mkmmd_loss_item))
 
     d_input_pseudo = pseudo_output
     d_output_pseudo = discriminator(d_input_pseudo)
@@ -152,6 +153,7 @@ def pseudo_training(target_splitnn, target_invmodel, target_invmodel_optimizer,
     for para in pseudo_model.parameters():
         para.requires_grad = False
 
+    # pseudo_model只知道影子数据，所以pseudo_invmodel对影子模型的输出进行重构
     with torch.no_grad():
         pseudo_invmodel_input = pseudo_model(shadow_data).detach()
     pseudo_invmodel_output = pseudo_invmodel(pseudo_invmodel_input)
@@ -282,7 +284,7 @@ def attack_test(target_invmodel, pseudo_invmodel, target_data, target_splitnn_in
     pseudo_lpips = 0
 
     target_pseudo_mse = 0
-
+    # 生成一个与原对象完全独立的新对象。这意味着对新对象的修改不会影响到原对象
     target_model_ = copy.deepcopy(target_model)
     pseudo_model_ = copy.deepcopy(pseudo_model)
     target_model_.train()
@@ -300,7 +302,7 @@ def attack_test(target_invmodel, pseudo_invmodel, target_data, target_splitnn_in
     with torch.no_grad():
         target_output = target_splitnn_intermidiate.detach()
         target_data = target_data.to(device)
-
+        # 两个逆网络模型的输出
         pseudo_inv_output = pseudo_invmodel(target_output)
         target_inv_output = target_invmodel(target_output)
 
@@ -318,7 +320,7 @@ def attack_test(target_invmodel, pseudo_invmodel, target_data, target_splitnn_in
         
         pseudo_inter = pseudo_model_(target_data)
         target_inter = target_model_(target_data)
-
+        # 计算伪模型和目标模型的特征空间MSE损失
         target_pseudo_mse += F.mse_loss(pseudo_inter,target_inter,reduction='sum').item()
 
 

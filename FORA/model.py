@@ -383,7 +383,7 @@ def cifar_discriminator_model(input_shape, level):
 
     net = []
     if level <=2:
-        net += [nn.Conv2d(input_shape[0], 128, 3, 2, 1)]
+        net += [nn.Conv2d(input_shape[0], 128, 3, 2, 1)] # inchannels = input_shape[0]
         net += [nn.ReLU()]
         net += [nn.Conv2d(128, 256, 3, 2, 1)]
     elif level == 3:

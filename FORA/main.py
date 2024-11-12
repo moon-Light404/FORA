@@ -68,6 +68,7 @@ def main():
 
     train_dataset = torchvision.datasets.CIFAR10(root='./data', train = True, transform=cinic_transform, download=True)
     test_dataset = torchvision.datasets.CIFAR10(root='./data', train = False, transform=cinic_transform, download=True)
+    # 取5000个私有数据
     shadow_dataset = Subset(test_dataset, range(0,args.dataset_num))
 
     print("DataSet:",args.dataset)
@@ -92,7 +93,7 @@ def main():
     test_data = torch.ones(1,dataset_shape[0], dataset_shape[1], dataset_shape[2]).to(device)
     with torch.no_grad():
         test_data_output = pseudo_model(test_data)
-        discriminator_input_shape = test_data_output.shape[1:]
+        discriminator_input_shape = test_data_output.shape[1:] # 除去第0维以后的维度
     print(discriminator_input_shape)
     # 鉴别器
     discriminator = cifar_discriminator_model(discriminator_input_shape,level=int(args.layer_id))
@@ -153,9 +154,9 @@ def main():
     cudnn.benchmark = False
     for n in range(1, args.iteration+1):
         if (n-1)%int((len(train_dataset)/args.batch_size)) == 0 :        
-            target_iterator = iter(train_dataloader)
+            target_iterator = iter(train_dataloader) # 从头开始迭代
         if (n-1)%int((len(shadow_dataset)/args.batch_size)) == 0 :        
-            shadow_iterator = iter(shadow_dataloader)        
+            shadow_iterator = iter(shadow_dataloader) # 从头开始迭代         
         try:
             target_data, target_label = next(target_iterator)
             if args.dataset == 'celeba_smile':
@@ -216,6 +217,14 @@ def main():
 
         writer_inv_psnr.add_scalars('psnr', {'target_psnr': target_psnr}, n)
         writer_inv_psnr.add_scalars('psnr', {'pseudo_psnr': pseudo_psnr}, n)
+
+        with open('metrics_log.txt', 'a') as f:
+            f.write(f"Iteration {n}:\n")
+            f.write(f"target_ssim: {target_ssim}\n")
+            f.write(f"pseudo_ssim: {pseudo_ssim}\n")
+            f.write(f"target_psnr: {target_psnr}\n")
+            f.write(f"pseudo_psnr: {pseudo_psnr}\n")
+            f.write("\n")
 
         if n % int(5000) == 0: # save middle model
             pseudo_middle_state = {
