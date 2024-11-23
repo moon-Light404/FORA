@@ -68,7 +68,7 @@ def main():
     parser.add_argument('--dlr', type=float, default=1e-5, help="")
     # parser.add_argument('--dlr', type=float, default=1e-4, help="")
 
-    parser.add_argument('--print_freq', type=int, default=20, help="")
+    parser.add_argument('--print_freq', type=int, default=40, help="")
     parser.add_argument('--save_path', type=str, default='attack_model.pth', help="")
     parser.add_argument('--gid', type=str, default='0', help="gpu id")
     parser.add_argument('--layer_id', type=str, default='2', help="layer id")
