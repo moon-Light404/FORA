@@ -87,7 +87,7 @@ def gradient_penalty(discriminator, x, x_gen,device):
 def pseudo_training(target_splitnn, target_invmodel, target_invmodel_optimizer, 
                    pseudo_model, pseudo_invmodel, pseudo_invmodel_optimizer,target_server_pseudo_optimizer,pseudo_optimizer,
                    discriminator, discriminator_optimizer,
-                   target_data, target_label, shadow_data, shadow_label, print_freq, device, n, iteration, dataset, mkmmd_loss, a):
+                   target_data, target_label, shadow_data, shadow_label, device, n, args, loss_func):
     
 
     target_splitnn.train()
@@ -99,7 +99,7 @@ def pseudo_training(target_splitnn, target_invmodel, target_invmodel_optimizer,
     target_splitnn.zero_grads()
     target_splitnn_output = target_splitnn(target_data)
     target_splitnn_intermidiate =target_splitnn.intermidiate_to_server.detach()
-    if dataset == 'celeba_smile':
+    if args.dataset == 'celeba_smile':
         target_splitnn_celoss = F.binary_cross_entropy_with_logits(target_splitnn_output, target_label)
     else:
         target_splitnn_celoss = F.cross_entropy(target_splitnn_output,target_label)
@@ -133,27 +133,21 @@ def pseudo_training(target_splitnn, target_invmodel, target_invmodel_optimizer,
     pseudo_output = pseudo_model(shadow_data)
 
     # MK-MMD Loss,训练mkmmd模型
-    mkmmd_loss.train()
-    target = target_splitnn_intermidiate.detach().view(pseudo_output.size(0),-1)
-    source = pseudo_output.view(pseudo_output.size(0),-1)
-    mkmmd_loss_item = mkmmd_loss(target,source)
-    if n % 20 == 0:
-        logging.critical('MK_MMD Loss: {}'.format(mkmmd_loss_item))
-
-     # correlation alignment loss
-    # coral_loss.train()
-    # target = target_splitnn_intermidiate.detach().view(pseudo_output.size(0),-1)
-    # source = pseudo_output.view(pseudo_output.size(0),-1)
-    # coral_loss_item = coral_loss(target,source)
-    # if n % 20 == 0:
-    #     print('MK_MMD Loss: {}'.format(coral_loss_item)
-    # )
+    if args.mkkd == True or args.coral == True:
+        loss_func.train()
+        target = target_splitnn_intermidiate.detach().view(pseudo_output.size(0),-1)
+        source = pseudo_output.view(pseudo_output.size(0),-1)
+        mkmmd_loss_item = loss_func(target,source).item()
+        if n % 20 == 0:
+            logging.critical('Adaption Loss: {}'.format(mkmmd_loss_item))
 
     d_input_pseudo = pseudo_output
     d_output_pseudo = discriminator(d_input_pseudo)
     # 总的损失函数：鉴别器对抗+MK-MMD
-    pseudo_d_loss = (1-a)*torch.mean(d_output_pseudo)+a*mkmmd_loss_item
-    pseudo_d_loss = torch.mean(d_output_pseudo)
+    if args.mkkd == True or args.coral == True:
+        pseudo_d_loss = (1-args.a)*torch.mean(d_output_pseudo)+args.a*mkmmd_loss_item
+    else:
+        pseudo_d_loss = torch.mean(d_output_pseudo)
 
     pseudo_d_loss.backward()
     pseudo_optimizer.step()
@@ -202,9 +196,9 @@ def pseudo_training(target_splitnn, target_invmodel, target_invmodel_optimizer,
     for para in pseudo_model.parameters():
         para.requires_grad = True
 
-    if n % print_freq == 0:
+    if n % args.print_freq == 0:
         logging.critical('Train Iteration: [{}/{} ({:.0f}%)]\t   Pseudo_AttackLoss: {:.6f}   Pseudo_target_mseloss: {:.6f}     Vanila_D_Loss: {:.6f}    D_Loss: {:.6f}     Dis_Pseudo_Loss: {:.6f}     Dis_target_Loss: {:.6f}   Target_AttackLoss: {:.6f}'.format(
-            n, iteration, 100. * n / iteration, pseudo_inv_loss.item(), pseudo_target_mseloss.item(), vanila_D_loss.item(), D_loss.item(), loss_discr_fake.item(), loss_discr_true.item(), target_inv_loss.item()))
+            n, args.iteration, 100. * n / args.iteration, pseudo_inv_loss.item(), pseudo_target_mseloss.item(), vanila_D_loss.item(), D_loss.item(), loss_discr_fake.item(), loss_discr_true.item(), target_inv_loss.item()))
     
     return target_splitnn_intermidiate.detach()
 

@@ -20,7 +20,7 @@ import numpy as np
 from torch.utils.data import Subset
 from random import shuffle
 import math
-from utils import  MultipleKernelMaximumMeanDiscrepancy,GaussianKernel
+from utils import  MultipleKernelMaximumMeanDiscrepancy,GaussianKernel, CorrelationAlignmentLoss
 import logging
 from datetime import datetime
 import pytz
@@ -76,6 +76,8 @@ def main():
     parser.add_argument('--batch_size', type=int, default=64, help='')
     parser.add_argument('--dataset', type=str, default='cifar10', help='')
     parser.add_argument('--dataset_num', type=int, default=2500, help='size of auxiliary data')
+    parser.add_argument('--coral', action='store_true', help='use coral loss')
+    parser.add_argument('--mkkd', action='store_true', help='use mkkd loss')
 
     args = parser.parse_args()    
     use_cuda = torch.cuda.is_available()
@@ -115,9 +117,9 @@ def main():
     # 取5000个私有数据
     shadow_dataset = Subset(test_dataset, range(0,args.dataset_num))
 
-    logging.info("DataSet:",args.dataset)
-    logging.info("Train Dataset:",len(train_dataset))
-    logging.info("Test Dataset:",len(test_dataset))
+    logging.info("DataSet:%s",args.dataset)
+    logging.info("Train Dataset:%d",len(train_dataset))
+    logging.info("Test Dataset:%d",len(test_dataset))
 
 
     train_dataloader = torch.utils.data.DataLoader(train_dataset, batch_size=args.batch_size, shuffle=True, num_workers = 4, pin_memory = True)
@@ -228,11 +230,18 @@ def main():
             kernels=[GaussianKernel(alpha=2 ** k) for k in range(-3, 2)],
                 linear=False)
         
+        coral_loss = CorrelationAlignmentLoss()
+        loss_func = None
+        if args.mkkd == True:
+            loss_func = mkmmd_loss
+        elif args.coral == True:
+            loss_func = coral_loss
+        
 
         target_splitnn_intermidiate = pseudo_training(target_splitnn, target_invmodel, target_invmodel_optimizer, 
                     pseudo_model, pseudo_invmodel, pseudo_invmodel_optimizer,target_server_pseudo_optimizer,pseudo_optimizer,
                     discriminator, discriminator_optimizer,
-                    target_data, target_label, shadow_data, shadow_label, args.print_freq, device, n, args.iteration,  args.dataset, mkmmd_loss, args.a)
+                    target_data, target_label, shadow_data, shadow_label, device, n, args, loss_func)
 
         # target_pseudo_mse, target_mseloss,shadow_mseloss,pseudo_mseloss,target_ssim,target_psnr,shadow_ssim,shadow_psnr,pseudo_ssim,pseudo_psnr,baseline_mse,baseline_ssim,baseline_psnr,pseudo_lpips = attack_test(target_invmodel, pseudo_invmodel, target_data, target_splitnn_intermidiate, 
         #                                                                                                                                                         device, args.layer_id, n, args.save_path, args.dataset, target_bottom, pseudo_model)
