@@ -13,6 +13,7 @@ import numpy as np
 import torchvision.utils as vutils
 from torch.utils.tensorboard import SummaryWriter
 from piq import ssim,psnr,LPIPS
+import logging
 class Crop(torch.nn.Module):
 
     def __init__(self, top, left, height, width):
@@ -137,7 +138,7 @@ def pseudo_training(target_splitnn, target_invmodel, target_invmodel_optimizer,
     source = pseudo_output.view(pseudo_output.size(0),-1)
     mkmmd_loss_item = mkmmd_loss(target,source)
     if n % 20 == 0:
-        print('MK_MMD Loss: {}'.format(mkmmd_loss_item))
+        logging.critical('MK_MMD Loss: {}'.format(mkmmd_loss_item))
 
      # correlation alignment loss
     # coral_loss.train()
@@ -202,7 +203,7 @@ def pseudo_training(target_splitnn, target_invmodel, target_invmodel_optimizer,
         para.requires_grad = True
 
     if n % print_freq == 0:
-        print('Train Iteration: [{}/{} ({:.0f}%)]\t   Pseudo_AttackLoss: {:.6f}   Pseudo_target_mseloss: {:.6f}     Vanila_D_Loss: {:.6f}    D_Loss: {:.6f}     Dis_Pseudo_Loss: {:.6f}     Dis_target_Loss: {:.6f}   Target_AttackLoss: {:.6f}'.format(
+        logging.critical('Train Iteration: [{}/{} ({:.0f}%)]\t   Pseudo_AttackLoss: {:.6f}   Pseudo_target_mseloss: {:.6f}     Vanila_D_Loss: {:.6f}    D_Loss: {:.6f}     Dis_Pseudo_Loss: {:.6f}     Dis_target_Loss: {:.6f}   Target_AttackLoss: {:.6f}'.format(
             n, iteration, 100. * n / iteration, pseudo_inv_loss.item(), pseudo_target_mseloss.item(), vanila_D_loss.item(), D_loss.item(), loss_discr_fake.item(), loss_discr_true.item(), target_inv_loss.item()))
     
     return target_splitnn_intermidiate.detach()
@@ -227,7 +228,7 @@ def cla_train(splitnn, invmodel, invmodel_optimizer, target_data, target_label, 
     splitnn.step()
 
     if epoch % print_freq == 0:
-        print('Train Epoch: {} [{}/{} ({:.0f}%)]\tCELoss: {:.6f}'.format(
+        logging.critical('Train Epoch: {} [{}/{} ({:.0f}%)]\tCELoss: {:.6f}'.format(
             epoch, epoch * len(data), len(dataloader.dataset),
             100. * epoch / len(dataloader), celoss.item(),))
     return epoch, gridients
@@ -264,7 +265,7 @@ def cla_test(target_splitnn, pseudo_model, test_loader, device, dataset):
     test_loss /= len(test_loader.dataset)
     # correct = round(correct / len(test_loader.dataset),2)
 
-    print('\nTest set: Average loss: {:.4f}, Accuracy: {}/{} ({:.0f}%)\n'.format(
+    logging.critical('\nTest set: Average loss: {:.4f}, Accuracy: {}/{} ({:.0f}%)\n'.format(
         test_loss, correct, len(test_loader.dataset),
         100. * correct / len(test_loader.dataset)))
     return test_loss, 100. * correct / len(test_loader.dataset)

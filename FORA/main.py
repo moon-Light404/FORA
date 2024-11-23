@@ -21,7 +21,43 @@ from torch.utils.data import Subset
 from random import shuffle
 import math
 from utils import  MultipleKernelMaximumMeanDiscrepancy,GaussianKernel
+import logging
+from datetime import datetime
+import pytz
+from logging import Formatter
 
+# 设置时区为北京时间
+class BeijingFormatter(Formatter):
+    def formatTime(self, record, datefmt=None):
+        dt = datetime.fromtimestamp(record.created, pytz.timezone('Asia/Shanghai'))
+        if datefmt:
+            s = dt.strftime(datefmt)
+        else:
+            s = dt.isoformat()
+        return s
+
+def initlogging(logfile):
+    # debug, info, warning, error, critical
+    # set up logging to file
+    logging.shutdown()
+    
+    logger = logging.getLogger()
+    logger.handlers = []
+    # 设置日志记录级别为INFO，即只有INFO级别及以上的会被记录
+    logging.basicConfig(level=logging.INFO,
+                        format='%(asctime)s - %(levelname)s - %(message)s',
+                        filename=logfile,
+                        filemode='w')
+    
+    for handler in logging.getLogger().handlers:
+        handler.setFormatter(BeijingFormatter('%(asctime)s - %(levelname)s - %(message)s'))
+    
+    # create console handler and set level to debug
+    ch = logging.StreamHandler()
+    ch.setLevel(logging.CRITICAL) # 只有critical级别的才会输出到控制台
+    # add formatter to ch
+    ch.setFormatter(logging.Formatter('%(message)s')) # 控制台只输出日志消息的内容
+    logging.getLogger().addHandler(ch)
 
 
 def main():
@@ -29,8 +65,8 @@ def main():
     parser.add_argument('--iteration', type=int, default=10000, help="")
     parser.add_argument('--lr', type=float, default=1e-4, help="")
     parser.add_argument('--server_pseudo_lr', type=float, default=1e-4, help="")
-    # parser.add_argument('--dlr', type=float, default=1e-5, help="")
-    parser.add_argument('--dlr', type=float, default=1e-4, help="")
+    parser.add_argument('--dlr', type=float, default=1e-5, help="")
+    # parser.add_argument('--dlr', type=float, default=1e-4, help="")
 
     parser.add_argument('--print_freq', type=int, default=20, help="")
     parser.add_argument('--save_path', type=str, default='attack_model.pth', help="")
@@ -52,6 +88,14 @@ def main():
         device = torch.device('cpu')
 
     print(device)
+    date_time_file = datetime.now(pytz.timezone('Asia/Shanghai')).strftime("%Y-%m-%d-%H-%M-%S")
+    path_name = os.path.join('log', args.dataset)
+    os.makedirs(path_name, exist_ok=True)
+    initlogging(logfile=os.path.join(path_name, date_time_file+'.log'))
+    logging.info(">>>>>>>>>>>>>>Running settings>>>>>>>>>>>>>>")
+    for arg in vars(args):
+        logging.info("%s: %s", arg, getattr(args, arg))
+    logging.info(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n\n")
 
 
     torch.manual_seed(3407)
@@ -71,9 +115,9 @@ def main():
     # 取5000个私有数据
     shadow_dataset = Subset(test_dataset, range(0,args.dataset_num))
 
-    print("DataSet:",args.dataset)
-    print("Train Dataset:",len(train_dataset))
-    print("Test Dataset:",len(test_dataset))
+    logging.info("DataSet:",args.dataset)
+    logging.info("Train Dataset:",len(train_dataset))
+    logging.info("Test Dataset:",len(test_dataset))
 
 
     train_dataloader = torch.utils.data.DataLoader(train_dataset, batch_size=args.batch_size, shuffle=True, num_workers = 4, pin_memory = True)
@@ -196,18 +240,15 @@ def main():
 
         
         if n % int(50) == 0:
-            # print("---------------------Target Loss:---------------------------")
-            print("---------------------Target Loss:---------------------------")
             target_celoss, target_acc = cla_test(target_splitnn, None, test_dataloader, device, args.dataset)
-            print("---------------------Pseudo Loss:---------------------------")
             pseudo_celoss, pseudo_acc = cla_test(target_splitnn, pseudo_model, test_dataloader, device, args.dataset)
             
 
-        if n % int(50) == 0:
-            writer_target.add_scalars('loss', {'test_loss': target_celoss}, n)
-            writer_target.add_scalars('accuracy', {'test_acc': target_acc}, n)
-            writer_shadow.add_scalars('loss', {'test_loss': pseudo_celoss}, n)
-            writer_shadow.add_scalars('accuracy', {'test_acc': pseudo_acc}, n)
+        # if n % int(50) == 0:
+        #     writer_target.add_scalars('loss', {'test_loss': target_celoss}, n)
+        #     writer_target.add_scalars('accuracy', {'test_acc': target_acc}, n)
+        #     writer_shadow.add_scalars('loss', {'test_loss': pseudo_celoss}, n)
+        #     writer_shadow.add_scalars('accuracy', {'test_acc': pseudo_acc}, n)
 
         # writer_inv_mse.add_scalars('mseloss', {'target_pseudo_mse': target_pseudo_mse}, n)
         
@@ -226,49 +267,49 @@ def main():
         #     f.write(f"pseudo_psnr: {pseudo_psnr}\n")
         #     f.write("\n")
 
-        if n % int(5000) == 0: # save middle model
-            pseudo_middle_state = {
-                'iteration': n,
-                'pseudo_model': pseudo_model.state_dict(),
-                'target_top':target_top.state_dict(),
-                'final_acc': pseudo_acc,
-            }
+        # if n % int(5000) == 0: # save middle model
+        #     pseudo_middle_state = {
+        #         'iteration': n,
+        #         'pseudo_model': pseudo_model.state_dict(),
+        #         'target_top':target_top.state_dict(),
+        #         'final_acc': pseudo_acc,
+        #     }
 
-            target_middle_state = {
-                'iteration': n,
-                'bottom_model': target_bottom.state_dict(),
-                'top_model': target_top.state_dict(),
-                'final_acc': target_acc,
-            }
-            os.makedirs('./model/pseudo/middle', exist_ok=True)
-            os.makedirs('./model/target/middle', exist_ok=True)
-            torch.save(target_middle_state, os.path.join('./model/target/middle',str(n)+'_'+args.save_path))
-            torch.save( pseudo_middle_state, os.path.join('./model/pseudo/middle',str(n)+'_'+args.save_path))
+        #     target_middle_state = {
+        #         'iteration': n,
+        #         'bottom_model': target_bottom.state_dict(),
+        #         'top_model': target_top.state_dict(),
+        #         'final_acc': target_acc,
+        #     }
+        #     os.makedirs('./model/pseudo/middle', exist_ok=True)
+        #     os.makedirs('./model/target/middle', exist_ok=True)
+        #     torch.save(target_middle_state, os.path.join('./model/target/middle',str(n)+'_'+args.save_path))
+        #     torch.save( pseudo_middle_state, os.path.join('./model/pseudo/middle',str(n)+'_'+args.save_path))
 
     # save final model
-    pseudo_final_state = {
-                'iteration': n,
-                'pseudo_model': pseudo_model.state_dict(),
-                'target_top':target_top.state_dict(),
-                'final_acc': pseudo_acc,
-            }
+    # pseudo_final_state = {
+    #             'iteration': n,
+    #             'pseudo_model': pseudo_model.state_dict(),
+    #             'target_top':target_top.state_dict(),
+    #             'final_acc': pseudo_acc,
+    #         }
 
-    target_final_state = {
-                'iteration': n,
-                'bottom_model': target_bottom.state_dict(),
-                'top_model': target_top.state_dict(),
-                'final_acc': target_acc,
-            }
+    # target_final_state = {
+    #             'iteration': n,
+    #             'bottom_model': target_bottom.state_dict(),
+    #             'top_model': target_top.state_dict(),
+    #             'final_acc': target_acc,
+    #         }
 
-    os.makedirs('./model/pseudo/final', exist_ok=True)
-    os.makedirs('./model/target/final', exist_ok=True)
-    torch.save(target_final_state, os.path.join('./model/target/final',args.save_path))
-    torch.save( pseudo_final_state, os.path.join('./model/pseudo/final',args.save_path))
-    writer_target.close()
-    writer_shadow.close()
-    writer_inv_mse.close()
-    writer_inv_ssim.close()
-    writer_inv_psnr.close()
+    # os.makedirs('./model/pseudo/final', exist_ok=True)
+    # os.makedirs('./model/target/final', exist_ok=True)
+    # torch.save(target_final_state, os.path.join('./model/target/final',args.save_path))
+    # torch.save( pseudo_final_state, os.path.join('./model/pseudo/final',args.save_path))
+    # writer_target.close()
+    # writer_shadow.close()
+    # writer_inv_mse.close()
+    # writer_inv_ssim.close()
+    # writer_inv_psnr.close()
     print("=> Training Complete!\n")
 
 if __name__ == '__main__':
