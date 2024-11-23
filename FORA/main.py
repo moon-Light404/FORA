@@ -35,11 +35,11 @@ def main():
     parser.add_argument('--print_freq', type=int, default=20, help="")
     parser.add_argument('--save_path', type=str, default='attack_model.pth', help="")
     parser.add_argument('--gid', type=str, default='0', help="gpu id")
-    parser.add_argument('--layer_id', type=str, default='1', help="layer id")
+    parser.add_argument('--layer_id', type=str, default='2', help="layer id")
     parser.add_argument('--a', type=float, default=1, help='hyperparameter of loss')
     parser.add_argument('--batch_size', type=int, default=64, help='')
     parser.add_argument('--dataset', type=str, default='cifar10', help='')
-    parser.add_argument('--dataset_num', type=int, default=5000, help='size of auxiliary data')
+    parser.add_argument('--dataset_num', type=int, default=2500, help='size of auxiliary data')
 
     args = parser.parse_args()    
     use_cuda = torch.cuda.is_available()
@@ -190,8 +190,8 @@ def main():
                     discriminator, discriminator_optimizer,
                     target_data, target_label, shadow_data, shadow_label, args.print_freq, device, n, args.iteration,  args.dataset, mkmmd_loss, args.a)
 
-        target_pseudo_mse, target_mseloss,shadow_mseloss,pseudo_mseloss,target_ssim,target_psnr,shadow_ssim,shadow_psnr,pseudo_ssim,pseudo_psnr,baseline_mse,baseline_ssim,baseline_psnr,pseudo_lpips = attack_test(target_invmodel, pseudo_invmodel, target_data, target_splitnn_intermidiate, 
-                                                                                                                                                                device, args.layer_id, n, args.save_path, args.dataset, target_bottom, pseudo_model)
+        # target_pseudo_mse, target_mseloss,shadow_mseloss,pseudo_mseloss,target_ssim,target_psnr,shadow_ssim,shadow_psnr,pseudo_ssim,pseudo_psnr,baseline_mse,baseline_ssim,baseline_psnr,pseudo_lpips = attack_test(target_invmodel, pseudo_invmodel, target_data, target_splitnn_intermidiate, 
+        #                                                                                                                                                         device, args.layer_id, n, args.save_path, args.dataset, target_bottom, pseudo_model)
 
 
         
@@ -209,22 +209,22 @@ def main():
             writer_shadow.add_scalars('loss', {'test_loss': pseudo_celoss}, n)
             writer_shadow.add_scalars('accuracy', {'test_acc': pseudo_acc}, n)
 
-        writer_inv_mse.add_scalars('mseloss', {'target_pseudo_mse': target_pseudo_mse}, n)
+        # writer_inv_mse.add_scalars('mseloss', {'target_pseudo_mse': target_pseudo_mse}, n)
         
 
-        writer_inv_ssim.add_scalars('ssim', {'target_ssim': target_ssim}, n)
-        writer_inv_ssim.add_scalars('ssim', {'pseudo_ssim': pseudo_ssim}, n)
+        # writer_inv_ssim.add_scalars('ssim', {'target_ssim': target_ssim}, n)
+        # writer_inv_ssim.add_scalars('ssim', {'pseudo_ssim': pseudo_ssim}, n)
 
-        writer_inv_psnr.add_scalars('psnr', {'target_psnr': target_psnr}, n)
-        writer_inv_psnr.add_scalars('psnr', {'pseudo_psnr': pseudo_psnr}, n)
+        # writer_inv_psnr.add_scalars('psnr', {'target_psnr': target_psnr}, n)
+        # writer_inv_psnr.add_scalars('psnr', {'pseudo_psnr': pseudo_psnr}, n)
 
-        with open('metrics_log.txt', 'a') as f:
-            f.write(f"Iteration {n}:\n")
-            f.write(f"target_ssim: {target_ssim}\n")
-            f.write(f"pseudo_ssim: {pseudo_ssim}\n")
-            f.write(f"target_psnr: {target_psnr}\n")
-            f.write(f"pseudo_psnr: {pseudo_psnr}\n")
-            f.write("\n")
+        # with open('metrics_log.txt', 'a') as f:
+        #     f.write(f"Iteration {n}:\n")
+        #     f.write(f"target_ssim: {target_ssim}\n")
+        #     f.write(f"pseudo_ssim: {pseudo_ssim}\n")
+        #     f.write(f"target_psnr: {target_psnr}\n")
+        #     f.write(f"pseudo_psnr: {pseudo_psnr}\n")
+        #     f.write("\n")
 
         if n % int(5000) == 0: # save middle model
             pseudo_middle_state = {
