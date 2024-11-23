@@ -1,0 +1,2361 @@
+2024-11-23T22:05:26.915536+08:00 - INFO - >>>>>>>>>>>>>>Running settings>>>>>>>>>>>>>>
+2024-11-23T22:05:26.915685+08:00 - INFO - iteration: 12000
+2024-11-23T22:05:26.915759+08:00 - INFO - lr: 0.0001
+2024-11-23T22:05:26.915832+08:00 - INFO - server_pseudo_lr: 0.0001
+2024-11-23T22:05:26.915897+08:00 - INFO - dlr: 0.0003
+2024-11-23T22:05:26.915959+08:00 - INFO - print_freq: 40
+2024-11-23T22:05:26.916020+08:00 - INFO - save_path: attack_model.pth
+2024-11-23T22:05:26.916080+08:00 - INFO - gid: 0
+2024-11-23T22:05:26.916141+08:00 - INFO - layer_id: 2
+2024-11-23T22:05:26.916201+08:00 - INFO - a: 0.6
+2024-11-23T22:05:26.916262+08:00 - INFO - batch_size: 64
+2024-11-23T22:05:26.916321+08:00 - INFO - dataset: cifar10
+2024-11-23T22:05:26.916381+08:00 - INFO - dataset_num: 2500
+2024-11-23T22:05:26.916441+08:00 - INFO - coral: False
+2024-11-23T22:05:26.916501+08:00 - INFO - mkkd: True
+2024-11-23T22:05:26.916560+08:00 - INFO - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+2024-11-23T22:05:28.696332+08:00 - INFO - DataSet:cifar10
+2024-11-23T22:05:28.696626+08:00 - INFO - Train Dataset:50000
+2024-11-23T22:05:28.696769+08:00 - INFO - Test Dataset:10000
+2024-11-23T22:05:40.101293+08:00 - CRITICAL - Adaption Loss: 0.32936611771583557
+2024-11-23T22:05:49.138155+08:00 - CRITICAL - Adaption Loss: 0.27692344784736633
+2024-11-23T22:05:49.229896+08:00 - CRITICAL - Train Iteration: [40/12000 (0%)]	   Pseudo_AttackLoss: 0.064117   Pseudo_target_mseloss: 0.824469     Vanila_D_Loss: -2.331170    D_Loss: -1.055148     Dis_Pseudo_Loss: -5.465544     Dis_target_Loss: 3.134374   Target_AttackLoss: 0.041335
+2024-11-23T22:05:54.999264+08:00 - CRITICAL - 
+Test set: Average loss: 2.2647, Accuracy: 1525/10000 (15%)
+
+2024-11-23T22:05:56.236126+08:00 - CRITICAL - 
+Test set: Average loss: 2.3190, Accuracy: 1325/10000 (13%)
+
+2024-11-23T22:06:00.609082+08:00 - CRITICAL - Adaption Loss: 0.259821355342865
+2024-11-23T22:06:09.709109+08:00 - CRITICAL - Adaption Loss: 0.22895312309265137
+2024-11-23T22:06:09.797055+08:00 - CRITICAL - Train Iteration: [80/12000 (1%)]	   Pseudo_AttackLoss: 0.053197   Pseudo_target_mseloss: 0.723519     Vanila_D_Loss: -19.003626    D_Loss: -17.101080     Dis_Pseudo_Loss: -36.754974     Dis_target_Loss: 17.751348   Target_AttackLoss: 0.031346
+2024-11-23T22:06:18.639462+08:00 - CRITICAL - Adaption Loss: 0.23599082231521606
+2024-11-23T22:06:19.979355+08:00 - CRITICAL - 
+Test set: Average loss: 2.0721, Accuracy: 2313/10000 (23%)
+
+2024-11-23T22:06:21.262069+08:00 - CRITICAL - 
+Test set: Average loss: 2.4818, Accuracy: 1343/10000 (13%)
+
+2024-11-23T22:06:30.292740+08:00 - CRITICAL - Adaption Loss: 0.2231689691543579
+2024-11-23T22:06:30.380081+08:00 - CRITICAL - Train Iteration: [120/12000 (1%)]	   Pseudo_AttackLoss: 0.047828   Pseudo_target_mseloss: 0.496524     Vanila_D_Loss: -24.858643    D_Loss: -20.623308     Dis_Pseudo_Loss: -29.386765     Dis_target_Loss: 4.528122   Target_AttackLoss: 0.025468
+2024-11-23T22:06:39.078856+08:00 - CRITICAL - Adaption Loss: 0.23792733252048492
+2024-11-23T22:06:44.849794+08:00 - CRITICAL - 
+Test set: Average loss: 1.9675, Accuracy: 2721/10000 (27%)
+
+2024-11-23T22:06:46.065107+08:00 - CRITICAL - 
+Test set: Average loss: 2.3427, Accuracy: 1387/10000 (14%)
+
+2024-11-23T22:06:50.622997+08:00 - CRITICAL - Adaption Loss: 0.20841069519519806
+2024-11-23T22:06:50.709373+08:00 - CRITICAL - Train Iteration: [160/12000 (1%)]	   Pseudo_AttackLoss: 0.054169   Pseudo_target_mseloss: 0.564183     Vanila_D_Loss: -23.490669    D_Loss: -20.188816     Dis_Pseudo_Loss: -32.541077     Dis_target_Loss: 9.050408   Target_AttackLoss: 0.031132
+2024-11-23T22:06:59.601309+08:00 - CRITICAL - Adaption Loss: 0.22496485710144043
+2024-11-23T22:07:08.685039+08:00 - CRITICAL - Adaption Loss: 0.18691816926002502
+2024-11-23T22:07:08.770339+08:00 - CRITICAL - Train Iteration: [200/12000 (2%)]	   Pseudo_AttackLoss: 0.057579   Pseudo_target_mseloss: 0.533974     Vanila_D_Loss: -24.876087    D_Loss: -24.319851     Dis_Pseudo_Loss: -25.785601     Dis_target_Loss: 0.909513   Target_AttackLoss: 0.024832
+2024-11-23T22:07:10.035662+08:00 - CRITICAL - 
+Test set: Average loss: 1.9432, Accuracy: 2984/10000 (30%)
+
+2024-11-23T22:07:11.328153+08:00 - CRITICAL - 
+Test set: Average loss: 2.5882, Accuracy: 1334/10000 (13%)
+
+2024-11-23T22:07:20.122951+08:00 - CRITICAL - Adaption Loss: 0.17918211221694946
+2024-11-23T22:07:29.179288+08:00 - CRITICAL - Adaption Loss: 0.18897399306297302
+2024-11-23T22:07:29.236715+08:00 - CRITICAL - Train Iteration: [240/12000 (2%)]	   Pseudo_AttackLoss: 0.045901   Pseudo_target_mseloss: 0.508428     Vanila_D_Loss: -4.172186    D_Loss: 1.397436     Dis_Pseudo_Loss: -3.654270     Dis_target_Loss: -0.517916   Target_AttackLoss: 0.020575
+2024-11-23T22:07:34.791563+08:00 - CRITICAL - 
+Test set: Average loss: 1.8255, Accuracy: 3120/10000 (31%)
+
+2024-11-23T22:07:36.000683+08:00 - CRITICAL - 
+Test set: Average loss: 2.7125, Accuracy: 1386/10000 (14%)
+
+2024-11-23T22:07:40.189767+08:00 - CRITICAL - Adaption Loss: 0.18407189846038818
+2024-11-23T22:07:48.947201+08:00 - CRITICAL - Adaption Loss: 0.16642913222312927
+2024-11-23T22:07:49.033504+08:00 - CRITICAL - Train Iteration: [280/12000 (2%)]	   Pseudo_AttackLoss: 0.035791   Pseudo_target_mseloss: 0.521712     Vanila_D_Loss: -10.424225    D_Loss: -7.218670     Dis_Pseudo_Loss: -13.918540     Dis_target_Loss: 3.494316   Target_AttackLoss: 0.021541
+2024-11-23T22:07:57.167284+08:00 - CRITICAL - Adaption Loss: 0.18496981263160706
+2024-11-23T22:07:58.499083+08:00 - CRITICAL - 
+Test set: Average loss: 1.8134, Accuracy: 3168/10000 (32%)
+
+2024-11-23T22:07:59.753803+08:00 - CRITICAL - 
+Test set: Average loss: 2.5115, Accuracy: 1389/10000 (14%)
+
+2024-11-23T22:08:08.310670+08:00 - CRITICAL - Adaption Loss: 0.16480162739753723
+2024-11-23T22:08:08.398151+08:00 - CRITICAL - Train Iteration: [320/12000 (3%)]	   Pseudo_AttackLoss: 0.034015   Pseudo_target_mseloss: 0.527657     Vanila_D_Loss: -14.479210    D_Loss: -13.832582     Dis_Pseudo_Loss: -26.467808     Dis_target_Loss: 11.988598   Target_AttackLoss: 0.020484
+2024-11-23T22:08:16.450424+08:00 - CRITICAL - Adaption Loss: 0.184729665517807
+2024-11-23T22:08:21.929486+08:00 - CRITICAL - 
+Test set: Average loss: 1.7710, Accuracy: 3382/10000 (34%)
+
+2024-11-23T22:08:23.163164+08:00 - CRITICAL - 
+Test set: Average loss: 2.7329, Accuracy: 1339/10000 (13%)
+
+2024-11-23T22:08:27.271792+08:00 - CRITICAL - Adaption Loss: 0.1612485945224762
+2024-11-23T22:08:27.320235+08:00 - CRITICAL - Train Iteration: [360/12000 (3%)]	   Pseudo_AttackLoss: 0.032630   Pseudo_target_mseloss: 0.560247     Vanila_D_Loss: -20.492815    D_Loss: -18.217133     Dis_Pseudo_Loss: -26.253407     Dis_target_Loss: 5.760591   Target_AttackLoss: 0.021158
+2024-11-23T22:08:35.529897+08:00 - CRITICAL - Adaption Loss: 0.15732310712337494
+2024-11-23T22:08:44.420192+08:00 - CRITICAL - Adaption Loss: 0.1365664005279541
+2024-11-23T22:08:44.504176+08:00 - CRITICAL - Train Iteration: [400/12000 (3%)]	   Pseudo_AttackLoss: 0.044281   Pseudo_target_mseloss: 0.434149     Vanila_D_Loss: -18.331432    D_Loss: -17.658060     Dis_Pseudo_Loss: -18.869070     Dis_target_Loss: 0.537637   Target_AttackLoss: 0.015841
+2024-11-23T22:08:45.811691+08:00 - CRITICAL - 
+Test set: Average loss: 1.7467, Accuracy: 3581/10000 (36%)
+
+2024-11-23T22:08:47.065999+08:00 - CRITICAL - 
+Test set: Average loss: 2.5482, Accuracy: 1537/10000 (15%)
+
+2024-11-23T22:08:55.773909+08:00 - CRITICAL - Adaption Loss: 0.13628917932510376
+2024-11-23T22:09:04.443458+08:00 - CRITICAL - Adaption Loss: 0.11980828642845154
+2024-11-23T22:09:04.528974+08:00 - CRITICAL - Train Iteration: [440/12000 (4%)]	   Pseudo_AttackLoss: 0.041392   Pseudo_target_mseloss: 0.334710     Vanila_D_Loss: -18.333199    D_Loss: -18.039135     Dis_Pseudo_Loss: -19.976347     Dis_target_Loss: 1.643149   Target_AttackLoss: 0.015564
+2024-11-23T22:09:10.007266+08:00 - CRITICAL - 
+Test set: Average loss: 1.6898, Accuracy: 3724/10000 (37%)
+
+2024-11-23T22:09:11.207448+08:00 - CRITICAL - 
+Test set: Average loss: 2.7171, Accuracy: 1483/10000 (15%)
+
+2024-11-23T22:09:15.435426+08:00 - CRITICAL - Adaption Loss: 0.13914720714092255
+2024-11-23T22:09:24.218155+08:00 - CRITICAL - Adaption Loss: 0.1459321230649948
+2024-11-23T22:09:24.296999+08:00 - CRITICAL - Train Iteration: [480/12000 (4%)]	   Pseudo_AttackLoss: 0.037510   Pseudo_target_mseloss: 0.361313     Vanila_D_Loss: -23.056709    D_Loss: -22.584270     Dis_Pseudo_Loss: -26.872105     Dis_target_Loss: 3.815396   Target_AttackLoss: 0.017655
+2024-11-23T22:09:32.677125+08:00 - CRITICAL - Adaption Loss: 0.14364588260650635
+2024-11-23T22:09:34.015104+08:00 - CRITICAL - 
+Test set: Average loss: 1.6825, Accuracy: 3757/10000 (38%)
+
+2024-11-23T22:09:35.261691+08:00 - CRITICAL - 
+Test set: Average loss: 2.5422, Accuracy: 1586/10000 (16%)
+
+2024-11-23T22:09:44.065513+08:00 - CRITICAL - Adaption Loss: 0.14252200722694397
+2024-11-23T22:09:44.152267+08:00 - CRITICAL - Train Iteration: [520/12000 (4%)]	   Pseudo_AttackLoss: 0.037056   Pseudo_target_mseloss: 0.360109     Vanila_D_Loss: -9.910200    D_Loss: -2.224711     Dis_Pseudo_Loss: -2.127005     Dis_target_Loss: -7.783195   Target_AttackLoss: 0.017286
+2024-11-23T22:09:52.613411+08:00 - CRITICAL - Adaption Loss: 0.12044331431388855
+2024-11-23T22:09:58.537842+08:00 - CRITICAL - 
+Test set: Average loss: 1.6368, Accuracy: 4030/10000 (40%)
+
+2024-11-23T22:09:59.829168+08:00 - CRITICAL - 
+Test set: Average loss: 2.2973, Accuracy: 1880/10000 (19%)
+
+2024-11-23T22:10:04.650960+08:00 - CRITICAL - Adaption Loss: 0.12300281226634979
+2024-11-23T22:10:04.704699+08:00 - CRITICAL - Train Iteration: [560/12000 (5%)]	   Pseudo_AttackLoss: 0.030945   Pseudo_target_mseloss: 0.309275     Vanila_D_Loss: -12.262105    D_Loss: -10.855047     Dis_Pseudo_Loss: -1.453767     Dis_target_Loss: -10.808338   Target_AttackLoss: 0.017000
+2024-11-23T22:10:13.645123+08:00 - CRITICAL - Adaption Loss: 0.12413786351680756
+2024-11-23T22:10:23.233748+08:00 - CRITICAL - Adaption Loss: 0.11188183724880219
+2024-11-23T22:10:23.320694+08:00 - CRITICAL - Train Iteration: [600/12000 (5%)]	   Pseudo_AttackLoss: 0.030355   Pseudo_target_mseloss: 0.338811     Vanila_D_Loss: -17.210011    D_Loss: -13.757173     Dis_Pseudo_Loss: -17.500135     Dis_target_Loss: 0.290124   Target_AttackLoss: 0.016893
+2024-11-23T22:10:24.557752+08:00 - CRITICAL - 
+Test set: Average loss: 1.6236, Accuracy: 4069/10000 (41%)
+
+2024-11-23T22:10:25.780860+08:00 - CRITICAL - 
+Test set: Average loss: 2.2839, Accuracy: 2075/10000 (21%)
+
+2024-11-23T22:10:34.783422+08:00 - CRITICAL - Adaption Loss: 0.0941016674041748
+2024-11-23T22:10:44.068554+08:00 - CRITICAL - Adaption Loss: 0.10662215948104858
+2024-11-23T22:10:44.154218+08:00 - CRITICAL - Train Iteration: [640/12000 (5%)]	   Pseudo_AttackLoss: 0.033742   Pseudo_target_mseloss: 0.316654     Vanila_D_Loss: -16.253414    D_Loss: -15.032646     Dis_Pseudo_Loss: -17.336353     Dis_target_Loss: 1.082939   Target_AttackLoss: 0.014115
+2024-11-23T22:10:49.937441+08:00 - CRITICAL - 
+Test set: Average loss: 1.5985, Accuracy: 4092/10000 (41%)
+
+2024-11-23T22:10:51.141842+08:00 - CRITICAL - 
+Test set: Average loss: 2.1984, Accuracy: 2315/10000 (23%)
+
+2024-11-23T22:10:55.474850+08:00 - CRITICAL - Adaption Loss: 0.10894466936588287
+2024-11-23T22:11:04.582698+08:00 - CRITICAL - Adaption Loss: 0.09608545899391174
+2024-11-23T22:11:04.669634+08:00 - CRITICAL - Train Iteration: [680/12000 (6%)]	   Pseudo_AttackLoss: 0.032186   Pseudo_target_mseloss: 0.272871     Vanila_D_Loss: -16.669212    D_Loss: -16.163542     Dis_Pseudo_Loss: -17.301186     Dis_target_Loss: 0.631974   Target_AttackLoss: 0.027346
+2024-11-23T22:11:13.584748+08:00 - CRITICAL - Adaption Loss: 0.10089881718158722
+2024-11-23T22:11:14.916782+08:00 - CRITICAL - 
+Test set: Average loss: 1.5856, Accuracy: 4090/10000 (41%)
+
+2024-11-23T22:11:16.127309+08:00 - CRITICAL - 
+Test set: Average loss: 2.1539, Accuracy: 2458/10000 (25%)
+
+2024-11-23T22:11:25.137371+08:00 - CRITICAL - Adaption Loss: 0.09948766231536865
+2024-11-23T22:11:25.226039+08:00 - CRITICAL - Train Iteration: [720/12000 (6%)]	   Pseudo_AttackLoss: 0.024896   Pseudo_target_mseloss: 0.209516     Vanila_D_Loss: -18.878124    D_Loss: -17.773243     Dis_Pseudo_Loss: -21.639095     Dis_target_Loss: 2.760972   Target_AttackLoss: 0.015064
+2024-11-23T22:11:34.077198+08:00 - CRITICAL - Adaption Loss: 0.10195131599903107
+2024-11-23T22:11:40.127934+08:00 - CRITICAL - 
+Test set: Average loss: 1.5845, Accuracy: 4266/10000 (43%)
+
+2024-11-23T22:11:41.349588+08:00 - CRITICAL - 
+Test set: Average loss: 1.8799, Accuracy: 3176/10000 (32%)
+
+2024-11-23T22:11:45.692515+08:00 - CRITICAL - Adaption Loss: 0.08246029913425446
+2024-11-23T22:11:45.778035+08:00 - CRITICAL - Train Iteration: [760/12000 (6%)]	   Pseudo_AttackLoss: 0.028455   Pseudo_target_mseloss: 0.146725     Vanila_D_Loss: -16.622562    D_Loss: -15.522417     Dis_Pseudo_Loss: -25.426897     Dis_target_Loss: 8.804336   Target_AttackLoss: 0.017823
+2024-11-23T22:11:54.559194+08:00 - CRITICAL - Adaption Loss: 0.10567714273929596
+2024-11-23T22:12:03.508607+08:00 - CRITICAL - Adaption Loss: 0.08419433236122131
+2024-11-23T22:12:03.593855+08:00 - CRITICAL - Train Iteration: [800/12000 (7%)]	   Pseudo_AttackLoss: 0.029884   Pseudo_target_mseloss: 0.149739     Vanila_D_Loss: -16.854944    D_Loss: -16.311039     Dis_Pseudo_Loss: -20.516245     Dis_target_Loss: 3.661301   Target_AttackLoss: 0.012837
+2024-11-23T22:12:04.854765+08:00 - CRITICAL - 
+Test set: Average loss: 1.5604, Accuracy: 4247/10000 (42%)
+
+2024-11-23T22:12:06.072927+08:00 - CRITICAL - 
+Test set: Average loss: 1.9861, Accuracy: 2878/10000 (29%)
+
+2024-11-23T22:12:15.024012+08:00 - CRITICAL - Adaption Loss: 0.09373702108860016
+2024-11-23T22:12:23.967569+08:00 - CRITICAL - Adaption Loss: 0.0912662148475647
+2024-11-23T22:12:24.053273+08:00 - CRITICAL - Train Iteration: [840/12000 (7%)]	   Pseudo_AttackLoss: 0.027670   Pseudo_target_mseloss: 0.191996     Vanila_D_Loss: -17.374260    D_Loss: -16.884802     Dis_Pseudo_Loss: -17.657089     Dis_target_Loss: 0.282829   Target_AttackLoss: 0.012980
+2024-11-23T22:12:29.735877+08:00 - CRITICAL - 
+Test set: Average loss: 1.5599, Accuracy: 4343/10000 (43%)
+
+2024-11-23T22:12:30.969141+08:00 - CRITICAL - 
+Test set: Average loss: 2.1041, Accuracy: 2666/10000 (27%)
+
+2024-11-23T22:12:35.383047+08:00 - CRITICAL - Adaption Loss: 0.11638385057449341
+2024-11-23T22:12:44.238099+08:00 - CRITICAL - Adaption Loss: 0.08326920866966248
+2024-11-23T22:12:44.326284+08:00 - CRITICAL - Train Iteration: [880/12000 (7%)]	   Pseudo_AttackLoss: 0.026489   Pseudo_target_mseloss: 0.195314     Vanila_D_Loss: -18.689911    D_Loss: -17.921387     Dis_Pseudo_Loss: -15.217501     Dis_target_Loss: -3.472409   Target_AttackLoss: 0.013397
+2024-11-23T22:12:53.415850+08:00 - CRITICAL - Adaption Loss: 0.09060077369213104
+2024-11-23T22:12:54.764451+08:00 - CRITICAL - 
+Test set: Average loss: 1.6885, Accuracy: 3858/10000 (39%)
+
+2024-11-23T22:12:55.979679+08:00 - CRITICAL - 
+Test set: Average loss: 1.9830, Accuracy: 2974/10000 (30%)
+
+2024-11-23T22:13:04.815517+08:00 - CRITICAL - Adaption Loss: 0.07944624125957489
+2024-11-23T22:13:04.902133+08:00 - CRITICAL - Train Iteration: [920/12000 (8%)]	   Pseudo_AttackLoss: 0.032855   Pseudo_target_mseloss: 0.130888     Vanila_D_Loss: -13.825020    D_Loss: -11.723829     Dis_Pseudo_Loss: -5.165863     Dis_target_Loss: -8.659157   Target_AttackLoss: 0.012817
+2024-11-23T22:13:13.806218+08:00 - CRITICAL - Adaption Loss: 0.07761374115943909
+2024-11-23T22:13:19.587067+08:00 - CRITICAL - 
+Test set: Average loss: 1.5177, Accuracy: 4416/10000 (44%)
+
+2024-11-23T22:13:20.815440+08:00 - CRITICAL - 
+Test set: Average loss: 1.9341, Accuracy: 3006/10000 (30%)
+
+2024-11-23T22:13:25.189554+08:00 - CRITICAL - Adaption Loss: 0.07152001559734344
+2024-11-23T22:13:25.277017+08:00 - CRITICAL - Train Iteration: [960/12000 (8%)]	   Pseudo_AttackLoss: 0.027690   Pseudo_target_mseloss: 0.131131     Vanila_D_Loss: -16.207363    D_Loss: -15.616249     Dis_Pseudo_Loss: -24.884434     Dis_target_Loss: 8.677070   Target_AttackLoss: 0.019451
+2024-11-23T22:13:34.080137+08:00 - CRITICAL - Adaption Loss: 0.07654178142547607
+2024-11-23T22:13:42.238533+08:00 - CRITICAL - Adaption Loss: 0.07272310554981232
+2024-11-23T22:13:42.326847+08:00 - CRITICAL - Train Iteration: [1000/12000 (8%)]	   Pseudo_AttackLoss: 0.024635   Pseudo_target_mseloss: 0.154066     Vanila_D_Loss: -15.300549    D_Loss: -14.785686     Dis_Pseudo_Loss: -13.907738     Dis_target_Loss: -1.392811   Target_AttackLoss: 0.015948
+2024-11-23T22:13:43.572376+08:00 - CRITICAL - 
+Test set: Average loss: 1.5295, Accuracy: 4335/10000 (43%)
+
+2024-11-23T22:13:44.802026+08:00 - CRITICAL - 
+Test set: Average loss: 1.8663, Accuracy: 3177/10000 (32%)
+
+2024-11-23T22:13:53.404928+08:00 - CRITICAL - Adaption Loss: 0.0974821150302887
+2024-11-23T22:14:01.659270+08:00 - CRITICAL - Adaption Loss: 0.08765286952257156
+2024-11-23T22:14:01.708555+08:00 - CRITICAL - Train Iteration: [1040/12000 (9%)]	   Pseudo_AttackLoss: 0.019469   Pseudo_target_mseloss: 0.151122     Vanila_D_Loss: -21.406948    D_Loss: -20.718470     Dis_Pseudo_Loss: -14.015911     Dis_target_Loss: -7.391037   Target_AttackLoss: 0.013169
+2024-11-23T22:14:06.944574+08:00 - CRITICAL - 
+Test set: Average loss: 1.5227, Accuracy: 4493/10000 (45%)
+
+2024-11-23T22:14:08.195130+08:00 - CRITICAL - 
+Test set: Average loss: 1.9113, Accuracy: 3281/10000 (33%)
+
+2024-11-23T22:14:12.578283+08:00 - CRITICAL - Adaption Loss: 0.08426077663898468
+2024-11-23T22:14:21.415844+08:00 - CRITICAL - Adaption Loss: 0.08167561888694763
+2024-11-23T22:14:21.502249+08:00 - CRITICAL - Train Iteration: [1080/12000 (9%)]	   Pseudo_AttackLoss: 0.024682   Pseudo_target_mseloss: 0.104650     Vanila_D_Loss: -17.675394    D_Loss: -16.104298     Dis_Pseudo_Loss: -21.275391     Dis_target_Loss: 3.599996   Target_AttackLoss: 0.014938
+2024-11-23T22:14:30.445055+08:00 - CRITICAL - Adaption Loss: 0.08672280609607697
+2024-11-23T22:14:31.780488+08:00 - CRITICAL - 
+Test set: Average loss: 1.4930, Accuracy: 4548/10000 (45%)
+
+2024-11-23T22:14:32.986900+08:00 - CRITICAL - 
+Test set: Average loss: 1.8162, Accuracy: 3509/10000 (35%)
+
+2024-11-23T22:14:41.813026+08:00 - CRITICAL - Adaption Loss: 0.07776737958192825
+2024-11-23T22:14:41.900351+08:00 - CRITICAL - Train Iteration: [1120/12000 (9%)]	   Pseudo_AttackLoss: 0.021235   Pseudo_target_mseloss: 0.102901     Vanila_D_Loss: -17.112652    D_Loss: -16.703072     Dis_Pseudo_Loss: -14.346714     Dis_target_Loss: -2.765937   Target_AttackLoss: 0.014459
+2024-11-23T22:14:50.902178+08:00 - CRITICAL - Adaption Loss: 0.0895601212978363
+2024-11-23T22:14:56.764885+08:00 - CRITICAL - 
+Test set: Average loss: 1.5168, Accuracy: 4419/10000 (44%)
+
+2024-11-23T22:14:57.971849+08:00 - CRITICAL - 
+Test set: Average loss: 1.7927, Accuracy: 3549/10000 (35%)
+
+2024-11-23T22:15:02.092580+08:00 - CRITICAL - Adaption Loss: 0.08068685233592987
+2024-11-23T22:15:02.180104+08:00 - CRITICAL - Train Iteration: [1160/12000 (10%)]	   Pseudo_AttackLoss: 0.022632   Pseudo_target_mseloss: 0.120960     Vanila_D_Loss: -16.160011    D_Loss: -15.791720     Dis_Pseudo_Loss: -15.121716     Dis_target_Loss: -1.038295   Target_AttackLoss: 0.013706
+2024-11-23T22:15:11.157907+08:00 - CRITICAL - Adaption Loss: 0.07611583173274994
+2024-11-23T22:15:20.058398+08:00 - CRITICAL - Adaption Loss: 0.07566536962985992
+2024-11-23T22:15:20.144356+08:00 - CRITICAL - Train Iteration: [1200/12000 (10%)]	   Pseudo_AttackLoss: 0.019569   Pseudo_target_mseloss: 0.121014     Vanila_D_Loss: -16.667671    D_Loss: -16.281185     Dis_Pseudo_Loss: -11.094603     Dis_target_Loss: -5.573070   Target_AttackLoss: 0.011697
+2024-11-23T22:15:21.405104+08:00 - CRITICAL - 
+Test set: Average loss: 1.4470, Accuracy: 4711/10000 (47%)
+
+2024-11-23T22:15:22.639600+08:00 - CRITICAL - 
+Test set: Average loss: 1.8033, Accuracy: 3511/10000 (35%)
+
+2024-11-23T22:15:32.174551+08:00 - CRITICAL - Adaption Loss: 0.08158333599567413
+2024-11-23T22:15:42.118286+08:00 - CRITICAL - Adaption Loss: 0.0825444757938385
+2024-11-23T22:15:42.170418+08:00 - CRITICAL - Train Iteration: [1240/12000 (10%)]	   Pseudo_AttackLoss: 0.018437   Pseudo_target_mseloss: 0.118886     Vanila_D_Loss: -17.075237    D_Loss: -16.570562     Dis_Pseudo_Loss: -7.404141     Dis_target_Loss: -9.671096   Target_AttackLoss: 0.013301
+2024-11-23T22:15:48.515361+08:00 - CRITICAL - 
+Test set: Average loss: 1.4727, Accuracy: 4563/10000 (46%)
+
+2024-11-23T22:15:49.742284+08:00 - CRITICAL - 
+Test set: Average loss: 1.7873, Accuracy: 3562/10000 (36%)
+
+2024-11-23T22:15:54.105921+08:00 - CRITICAL - Adaption Loss: 0.08583033084869385
+2024-11-23T22:16:03.054540+08:00 - CRITICAL - Adaption Loss: 0.07777373492717743
+2024-11-23T22:16:03.141486+08:00 - CRITICAL - Train Iteration: [1280/12000 (11%)]	   Pseudo_AttackLoss: 0.022348   Pseudo_target_mseloss: 0.107626     Vanila_D_Loss: -17.532333    D_Loss: -16.944344     Dis_Pseudo_Loss: -7.563796     Dis_target_Loss: -9.968538   Target_AttackLoss: 0.012858
+2024-11-23T22:16:12.929674+08:00 - CRITICAL - Adaption Loss: 0.06928086280822754
+2024-11-23T22:16:14.277140+08:00 - CRITICAL - 
+Test set: Average loss: 1.4310, Accuracy: 4864/10000 (49%)
+
+2024-11-23T22:16:15.520581+08:00 - CRITICAL - 
+Test set: Average loss: 1.6191, Accuracy: 4124/10000 (41%)
+
+2024-11-23T22:16:23.833041+08:00 - CRITICAL - Adaption Loss: 0.07754385471343994
+2024-11-23T22:16:23.890451+08:00 - CRITICAL - Train Iteration: [1320/12000 (11%)]	   Pseudo_AttackLoss: 0.017435   Pseudo_target_mseloss: 0.097441     Vanila_D_Loss: -15.960925    D_Loss: -15.406310     Dis_Pseudo_Loss: -6.231441     Dis_target_Loss: -9.729485   Target_AttackLoss: 0.012962
+2024-11-23T22:16:33.334100+08:00 - CRITICAL - Adaption Loss: 0.09949389100074768
+2024-11-23T22:16:39.726854+08:00 - CRITICAL - 
+Test set: Average loss: 1.4904, Accuracy: 4546/10000 (45%)
+
+2024-11-23T22:16:40.951550+08:00 - CRITICAL - 
+Test set: Average loss: 1.8176, Accuracy: 3441/10000 (34%)
+
+2024-11-23T22:16:45.265827+08:00 - CRITICAL - Adaption Loss: 0.07999920845031738
+2024-11-23T22:16:45.353341+08:00 - CRITICAL - Train Iteration: [1360/12000 (11%)]	   Pseudo_AttackLoss: 0.019645   Pseudo_target_mseloss: 0.084423     Vanila_D_Loss: -18.813103    D_Loss: -18.326248     Dis_Pseudo_Loss: -6.176405     Dis_target_Loss: -12.636699   Target_AttackLoss: 0.012477
+2024-11-23T22:16:54.343344+08:00 - CRITICAL - Adaption Loss: 0.08439107239246368
+2024-11-23T22:17:03.188952+08:00 - CRITICAL - Adaption Loss: 0.06821906566619873
+2024-11-23T22:17:03.276076+08:00 - CRITICAL - Train Iteration: [1400/12000 (12%)]	   Pseudo_AttackLoss: 0.021263   Pseudo_target_mseloss: 0.074539     Vanila_D_Loss: -15.004660    D_Loss: -14.743773     Dis_Pseudo_Loss: -7.434271     Dis_target_Loss: -7.570389   Target_AttackLoss: 0.012046
+2024-11-23T22:17:04.523184+08:00 - CRITICAL - 
+Test set: Average loss: 1.3933, Accuracy: 4965/10000 (50%)
+
+2024-11-23T22:17:05.748933+08:00 - CRITICAL - 
+Test set: Average loss: 1.6709, Accuracy: 3886/10000 (39%)
+
+2024-11-23T22:17:14.350738+08:00 - CRITICAL - Adaption Loss: 0.07570575922727585
+2024-11-23T22:17:22.555584+08:00 - CRITICAL - Adaption Loss: 0.06996005773544312
+2024-11-23T22:17:22.604100+08:00 - CRITICAL - Train Iteration: [1440/12000 (12%)]	   Pseudo_AttackLoss: 0.017810   Pseudo_target_mseloss: 0.074934     Vanila_D_Loss: -16.615168    D_Loss: -15.016943     Dis_Pseudo_Loss: -17.398546     Dis_target_Loss: 0.783379   Target_AttackLoss: 0.011466
+2024-11-23T22:17:28.126131+08:00 - CRITICAL - 
+Test set: Average loss: 1.4204, Accuracy: 4796/10000 (48%)
+
+2024-11-23T22:17:29.364183+08:00 - CRITICAL - 
+Test set: Average loss: 1.7362, Accuracy: 3687/10000 (37%)
+
+2024-11-23T22:17:33.469553+08:00 - CRITICAL - Adaption Loss: 0.06636066734790802
+2024-11-23T22:17:42.090377+08:00 - CRITICAL - Adaption Loss: 0.06721054017543793
+2024-11-23T22:17:42.177277+08:00 - CRITICAL - Train Iteration: [1480/12000 (12%)]	   Pseudo_AttackLoss: 0.016399   Pseudo_target_mseloss: 0.076130     Vanila_D_Loss: -16.698353    D_Loss: -15.841195     Dis_Pseudo_Loss: -8.454165     Dis_target_Loss: -8.244187   Target_AttackLoss: 0.011162
+2024-11-23T22:17:51.301474+08:00 - CRITICAL - Adaption Loss: 0.07325763255357742
+2024-11-23T22:17:52.685591+08:00 - CRITICAL - 
+Test set: Average loss: 1.4224, Accuracy: 4836/10000 (48%)
+
+2024-11-23T22:17:53.969623+08:00 - CRITICAL - 
+Test set: Average loss: 1.6813, Accuracy: 3776/10000 (38%)
+
+2024-11-23T22:18:02.897722+08:00 - CRITICAL - Adaption Loss: 0.06665322929620743
+2024-11-23T22:18:02.990929+08:00 - CRITICAL - Train Iteration: [1520/12000 (13%)]	   Pseudo_AttackLoss: 0.018417   Pseudo_target_mseloss: 0.079718     Vanila_D_Loss: -16.441608    D_Loss: -15.962013     Dis_Pseudo_Loss: -7.021190     Dis_target_Loss: -9.420420   Target_AttackLoss: 0.011642
+2024-11-23T22:18:11.930572+08:00 - CRITICAL - Adaption Loss: 0.06948962807655334
+2024-11-23T22:18:17.731866+08:00 - CRITICAL - 
+Test set: Average loss: 1.4420, Accuracy: 4733/10000 (47%)
+
+2024-11-23T22:18:18.995889+08:00 - CRITICAL - 
+Test set: Average loss: 1.6951, Accuracy: 3860/10000 (39%)
+
+2024-11-23T22:18:23.321016+08:00 - CRITICAL - Adaption Loss: 0.06408657133579254
+2024-11-23T22:18:23.417191+08:00 - CRITICAL - Train Iteration: [1560/12000 (13%)]	   Pseudo_AttackLoss: 0.021609   Pseudo_target_mseloss: 0.084487     Vanila_D_Loss: -14.292889    D_Loss: -13.877479     Dis_Pseudo_Loss: 2.337212     Dis_target_Loss: -16.630100   Target_AttackLoss: 0.013576
+2024-11-23T22:18:32.652372+08:00 - CRITICAL - Adaption Loss: 0.0706012099981308
+2024-11-23T22:18:41.541229+08:00 - CRITICAL - Adaption Loss: 0.07158997654914856
+2024-11-23T22:18:41.630526+08:00 - CRITICAL - Train Iteration: [1600/12000 (13%)]	   Pseudo_AttackLoss: 0.017525   Pseudo_target_mseloss: 0.077647     Vanila_D_Loss: -16.831306    D_Loss: -16.417019     Dis_Pseudo_Loss: -4.147709     Dis_target_Loss: -12.683598   Target_AttackLoss: 0.011238
+2024-11-23T22:18:42.880338+08:00 - CRITICAL - 
+Test set: Average loss: 1.3887, Accuracy: 4972/10000 (50%)
+
+2024-11-23T22:18:44.120548+08:00 - CRITICAL - 
+Test set: Average loss: 1.6687, Accuracy: 3992/10000 (40%)
+
+2024-11-23T22:18:52.893543+08:00 - CRITICAL - Adaption Loss: 0.05677279457449913
+2024-11-23T22:19:01.949019+08:00 - CRITICAL - Adaption Loss: 0.06771291792392731
+2024-11-23T22:19:02.036332+08:00 - CRITICAL - Train Iteration: [1640/12000 (14%)]	   Pseudo_AttackLoss: 0.015172   Pseudo_target_mseloss: 0.071503     Vanila_D_Loss: -15.424948    D_Loss: -14.876309     Dis_Pseudo_Loss: -4.027296     Dis_target_Loss: -11.397652   Target_AttackLoss: 0.011839
+2024-11-23T22:19:07.771360+08:00 - CRITICAL - 
+Test set: Average loss: 1.4410, Accuracy: 4743/10000 (47%)
+
+2024-11-23T22:19:08.995272+08:00 - CRITICAL - 
+Test set: Average loss: 1.8975, Accuracy: 3363/10000 (34%)
+
+2024-11-23T22:19:13.121968+08:00 - CRITICAL - Adaption Loss: 0.05276498198509216
+2024-11-23T22:19:21.330246+08:00 - CRITICAL - Adaption Loss: 0.05658429116010666
+2024-11-23T22:19:21.392082+08:00 - CRITICAL - Train Iteration: [1680/12000 (14%)]	   Pseudo_AttackLoss: 0.020882   Pseudo_target_mseloss: 0.077476     Vanila_D_Loss: -15.252754    D_Loss: -14.847225     Dis_Pseudo_Loss: -2.792805     Dis_target_Loss: -12.459949   Target_AttackLoss: 0.011335
+2024-11-23T22:19:29.536050+08:00 - CRITICAL - Adaption Loss: 0.05924436077475548
+2024-11-23T22:19:30.819321+08:00 - CRITICAL - 
+Test set: Average loss: 1.4090, Accuracy: 4846/10000 (48%)
+
+2024-11-23T22:19:32.041467+08:00 - CRITICAL - 
+Test set: Average loss: 1.7411, Accuracy: 3708/10000 (37%)
+
+2024-11-23T22:19:40.597325+08:00 - CRITICAL - Adaption Loss: 0.07347273826599121
+2024-11-23T22:19:40.652852+08:00 - CRITICAL - Train Iteration: [1720/12000 (14%)]	   Pseudo_AttackLoss: 0.015334   Pseudo_target_mseloss: 0.082377     Vanila_D_Loss: -14.927824    D_Loss: -14.544711     Dis_Pseudo_Loss: -9.047451     Dis_target_Loss: -5.880373   Target_AttackLoss: 0.011397
+2024-11-23T22:19:50.240488+08:00 - CRITICAL - Adaption Loss: 0.06264860928058624
+2024-11-23T22:19:56.548018+08:00 - CRITICAL - 
+Test set: Average loss: 1.3919, Accuracy: 4955/10000 (50%)
+
+2024-11-23T22:19:57.828053+08:00 - CRITICAL - 
+Test set: Average loss: 1.7291, Accuracy: 3820/10000 (38%)
+
+2024-11-23T22:20:02.345454+08:00 - CRITICAL - Adaption Loss: 0.07821735739707947
+2024-11-23T22:20:02.432259+08:00 - CRITICAL - Train Iteration: [1760/12000 (15%)]	   Pseudo_AttackLoss: 0.015344   Pseudo_target_mseloss: 0.073194     Vanila_D_Loss: -16.909834    D_Loss: -15.375843     Dis_Pseudo_Loss: -4.386550     Dis_target_Loss: -12.523283   Target_AttackLoss: 0.012702
+2024-11-23T22:20:11.316549+08:00 - CRITICAL - Adaption Loss: 0.05926910415291786
+2024-11-23T22:20:20.373887+08:00 - CRITICAL - Adaption Loss: 0.06736177206039429
+2024-11-23T22:20:20.459866+08:00 - CRITICAL - Train Iteration: [1800/12000 (15%)]	   Pseudo_AttackLoss: 0.020687   Pseudo_target_mseloss: 0.083046     Vanila_D_Loss: -12.158331    D_Loss: -10.205276     Dis_Pseudo_Loss: -3.689380     Dis_target_Loss: -8.468951   Target_AttackLoss: 0.011718
+2024-11-23T22:20:21.761744+08:00 - CRITICAL - 
+Test set: Average loss: 1.3676, Accuracy: 5169/10000 (52%)
+
+2024-11-23T22:20:22.962268+08:00 - CRITICAL - 
+Test set: Average loss: 1.6098, Accuracy: 4187/10000 (42%)
+
+2024-11-23T22:20:31.746446+08:00 - CRITICAL - Adaption Loss: 0.05929408594965935
+2024-11-23T22:20:40.617577+08:00 - CRITICAL - Adaption Loss: 0.06142397224903107
+2024-11-23T22:20:40.664957+08:00 - CRITICAL - Train Iteration: [1840/12000 (15%)]	   Pseudo_AttackLoss: 0.018644   Pseudo_target_mseloss: 0.068900     Vanila_D_Loss: -12.567635    D_Loss: -11.871420     Dis_Pseudo_Loss: -2.205886     Dis_target_Loss: -10.361749   Target_AttackLoss: 0.011764
+2024-11-23T22:20:46.032365+08:00 - CRITICAL - 
+Test set: Average loss: 1.3806, Accuracy: 5033/10000 (50%)
+
+2024-11-23T22:20:47.279594+08:00 - CRITICAL - 
+Test set: Average loss: 1.6687, Accuracy: 4208/10000 (42%)
+
+2024-11-23T22:20:51.646826+08:00 - CRITICAL - Adaption Loss: 0.06849485635757446
+2024-11-23T22:21:00.667114+08:00 - CRITICAL - Adaption Loss: 0.06217483431100845
+2024-11-23T22:21:00.753299+08:00 - CRITICAL - Train Iteration: [1880/12000 (16%)]	   Pseudo_AttackLoss: 0.014205   Pseudo_target_mseloss: 0.078108     Vanila_D_Loss: -14.882801    D_Loss: -14.417562     Dis_Pseudo_Loss: -4.418341     Dis_target_Loss: -10.464460   Target_AttackLoss: 0.012550
+2024-11-23T22:21:09.607847+08:00 - CRITICAL - Adaption Loss: 0.0708775520324707
+2024-11-23T22:21:10.956699+08:00 - CRITICAL - 
+Test set: Average loss: 1.3345, Accuracy: 5137/10000 (51%)
+
+2024-11-23T22:21:12.209082+08:00 - CRITICAL - 
+Test set: Average loss: 1.6177, Accuracy: 4242/10000 (42%)
+
+2024-11-23T22:21:22.416733+08:00 - CRITICAL - Adaption Loss: 0.057945575565099716
+2024-11-23T22:21:22.505283+08:00 - CRITICAL - Train Iteration: [1920/12000 (16%)]	   Pseudo_AttackLoss: 0.021425   Pseudo_target_mseloss: 0.091455     Vanila_D_Loss: -16.986549    D_Loss: -16.542236     Dis_Pseudo_Loss: -9.288766     Dis_target_Loss: -7.697783   Target_AttackLoss: 0.015302
+2024-11-23T22:21:31.175014+08:00 - CRITICAL - Adaption Loss: 0.05414443463087082
+2024-11-23T22:21:36.986535+08:00 - CRITICAL - 
+Test set: Average loss: 1.3411, Accuracy: 5260/10000 (53%)
+
+2024-11-23T22:21:38.209920+08:00 - CRITICAL - 
+Test set: Average loss: 1.6969, Accuracy: 3980/10000 (40%)
+
+2024-11-23T22:21:42.729040+08:00 - CRITICAL - Adaption Loss: 0.05763358995318413
+2024-11-23T22:21:42.815952+08:00 - CRITICAL - Train Iteration: [1960/12000 (16%)]	   Pseudo_AttackLoss: 0.015836   Pseudo_target_mseloss: 0.069685     Vanila_D_Loss: -14.277329    D_Loss: -13.975454     Dis_Pseudo_Loss: -4.741670     Dis_target_Loss: -9.535660   Target_AttackLoss: 0.011728
+2024-11-23T22:21:51.682366+08:00 - CRITICAL - Adaption Loss: 0.0682055652141571
+2024-11-23T22:22:00.707418+08:00 - CRITICAL - Adaption Loss: 0.06244771555066109
+2024-11-23T22:22:00.793384+08:00 - CRITICAL - Train Iteration: [2000/12000 (17%)]	   Pseudo_AttackLoss: 0.012878   Pseudo_target_mseloss: 0.060799     Vanila_D_Loss: -15.193661    D_Loss: -14.689817     Dis_Pseudo_Loss: -5.112307     Dis_target_Loss: -10.081354   Target_AttackLoss: 0.011448
+2024-11-23T22:22:02.046488+08:00 - CRITICAL - 
+Test set: Average loss: 1.3243, Accuracy: 5227/10000 (52%)
+
+2024-11-23T22:22:03.271807+08:00 - CRITICAL - 
+Test set: Average loss: 1.5469, Accuracy: 4520/10000 (45%)
+
+2024-11-23T22:22:12.079232+08:00 - CRITICAL - Adaption Loss: 0.06226715072989464
+2024-11-23T22:22:20.933526+08:00 - CRITICAL - Adaption Loss: 0.05495545268058777
+2024-11-23T22:22:21.020365+08:00 - CRITICAL - Train Iteration: [2040/12000 (17%)]	   Pseudo_AttackLoss: 0.013017   Pseudo_target_mseloss: 0.058382     Vanila_D_Loss: -15.402295    D_Loss: -14.827419     Dis_Pseudo_Loss: -7.097586     Dis_target_Loss: -8.304709   Target_AttackLoss: 0.010414
+2024-11-23T22:22:26.759940+08:00 - CRITICAL - 
+Test set: Average loss: 1.3087, Accuracy: 5309/10000 (53%)
+
+2024-11-23T22:22:28.013517+08:00 - CRITICAL - 
+Test set: Average loss: 1.5582, Accuracy: 4333/10000 (43%)
+
+2024-11-23T22:22:32.137513+08:00 - CRITICAL - Adaption Loss: 0.05389522388577461
+2024-11-23T22:22:41.144803+08:00 - CRITICAL - Adaption Loss: 0.06344769895076752
+2024-11-23T22:22:41.230078+08:00 - CRITICAL - Train Iteration: [2080/12000 (17%)]	   Pseudo_AttackLoss: 0.016547   Pseudo_target_mseloss: 0.054342     Vanila_D_Loss: -15.984001    D_Loss: -15.386642     Dis_Pseudo_Loss: -3.322201     Dis_target_Loss: -12.661799   Target_AttackLoss: 0.012453
+2024-11-23T22:22:49.924802+08:00 - CRITICAL - Adaption Loss: 0.0711708813905716
+2024-11-23T22:22:51.287501+08:00 - CRITICAL - 
+Test set: Average loss: 1.3194, Accuracy: 5268/10000 (53%)
+
+2024-11-23T22:22:52.522634+08:00 - CRITICAL - 
+Test set: Average loss: 1.5950, Accuracy: 4243/10000 (42%)
+
+2024-11-23T22:23:01.620467+08:00 - CRITICAL - Adaption Loss: 0.05000973120331764
+2024-11-23T22:23:01.705601+08:00 - CRITICAL - Train Iteration: [2120/12000 (18%)]	   Pseudo_AttackLoss: 0.015384   Pseudo_target_mseloss: 0.060612     Vanila_D_Loss: -14.174816    D_Loss: -13.873125     Dis_Pseudo_Loss: -5.005386     Dis_target_Loss: -9.169430   Target_AttackLoss: 0.010183
+2024-11-23T22:23:10.503453+08:00 - CRITICAL - Adaption Loss: 0.05792917683720589
+2024-11-23T22:23:16.468588+08:00 - CRITICAL - 
+Test set: Average loss: 1.3229, Accuracy: 5220/10000 (52%)
+
+2024-11-23T22:23:17.717436+08:00 - CRITICAL - 
+Test set: Average loss: 1.5494, Accuracy: 4343/10000 (43%)
+
+2024-11-23T22:23:22.049995+08:00 - CRITICAL - Adaption Loss: 0.05253860726952553
+2024-11-23T22:23:22.136527+08:00 - CRITICAL - Train Iteration: [2160/12000 (18%)]	   Pseudo_AttackLoss: 0.013527   Pseudo_target_mseloss: 0.056069     Vanila_D_Loss: -14.907587    D_Loss: -14.576288     Dis_Pseudo_Loss: -3.331326     Dis_target_Loss: -11.576262   Target_AttackLoss: 0.010804
+2024-11-23T22:23:30.867338+08:00 - CRITICAL - Adaption Loss: 0.051467325538396835
+2024-11-23T22:23:39.962362+08:00 - CRITICAL - Adaption Loss: 0.062291469424963
+2024-11-23T22:23:40.048988+08:00 - CRITICAL - Train Iteration: [2200/12000 (18%)]	   Pseudo_AttackLoss: 0.014833   Pseudo_target_mseloss: 0.057023     Vanila_D_Loss: -14.018541    D_Loss: -13.573947     Dis_Pseudo_Loss: -4.211264     Dis_target_Loss: -9.807278   Target_AttackLoss: 0.010857
+2024-11-23T22:23:41.292150+08:00 - CRITICAL - 
+Test set: Average loss: 1.3389, Accuracy: 5112/10000 (51%)
+
+2024-11-23T22:23:42.510804+08:00 - CRITICAL - 
+Test set: Average loss: 1.4700, Accuracy: 4669/10000 (47%)
+
+2024-11-23T22:23:51.195013+08:00 - CRITICAL - Adaption Loss: 0.05604703724384308
+2024-11-23T22:24:00.259298+08:00 - CRITICAL - Adaption Loss: 0.05634007230401039
+2024-11-23T22:24:00.345050+08:00 - CRITICAL - Train Iteration: [2240/12000 (19%)]	   Pseudo_AttackLoss: 0.013149   Pseudo_target_mseloss: 0.057164     Vanila_D_Loss: -15.294612    D_Loss: -14.599109     Dis_Pseudo_Loss: -4.300704     Dis_target_Loss: -10.993908   Target_AttackLoss: 0.011670
+2024-11-23T22:24:05.983358+08:00 - CRITICAL - 
+Test set: Average loss: 1.2839, Accuracy: 5398/10000 (54%)
+
+2024-11-23T22:24:07.203238+08:00 - CRITICAL - 
+Test set: Average loss: 1.5083, Accuracy: 4508/10000 (45%)
+
+2024-11-23T22:24:11.601240+08:00 - CRITICAL - Adaption Loss: 0.05596418306231499
+2024-11-23T22:24:20.681315+08:00 - CRITICAL - Adaption Loss: 0.06729452311992645
+2024-11-23T22:24:20.767995+08:00 - CRITICAL - Train Iteration: [2280/12000 (19%)]	   Pseudo_AttackLoss: 0.018668   Pseudo_target_mseloss: 0.056580     Vanila_D_Loss: -15.483765    D_Loss: -14.786674     Dis_Pseudo_Loss: 3.066921     Dis_target_Loss: -18.550686   Target_AttackLoss: 0.010911
+2024-11-23T22:24:29.634809+08:00 - CRITICAL - Adaption Loss: 0.057238396257162094
+2024-11-23T22:24:31.012376+08:00 - CRITICAL - 
+Test set: Average loss: 1.2944, Accuracy: 5350/10000 (54%)
+
+2024-11-23T22:24:32.287436+08:00 - CRITICAL - 
+Test set: Average loss: 1.5000, Accuracy: 4619/10000 (46%)
+
+2024-11-23T22:24:41.122268+08:00 - CRITICAL - Adaption Loss: 0.055295806378126144
+2024-11-23T22:24:41.217389+08:00 - CRITICAL - Train Iteration: [2320/12000 (19%)]	   Pseudo_AttackLoss: 0.011751   Pseudo_target_mseloss: 0.062081     Vanila_D_Loss: -12.834204    D_Loss: -12.541003     Dis_Pseudo_Loss: -1.719321     Dis_target_Loss: -11.114883   Target_AttackLoss: 0.010219
+2024-11-23T22:24:49.750097+08:00 - CRITICAL - Adaption Loss: 0.05606613680720329
+2024-11-23T22:24:55.402688+08:00 - CRITICAL - 
+Test set: Average loss: 1.3109, Accuracy: 5368/10000 (54%)
+
+2024-11-23T22:24:56.633614+08:00 - CRITICAL - 
+Test set: Average loss: 1.6058, Accuracy: 4318/10000 (43%)
+
+2024-11-23T22:25:00.606914+08:00 - CRITICAL - Adaption Loss: 0.05497395992279053
+2024-11-23T22:25:00.654834+08:00 - CRITICAL - Train Iteration: [2360/12000 (20%)]	   Pseudo_AttackLoss: 0.013642   Pseudo_target_mseloss: 0.057556     Vanila_D_Loss: -14.750929    D_Loss: -14.281713     Dis_Pseudo_Loss: -1.327535     Dis_target_Loss: -13.423394   Target_AttackLoss: 0.010797
+2024-11-23T22:25:08.907709+08:00 - CRITICAL - Adaption Loss: 0.056515175849199295
+2024-11-23T22:25:17.137566+08:00 - CRITICAL - Adaption Loss: 0.052298057824373245
+2024-11-23T22:25:17.190087+08:00 - CRITICAL - Train Iteration: [2400/12000 (20%)]	   Pseudo_AttackLoss: 0.012098   Pseudo_target_mseloss: 0.051064     Vanila_D_Loss: -12.277084    D_Loss: -11.919743     Dis_Pseudo_Loss: 2.621979     Dis_target_Loss: -14.899064   Target_AttackLoss: 0.010030
+2024-11-23T22:25:18.433367+08:00 - CRITICAL - 
+Test set: Average loss: 1.2979, Accuracy: 5394/10000 (54%)
+
+2024-11-23T22:25:19.691121+08:00 - CRITICAL - 
+Test set: Average loss: 1.5210, Accuracy: 4553/10000 (46%)
+
+2024-11-23T22:25:27.870453+08:00 - CRITICAL - Adaption Loss: 0.07099735736846924
+2024-11-23T22:25:36.454982+08:00 - CRITICAL - Adaption Loss: 0.061928633600473404
+2024-11-23T22:25:36.541184+08:00 - CRITICAL - Train Iteration: [2440/12000 (20%)]	   Pseudo_AttackLoss: 0.012269   Pseudo_target_mseloss: 0.061930     Vanila_D_Loss: -14.576319    D_Loss: -14.206408     Dis_Pseudo_Loss: 6.240796     Dis_target_Loss: -20.817114   Target_AttackLoss: 0.011615
+2024-11-23T22:25:42.241581+08:00 - CRITICAL - 
+Test set: Average loss: 1.3149, Accuracy: 5248/10000 (52%)
+
+2024-11-23T22:25:43.463392+08:00 - CRITICAL - 
+Test set: Average loss: 1.6403, Accuracy: 4143/10000 (41%)
+
+2024-11-23T22:25:48.050766+08:00 - CRITICAL - Adaption Loss: 0.06833495199680328
+2024-11-23T22:25:56.934942+08:00 - CRITICAL - Adaption Loss: 0.05820479989051819
+2024-11-23T22:25:57.020963+08:00 - CRITICAL - Train Iteration: [2480/12000 (21%)]	   Pseudo_AttackLoss: 0.013214   Pseudo_target_mseloss: 0.065090     Vanila_D_Loss: -15.847014    D_Loss: -15.415591     Dis_Pseudo_Loss: -1.497844     Dis_target_Loss: -14.349171   Target_AttackLoss: 0.012061
+2024-11-23T22:26:06.010367+08:00 - CRITICAL - Adaption Loss: 0.049655281007289886
+2024-11-23T22:26:07.345188+08:00 - CRITICAL - 
+Test set: Average loss: 1.3290, Accuracy: 5280/10000 (53%)
+
+2024-11-23T22:26:08.606939+08:00 - CRITICAL - 
+Test set: Average loss: 1.5606, Accuracy: 4474/10000 (45%)
+
+2024-11-23T22:26:17.414528+08:00 - CRITICAL - Adaption Loss: 0.05453740060329437
+2024-11-23T22:26:17.479525+08:00 - CRITICAL - Train Iteration: [2520/12000 (21%)]	   Pseudo_AttackLoss: 0.012427   Pseudo_target_mseloss: 0.053668     Vanila_D_Loss: -12.892098    D_Loss: -12.403353     Dis_Pseudo_Loss: -5.231565     Dis_target_Loss: -7.660534   Target_AttackLoss: 0.011086
+2024-11-23T22:26:26.481941+08:00 - CRITICAL - Adaption Loss: 0.05162011831998825
+2024-11-23T22:26:32.261187+08:00 - CRITICAL - 
+Test set: Average loss: 1.2928, Accuracy: 5378/10000 (54%)
+
+2024-11-23T22:26:33.546603+08:00 - CRITICAL - 
+Test set: Average loss: 1.5030, Accuracy: 4532/10000 (45%)
+
+2024-11-23T22:26:37.821081+08:00 - CRITICAL - Adaption Loss: 0.06283210963010788
+2024-11-23T22:26:37.912373+08:00 - CRITICAL - Train Iteration: [2560/12000 (21%)]	   Pseudo_AttackLoss: 0.013349   Pseudo_target_mseloss: 0.047828     Vanila_D_Loss: -13.078110    D_Loss: -12.356975     Dis_Pseudo_Loss: -2.329364     Dis_target_Loss: -10.748745   Target_AttackLoss: 0.013185
+2024-11-23T22:26:47.050115+08:00 - CRITICAL - Adaption Loss: 0.06078535318374634
+2024-11-23T22:26:56.231692+08:00 - CRITICAL - Adaption Loss: 0.05428548529744148
+2024-11-23T22:26:56.326250+08:00 - CRITICAL - Train Iteration: [2600/12000 (22%)]	   Pseudo_AttackLoss: 0.013498   Pseudo_target_mseloss: 0.048589     Vanila_D_Loss: -13.441214    D_Loss: -12.988831     Dis_Pseudo_Loss: -4.086930     Dis_target_Loss: -9.354284   Target_AttackLoss: 0.012323
+2024-11-23T22:26:57.603326+08:00 - CRITICAL - 
+Test set: Average loss: 1.2958, Accuracy: 5418/10000 (54%)
+
+2024-11-23T22:26:58.829833+08:00 - CRITICAL - 
+Test set: Average loss: 1.5839, Accuracy: 4553/10000 (46%)
+
+2024-11-23T22:27:07.963242+08:00 - CRITICAL - Adaption Loss: 0.050361137837171555
+2024-11-23T22:27:16.861784+08:00 - CRITICAL - Adaption Loss: 0.04879513010382652
+2024-11-23T22:27:16.956645+08:00 - CRITICAL - Train Iteration: [2640/12000 (22%)]	   Pseudo_AttackLoss: 0.013487   Pseudo_target_mseloss: 0.054996     Vanila_D_Loss: -13.338903    D_Loss: -12.983471     Dis_Pseudo_Loss: -5.442721     Dis_target_Loss: -7.896183   Target_AttackLoss: 0.011009
+2024-11-23T22:27:22.770168+08:00 - CRITICAL - 
+Test set: Average loss: 1.2677, Accuracy: 5510/10000 (55%)
+
+2024-11-23T22:27:24.000135+08:00 - CRITICAL - 
+Test set: Average loss: 1.4972, Accuracy: 4496/10000 (45%)
+
+2024-11-23T22:27:28.384756+08:00 - CRITICAL - Adaption Loss: 0.047439198940992355
+2024-11-23T22:27:38.449721+08:00 - CRITICAL - Adaption Loss: 0.04784644767642021
+2024-11-23T22:27:38.537529+08:00 - CRITICAL - Train Iteration: [2680/12000 (22%)]	   Pseudo_AttackLoss: 0.011268   Pseudo_target_mseloss: 0.043781     Vanila_D_Loss: -12.869179    D_Loss: -12.130448     Dis_Pseudo_Loss: -6.512103     Dis_target_Loss: -6.357077   Target_AttackLoss: 0.010855
+2024-11-23T22:27:48.687019+08:00 - CRITICAL - Adaption Loss: 0.04987727478146553
+2024-11-23T22:27:50.037077+08:00 - CRITICAL - 
+Test set: Average loss: 1.2677, Accuracy: 5480/10000 (55%)
+
+2024-11-23T22:27:51.246776+08:00 - CRITICAL - 
+Test set: Average loss: 1.5106, Accuracy: 4655/10000 (47%)
+
+2024-11-23T22:28:00.061222+08:00 - CRITICAL - Adaption Loss: 0.05160574987530708
+2024-11-23T22:28:00.137586+08:00 - CRITICAL - Train Iteration: [2720/12000 (23%)]	   Pseudo_AttackLoss: 0.012112   Pseudo_target_mseloss: 0.056322     Vanila_D_Loss: -13.589220    D_Loss: -13.259070     Dis_Pseudo_Loss: -2.343567     Dis_target_Loss: -11.245653   Target_AttackLoss: 0.013031
+2024-11-23T22:28:08.837337+08:00 - CRITICAL - Adaption Loss: 0.052253711968660355
+2024-11-23T22:28:14.628746+08:00 - CRITICAL - 
+Test set: Average loss: 1.2621, Accuracy: 5455/10000 (55%)
+
+2024-11-23T22:28:15.907577+08:00 - CRITICAL - 
+Test set: Average loss: 1.5545, Accuracy: 4409/10000 (44%)
+
+2024-11-23T22:28:20.263264+08:00 - CRITICAL - Adaption Loss: 0.056113358587026596
+2024-11-23T22:28:20.350002+08:00 - CRITICAL - Train Iteration: [2760/12000 (23%)]	   Pseudo_AttackLoss: 0.014029   Pseudo_target_mseloss: 0.052088     Vanila_D_Loss: -14.451023    D_Loss: -13.905057     Dis_Pseudo_Loss: 1.793754     Dis_target_Loss: -16.244778   Target_AttackLoss: 0.008660
+2024-11-23T22:28:29.462341+08:00 - CRITICAL - Adaption Loss: 0.04682669788599014
+2024-11-23T22:28:38.394223+08:00 - CRITICAL - Adaption Loss: 0.05025571957230568
+2024-11-23T22:28:38.481690+08:00 - CRITICAL - Train Iteration: [2800/12000 (23%)]	   Pseudo_AttackLoss: 0.012646   Pseudo_target_mseloss: 0.049001     Vanila_D_Loss: -11.633304    D_Loss: -11.317640     Dis_Pseudo_Loss: -8.231287     Dis_target_Loss: -3.402016   Target_AttackLoss: 0.010507
+2024-11-23T22:28:39.785270+08:00 - CRITICAL - 
+Test set: Average loss: 1.2622, Accuracy: 5523/10000 (55%)
+
+2024-11-23T22:28:41.048063+08:00 - CRITICAL - 
+Test set: Average loss: 1.4060, Accuracy: 4903/10000 (49%)
+
+2024-11-23T22:28:50.087554+08:00 - CRITICAL - Adaption Loss: 0.059551093727350235
+2024-11-23T22:28:59.027178+08:00 - CRITICAL - Adaption Loss: 0.05110304057598114
+2024-11-23T22:28:59.113486+08:00 - CRITICAL - Train Iteration: [2840/12000 (24%)]	   Pseudo_AttackLoss: 0.012851   Pseudo_target_mseloss: 0.045905     Vanila_D_Loss: -15.206029    D_Loss: -14.494644     Dis_Pseudo_Loss: 2.022769     Dis_target_Loss: -17.228798   Target_AttackLoss: 0.010829
+2024-11-23T22:29:05.003138+08:00 - CRITICAL - 
+Test set: Average loss: 1.2351, Accuracy: 5584/10000 (56%)
+
+2024-11-23T22:29:06.238164+08:00 - CRITICAL - 
+Test set: Average loss: 1.4387, Accuracy: 4839/10000 (48%)
+
+2024-11-23T22:29:10.637869+08:00 - CRITICAL - Adaption Loss: 0.04652135446667671
+2024-11-23T22:29:19.539049+08:00 - CRITICAL - Adaption Loss: 0.04285522922873497
+2024-11-23T22:29:19.625206+08:00 - CRITICAL - Train Iteration: [2880/12000 (24%)]	   Pseudo_AttackLoss: 0.014611   Pseudo_target_mseloss: 0.046350     Vanila_D_Loss: -11.821895    D_Loss: -11.402691     Dis_Pseudo_Loss: -7.304667     Dis_target_Loss: -4.517228   Target_AttackLoss: 0.013150
+2024-11-23T22:29:28.662601+08:00 - CRITICAL - Adaption Loss: 0.04572654888033867
+2024-11-23T22:29:30.017183+08:00 - CRITICAL - 
+Test set: Average loss: 1.2413, Accuracy: 5540/10000 (55%)
+
+2024-11-23T22:29:31.225874+08:00 - CRITICAL - 
+Test set: Average loss: 1.4226, Accuracy: 4859/10000 (49%)
+
+2024-11-23T22:29:39.936722+08:00 - CRITICAL - Adaption Loss: 0.05036396160721779
+2024-11-23T22:29:40.022022+08:00 - CRITICAL - Train Iteration: [2920/12000 (24%)]	   Pseudo_AttackLoss: 0.013421   Pseudo_target_mseloss: 0.040977     Vanila_D_Loss: -14.361612    D_Loss: -13.722514     Dis_Pseudo_Loss: 7.316322     Dis_target_Loss: -21.677935   Target_AttackLoss: 0.009586
+2024-11-23T22:29:49.003507+08:00 - CRITICAL - Adaption Loss: 0.04421249032020569
+2024-11-23T22:29:54.854299+08:00 - CRITICAL - 
+Test set: Average loss: 1.2717, Accuracy: 5457/10000 (55%)
+
+2024-11-23T22:29:56.114923+08:00 - CRITICAL - 
+Test set: Average loss: 1.4764, Accuracy: 4843/10000 (48%)
+
+2024-11-23T22:30:00.474196+08:00 - CRITICAL - Adaption Loss: 0.04876385256648064
+2024-11-23T22:30:00.560355+08:00 - CRITICAL - Train Iteration: [2960/12000 (25%)]	   Pseudo_AttackLoss: 0.016888   Pseudo_target_mseloss: 0.053284     Vanila_D_Loss: -11.708223    D_Loss: -11.358294     Dis_Pseudo_Loss: -6.788970     Dis_target_Loss: -4.919254   Target_AttackLoss: 0.012879
+2024-11-23T22:30:09.641464+08:00 - CRITICAL - Adaption Loss: 0.0480450876057148
+2024-11-23T22:30:18.500518+08:00 - CRITICAL - Adaption Loss: 0.05307641252875328
+2024-11-23T22:30:18.586742+08:00 - CRITICAL - Train Iteration: [3000/12000 (25%)]	   Pseudo_AttackLoss: 0.013628   Pseudo_target_mseloss: 0.048235     Vanila_D_Loss: -14.154167    D_Loss: -12.865080     Dis_Pseudo_Loss: -3.701815     Dis_target_Loss: -10.452353   Target_AttackLoss: 0.011463
+2024-11-23T22:30:19.837115+08:00 - CRITICAL - 
+Test set: Average loss: 1.2087, Accuracy: 5763/10000 (58%)
+
+2024-11-23T22:30:21.043154+08:00 - CRITICAL - 
+Test set: Average loss: 1.4036, Accuracy: 4935/10000 (49%)
+
+2024-11-23T22:30:30.110043+08:00 - CRITICAL - Adaption Loss: 0.04922608658671379
+2024-11-23T22:30:38.289046+08:00 - CRITICAL - Adaption Loss: 0.04372759535908699
+2024-11-23T22:30:38.342379+08:00 - CRITICAL - Train Iteration: [3040/12000 (25%)]	   Pseudo_AttackLoss: 0.010765   Pseudo_target_mseloss: 0.046351     Vanila_D_Loss: -13.264465    D_Loss: -12.964889     Dis_Pseudo_Loss: 3.525659     Dis_target_Loss: -16.790125   Target_AttackLoss: 0.009899
+2024-11-23T22:30:43.880147+08:00 - CRITICAL - 
+Test set: Average loss: 1.2331, Accuracy: 5605/10000 (56%)
+
+2024-11-23T22:30:45.121775+08:00 - CRITICAL - 
+Test set: Average loss: 1.3924, Accuracy: 4977/10000 (50%)
+
+2024-11-23T22:30:49.606157+08:00 - CRITICAL - Adaption Loss: 0.04254484549164772
+2024-11-23T22:30:57.855794+08:00 - CRITICAL - Adaption Loss: 0.04752231761813164
+2024-11-23T22:30:57.911086+08:00 - CRITICAL - Train Iteration: [3080/12000 (26%)]	   Pseudo_AttackLoss: 0.015095   Pseudo_target_mseloss: 0.047231     Vanila_D_Loss: -12.803264    D_Loss: -12.555912     Dis_Pseudo_Loss: 6.802119     Dis_target_Loss: -19.605383   Target_AttackLoss: 0.009933
+2024-11-23T22:31:06.249513+08:00 - CRITICAL - Adaption Loss: 0.04308353736996651
+2024-11-23T22:31:07.537188+08:00 - CRITICAL - 
+Test set: Average loss: 1.2175, Accuracy: 5745/10000 (57%)
+
+2024-11-23T22:31:08.784410+08:00 - CRITICAL - 
+Test set: Average loss: 1.4209, Accuracy: 5071/10000 (51%)
+
+2024-11-23T22:31:17.544960+08:00 - CRITICAL - Adaption Loss: 0.05234876647591591
+2024-11-23T22:31:17.631016+08:00 - CRITICAL - Train Iteration: [3120/12000 (26%)]	   Pseudo_AttackLoss: 0.013026   Pseudo_target_mseloss: 0.049661     Vanila_D_Loss: -12.533899    D_Loss: -11.709372     Dis_Pseudo_Loss: -2.746597     Dis_target_Loss: -9.787302   Target_AttackLoss: 0.012884
+2024-11-23T22:31:26.837734+08:00 - CRITICAL - Adaption Loss: 0.04692274332046509
+2024-11-23T22:31:32.745327+08:00 - CRITICAL - 
+Test set: Average loss: 1.1885, Accuracy: 5835/10000 (58%)
+
+2024-11-23T22:31:33.957716+08:00 - CRITICAL - 
+Test set: Average loss: 1.4118, Accuracy: 5019/10000 (50%)
+
+2024-11-23T22:31:38.552906+08:00 - CRITICAL - Adaption Loss: 0.051451828330755234
+2024-11-23T22:31:38.644403+08:00 - CRITICAL - Train Iteration: [3160/12000 (26%)]	   Pseudo_AttackLoss: 0.011147   Pseudo_target_mseloss: 0.044326     Vanila_D_Loss: -13.155758    D_Loss: -12.683403     Dis_Pseudo_Loss: 2.782892     Dis_target_Loss: -15.938649   Target_AttackLoss: 0.010249
+2024-11-23T22:31:47.407319+08:00 - CRITICAL - Adaption Loss: 0.04661174491047859
+2024-11-23T22:31:56.460140+08:00 - CRITICAL - Adaption Loss: 0.04500560089945793
+2024-11-23T22:31:56.547276+08:00 - CRITICAL - Train Iteration: [3200/12000 (27%)]	   Pseudo_AttackLoss: 0.010902   Pseudo_target_mseloss: 0.043370     Vanila_D_Loss: -12.432648    D_Loss: -11.980433     Dis_Pseudo_Loss: -8.146063     Dis_target_Loss: -4.286584   Target_AttackLoss: 0.009808
+2024-11-23T22:31:57.861833+08:00 - CRITICAL - 
+Test set: Average loss: 1.2061, Accuracy: 5765/10000 (58%)
+
+2024-11-23T22:31:59.087788+08:00 - CRITICAL - 
+Test set: Average loss: 1.3440, Accuracy: 5278/10000 (53%)
+
+2024-11-23T22:32:07.895667+08:00 - CRITICAL - Adaption Loss: 0.04890071600675583
+2024-11-23T22:32:16.953629+08:00 - CRITICAL - Adaption Loss: 0.04635821655392647
+2024-11-23T22:32:17.040457+08:00 - CRITICAL - Train Iteration: [3240/12000 (27%)]	   Pseudo_AttackLoss: 0.014689   Pseudo_target_mseloss: 0.046909     Vanila_D_Loss: -12.759472    D_Loss: -12.191426     Dis_Pseudo_Loss: 6.175713     Dis_target_Loss: -18.935184   Target_AttackLoss: 0.009197
+2024-11-23T22:32:22.731921+08:00 - CRITICAL - 
+Test set: Average loss: 1.2231, Accuracy: 5691/10000 (57%)
+
+2024-11-23T22:32:23.965091+08:00 - CRITICAL - 
+Test set: Average loss: 1.4028, Accuracy: 5083/10000 (51%)
+
+2024-11-23T22:32:28.345883+08:00 - CRITICAL - Adaption Loss: 0.04671894386410713
+2024-11-23T22:32:37.479738+08:00 - CRITICAL - Adaption Loss: 0.04715658724308014
+2024-11-23T22:32:37.570061+08:00 - CRITICAL - Train Iteration: [3280/12000 (27%)]	   Pseudo_AttackLoss: 0.012769   Pseudo_target_mseloss: 0.043188     Vanila_D_Loss: -11.344616    D_Loss: -10.920879     Dis_Pseudo_Loss: 3.577448     Dis_target_Loss: -14.922064   Target_AttackLoss: 0.015365
+2024-11-23T22:32:46.299024+08:00 - CRITICAL - Adaption Loss: 0.04516519978642464
+2024-11-23T22:32:47.660856+08:00 - CRITICAL - 
+Test set: Average loss: 1.1799, Accuracy: 5838/10000 (58%)
+
+2024-11-23T22:32:48.923279+08:00 - CRITICAL - 
+Test set: Average loss: 1.3646, Accuracy: 5209/10000 (52%)
+
+2024-11-23T22:32:57.582297+08:00 - CRITICAL - Adaption Loss: 0.05020756274461746
+2024-11-23T22:32:57.670083+08:00 - CRITICAL - Train Iteration: [3320/12000 (28%)]	   Pseudo_AttackLoss: 0.018417   Pseudo_target_mseloss: 0.044886     Vanila_D_Loss: -12.346218    D_Loss: -12.062584     Dis_Pseudo_Loss: 1.027414     Dis_target_Loss: -13.373632   Target_AttackLoss: 0.010659
+2024-11-23T22:33:06.455639+08:00 - CRITICAL - Adaption Loss: 0.055912088602781296
+2024-11-23T22:33:12.216555+08:00 - CRITICAL - 
+Test set: Average loss: 1.2354, Accuracy: 5585/10000 (56%)
+
+2024-11-23T22:33:13.452309+08:00 - CRITICAL - 
+Test set: Average loss: 1.3918, Accuracy: 5016/10000 (50%)
+
+2024-11-23T22:33:17.993041+08:00 - CRITICAL - Adaption Loss: 0.05610964074730873
+2024-11-23T22:33:18.078429+08:00 - CRITICAL - Train Iteration: [3360/12000 (28%)]	   Pseudo_AttackLoss: 0.012548   Pseudo_target_mseloss: 0.049615     Vanila_D_Loss: -12.719273    D_Loss: -11.618810     Dis_Pseudo_Loss: 1.735140     Dis_target_Loss: -14.454412   Target_AttackLoss: 0.011802
+2024-11-23T22:33:26.866555+08:00 - CRITICAL - Adaption Loss: 0.04189586639404297
+2024-11-23T22:33:36.200474+08:00 - CRITICAL - Adaption Loss: 0.05232314392924309
+2024-11-23T22:33:36.292179+08:00 - CRITICAL - Train Iteration: [3400/12000 (28%)]	   Pseudo_AttackLoss: 0.010251   Pseudo_target_mseloss: 0.044667     Vanila_D_Loss: -12.384556    D_Loss: -11.550715     Dis_Pseudo_Loss: 5.109093     Dis_target_Loss: -17.493649   Target_AttackLoss: 0.010980
+2024-11-23T22:33:37.564924+08:00 - CRITICAL - 
+Test set: Average loss: 1.1828, Accuracy: 5832/10000 (58%)
+
+2024-11-23T22:33:38.801946+08:00 - CRITICAL - 
+Test set: Average loss: 1.3688, Accuracy: 5169/10000 (52%)
+
+2024-11-23T22:33:48.134135+08:00 - CRITICAL - Adaption Loss: 0.04738086834549904
+2024-11-23T22:33:57.226193+08:00 - CRITICAL - Adaption Loss: 0.048494745045900345
+2024-11-23T22:33:57.312549+08:00 - CRITICAL - Train Iteration: [3440/12000 (29%)]	   Pseudo_AttackLoss: 0.010995   Pseudo_target_mseloss: 0.041820     Vanila_D_Loss: -12.635477    D_Loss: -12.409881     Dis_Pseudo_Loss: 0.301756     Dis_target_Loss: -12.937233   Target_AttackLoss: 0.011725
+2024-11-23T22:34:03.023421+08:00 - CRITICAL - 
+Test set: Average loss: 1.2014, Accuracy: 5786/10000 (58%)
+
+2024-11-23T22:34:04.263184+08:00 - CRITICAL - 
+Test set: Average loss: 1.4114, Accuracy: 5139/10000 (51%)
+
+2024-11-23T22:34:08.452215+08:00 - CRITICAL - Adaption Loss: 0.04096916690468788
+2024-11-23T22:34:17.591877+08:00 - CRITICAL - Adaption Loss: 0.04981822147965431
+2024-11-23T22:34:17.679274+08:00 - CRITICAL - Train Iteration: [3480/12000 (29%)]	   Pseudo_AttackLoss: 0.011233   Pseudo_target_mseloss: 0.043340     Vanila_D_Loss: -12.280565    D_Loss: -11.862001     Dis_Pseudo_Loss: 3.007451     Dis_target_Loss: -15.288016   Target_AttackLoss: 0.010524
+2024-11-23T22:34:26.401906+08:00 - CRITICAL - Adaption Loss: 0.0561491884291172
+2024-11-23T22:34:27.750903+08:00 - CRITICAL - 
+Test set: Average loss: 1.1698, Accuracy: 5895/10000 (59%)
+
+2024-11-23T22:34:28.961730+08:00 - CRITICAL - 
+Test set: Average loss: 1.3595, Accuracy: 5250/10000 (52%)
+
+2024-11-23T22:34:37.478414+08:00 - CRITICAL - Adaption Loss: 0.04713021218776703
+2024-11-23T22:34:37.525669+08:00 - CRITICAL - Train Iteration: [3520/12000 (29%)]	   Pseudo_AttackLoss: 0.010868   Pseudo_target_mseloss: 0.046021     Vanila_D_Loss: -11.090187    D_Loss: -10.843392     Dis_Pseudo_Loss: -4.861791     Dis_target_Loss: -6.228395   Target_AttackLoss: 0.013364
+2024-11-23T22:34:46.356188+08:00 - CRITICAL - Adaption Loss: 0.044798366725444794
+2024-11-23T22:34:52.386029+08:00 - CRITICAL - 
+Test set: Average loss: 1.1483, Accuracy: 5935/10000 (59%)
+
+2024-11-23T22:34:53.607809+08:00 - CRITICAL - 
+Test set: Average loss: 1.3521, Accuracy: 5278/10000 (53%)
+
+2024-11-23T22:34:57.942164+08:00 - CRITICAL - Adaption Loss: 0.04375581815838814
+2024-11-23T22:34:58.028903+08:00 - CRITICAL - Train Iteration: [3560/12000 (30%)]	   Pseudo_AttackLoss: 0.012273   Pseudo_target_mseloss: 0.035580     Vanila_D_Loss: -13.354514    D_Loss: -12.980495     Dis_Pseudo_Loss: -0.959925     Dis_target_Loss: -12.394588   Target_AttackLoss: 0.008922
+2024-11-23T22:35:06.845016+08:00 - CRITICAL - Adaption Loss: 0.04670923203229904
+2024-11-23T22:35:16.022837+08:00 - CRITICAL - Adaption Loss: 0.04507678374648094
+2024-11-23T22:35:16.109172+08:00 - CRITICAL - Train Iteration: [3600/12000 (30%)]	   Pseudo_AttackLoss: 0.011597   Pseudo_target_mseloss: 0.040426     Vanila_D_Loss: -13.724449    D_Loss: -13.321544     Dis_Pseudo_Loss: 0.123125     Dis_target_Loss: -13.847574   Target_AttackLoss: 0.009500
+2024-11-23T22:35:17.413762+08:00 - CRITICAL - 
+Test set: Average loss: 1.1719, Accuracy: 5817/10000 (58%)
+
+2024-11-23T22:35:18.649744+08:00 - CRITICAL - 
+Test set: Average loss: 1.3362, Accuracy: 5303/10000 (53%)
+
+2024-11-23T22:35:27.490521+08:00 - CRITICAL - Adaption Loss: 0.04756021127104759
+2024-11-23T22:35:36.541414+08:00 - CRITICAL - Adaption Loss: 0.03990575298666954
+2024-11-23T22:35:36.629352+08:00 - CRITICAL - Train Iteration: [3640/12000 (30%)]	   Pseudo_AttackLoss: 0.013008   Pseudo_target_mseloss: 0.045441     Vanila_D_Loss: -11.682488    D_Loss: -11.320595     Dis_Pseudo_Loss: 2.432641     Dis_target_Loss: -14.115129   Target_AttackLoss: 0.013850
+2024-11-23T22:35:42.305542+08:00 - CRITICAL - 
+Test set: Average loss: 1.1587, Accuracy: 5934/10000 (59%)
+
+2024-11-23T22:35:43.520826+08:00 - CRITICAL - 
+Test set: Average loss: 1.3017, Accuracy: 5413/10000 (54%)
+
+2024-11-23T22:35:47.907463+08:00 - CRITICAL - Adaption Loss: 0.048393599689006805
+2024-11-23T22:35:57.027690+08:00 - CRITICAL - Adaption Loss: 0.0425783172249794
+2024-11-23T22:35:57.113637+08:00 - CRITICAL - Train Iteration: [3680/12000 (31%)]	   Pseudo_AttackLoss: 0.009757   Pseudo_target_mseloss: 0.036222     Vanila_D_Loss: -12.831163    D_Loss: -10.667787     Dis_Pseudo_Loss: 3.190905     Dis_target_Loss: -16.022068   Target_AttackLoss: 0.010398
+2024-11-23T22:36:04.870990+08:00 - CRITICAL - Adaption Loss: 0.0434928834438324
+2024-11-23T22:36:06.188340+08:00 - CRITICAL - 
+Test set: Average loss: 1.1561, Accuracy: 5945/10000 (59%)
+
+2024-11-23T22:36:07.458094+08:00 - CRITICAL - 
+Test set: Average loss: 1.3108, Accuracy: 5400/10000 (54%)
+
+2024-11-23T22:36:15.627315+08:00 - CRITICAL - Adaption Loss: 0.05452073737978935
+2024-11-23T22:36:15.675715+08:00 - CRITICAL - Train Iteration: [3720/12000 (31%)]	   Pseudo_AttackLoss: 0.010502   Pseudo_target_mseloss: 0.041206     Vanila_D_Loss: -12.928005    D_Loss: -12.370255     Dis_Pseudo_Loss: -0.301154     Dis_target_Loss: -12.626851   Target_AttackLoss: 0.011439
+2024-11-23T22:36:23.930952+08:00 - CRITICAL - Adaption Loss: 0.05456456542015076
+2024-11-23T22:36:29.546485+08:00 - CRITICAL - 
+Test set: Average loss: 1.1454, Accuracy: 6017/10000 (60%)
+
+2024-11-23T22:36:30.797950+08:00 - CRITICAL - 
+Test set: Average loss: 1.4040, Accuracy: 5172/10000 (52%)
+
+2024-11-23T22:36:34.749257+08:00 - CRITICAL - Adaption Loss: 0.05523456260561943
+2024-11-23T22:36:34.802945+08:00 - CRITICAL - Train Iteration: [3760/12000 (31%)]	   Pseudo_AttackLoss: 0.011501   Pseudo_target_mseloss: 0.041187     Vanila_D_Loss: -12.083381    D_Loss: -11.186583     Dis_Pseudo_Loss: 0.617536     Dis_target_Loss: -12.700917   Target_AttackLoss: 0.010548
+2024-11-23T22:36:42.884849+08:00 - CRITICAL - Adaption Loss: 0.04899198189377785
+2024-11-23T22:36:51.332666+08:00 - CRITICAL - Adaption Loss: 0.04786868020892143
+2024-11-23T22:36:51.416916+08:00 - CRITICAL - Train Iteration: [3800/12000 (32%)]	   Pseudo_AttackLoss: 0.010685   Pseudo_target_mseloss: 0.038744     Vanila_D_Loss: -14.003667    D_Loss: -13.220355     Dis_Pseudo_Loss: -10.551132     Dis_target_Loss: -3.452534   Target_AttackLoss: 0.009829
+2024-11-23T22:36:52.665781+08:00 - CRITICAL - 
+Test set: Average loss: 1.1471, Accuracy: 5988/10000 (60%)
+
+2024-11-23T22:36:53.882092+08:00 - CRITICAL - 
+Test set: Average loss: 1.3068, Accuracy: 5434/10000 (54%)
+
+2024-11-23T22:37:02.765951+08:00 - CRITICAL - Adaption Loss: 0.0495578907430172
+2024-11-23T22:37:11.892561+08:00 - CRITICAL - Adaption Loss: 0.04494645074009895
+2024-11-23T22:37:11.979244+08:00 - CRITICAL - Train Iteration: [3840/12000 (32%)]	   Pseudo_AttackLoss: 0.009851   Pseudo_target_mseloss: 0.040418     Vanila_D_Loss: -12.975515    D_Loss: -12.633304     Dis_Pseudo_Loss: 6.942331     Dis_target_Loss: -19.917847   Target_AttackLoss: 0.008858
+2024-11-23T22:37:17.726759+08:00 - CRITICAL - 
+Test set: Average loss: 1.1570, Accuracy: 5907/10000 (59%)
+
+2024-11-23T22:37:18.978955+08:00 - CRITICAL - 
+Test set: Average loss: 1.3637, Accuracy: 5228/10000 (52%)
+
+2024-11-23T22:37:23.356813+08:00 - CRITICAL - Adaption Loss: 0.05085380747914314
+2024-11-23T22:37:32.375941+08:00 - CRITICAL - Adaption Loss: 0.05588359758257866
+2024-11-23T22:37:32.464497+08:00 - CRITICAL - Train Iteration: [3880/12000 (32%)]	   Pseudo_AttackLoss: 0.009875   Pseudo_target_mseloss: 0.038248     Vanila_D_Loss: -12.266490    D_Loss: -11.741804     Dis_Pseudo_Loss: 0.184078     Dis_target_Loss: -12.450567   Target_AttackLoss: 0.011033
+2024-11-23T22:37:41.347009+08:00 - CRITICAL - Adaption Loss: 0.04521387815475464
+2024-11-23T22:37:42.684290+08:00 - CRITICAL - 
+Test set: Average loss: 1.1445, Accuracy: 5899/10000 (59%)
+
+2024-11-23T22:37:43.890285+08:00 - CRITICAL - 
+Test set: Average loss: 1.2515, Accuracy: 5554/10000 (56%)
+
+2024-11-23T22:37:53.957699+08:00 - CRITICAL - Adaption Loss: 0.04047536849975586
+2024-11-23T22:37:54.044760+08:00 - CRITICAL - Train Iteration: [3920/12000 (33%)]	   Pseudo_AttackLoss: 0.011002   Pseudo_target_mseloss: 0.038709     Vanila_D_Loss: -12.883813    D_Loss: -12.081675     Dis_Pseudo_Loss: -1.562743     Dis_target_Loss: -11.321070   Target_AttackLoss: 0.008892
+2024-11-23T22:38:03.031142+08:00 - CRITICAL - Adaption Loss: 0.04705597087740898
+2024-11-23T22:38:08.785928+08:00 - CRITICAL - 
+Test set: Average loss: 1.1786, Accuracy: 5978/10000 (60%)
+
+2024-11-23T22:38:10.060547+08:00 - CRITICAL - 
+Test set: Average loss: 1.3183, Accuracy: 5436/10000 (54%)
+
+2024-11-23T22:38:14.419128+08:00 - CRITICAL - Adaption Loss: 0.042673759162425995
+2024-11-23T22:38:14.466716+08:00 - CRITICAL - Train Iteration: [3960/12000 (33%)]	   Pseudo_AttackLoss: 0.010116   Pseudo_target_mseloss: 0.035667     Vanila_D_Loss: -12.318927    D_Loss: -11.833776     Dis_Pseudo_Loss: 1.589459     Dis_target_Loss: -13.908386   Target_AttackLoss: 0.008211
+2024-11-23T22:38:23.551912+08:00 - CRITICAL - Adaption Loss: 0.04287748038768768
+2024-11-23T22:38:32.626271+08:00 - CRITICAL - Adaption Loss: 0.039705630391836166
+2024-11-23T22:38:32.712632+08:00 - CRITICAL - Train Iteration: [4000/12000 (33%)]	   Pseudo_AttackLoss: 0.010121   Pseudo_target_mseloss: 0.046186     Vanila_D_Loss: -12.746428    D_Loss: -12.455914     Dis_Pseudo_Loss: 5.694897     Dis_target_Loss: -18.441324   Target_AttackLoss: 0.014293
+2024-11-23T22:38:33.961353+08:00 - CRITICAL - 
+Test set: Average loss: 1.1790, Accuracy: 5998/10000 (60%)
+
+2024-11-23T22:38:35.170646+08:00 - CRITICAL - 
+Test set: Average loss: 1.3241, Accuracy: 5469/10000 (55%)
+
+2024-11-23T22:38:44.224045+08:00 - CRITICAL - Adaption Loss: 0.04102350026369095
+2024-11-23T22:38:53.082460+08:00 - CRITICAL - Adaption Loss: 0.038513630628585815
+2024-11-23T22:38:53.169182+08:00 - CRITICAL - Train Iteration: [4040/12000 (34%)]	   Pseudo_AttackLoss: 0.011985   Pseudo_target_mseloss: 0.041323     Vanila_D_Loss: -11.976705    D_Loss: -11.462465     Dis_Pseudo_Loss: -1.594022     Dis_target_Loss: -10.382683   Target_AttackLoss: 0.010382
+2024-11-23T22:38:58.916581+08:00 - CRITICAL - 
+Test set: Average loss: 1.1782, Accuracy: 5928/10000 (59%)
+
+2024-11-23T22:39:00.141776+08:00 - CRITICAL - 
+Test set: Average loss: 1.3185, Accuracy: 5487/10000 (55%)
+
+2024-11-23T22:39:04.690021+08:00 - CRITICAL - Adaption Loss: 0.04671427607536316
+2024-11-23T22:39:13.567475+08:00 - CRITICAL - Adaption Loss: 0.05452503636479378
+2024-11-23T22:39:13.653615+08:00 - CRITICAL - Train Iteration: [4080/12000 (34%)]	   Pseudo_AttackLoss: 0.013406   Pseudo_target_mseloss: 0.035126     Vanila_D_Loss: -12.468636    D_Loss: -12.185242     Dis_Pseudo_Loss: 1.217692     Dis_target_Loss: -13.686327   Target_AttackLoss: 0.008967
+2024-11-23T22:39:22.707994+08:00 - CRITICAL - Adaption Loss: 0.0439961738884449
+2024-11-23T22:39:24.040006+08:00 - CRITICAL - 
+Test set: Average loss: 1.1415, Accuracy: 5993/10000 (60%)
+
+2024-11-23T22:39:25.266508+08:00 - CRITICAL - 
+Test set: Average loss: 1.3101, Accuracy: 5424/10000 (54%)
+
+2024-11-23T22:39:34.128329+08:00 - CRITICAL - Adaption Loss: 0.04078109934926033
+2024-11-23T22:39:34.214476+08:00 - CRITICAL - Train Iteration: [4120/12000 (34%)]	   Pseudo_AttackLoss: 0.009998   Pseudo_target_mseloss: 0.036051     Vanila_D_Loss: -11.665939    D_Loss: -11.371463     Dis_Pseudo_Loss: -2.724871     Dis_target_Loss: -8.941069   Target_AttackLoss: 0.009135
+2024-11-23T22:39:43.230302+08:00 - CRITICAL - Adaption Loss: 0.042380351573228836
+2024-11-23T22:39:49.005393+08:00 - CRITICAL - 
+Test set: Average loss: 1.1281, Accuracy: 6038/10000 (60%)
+
+2024-11-23T22:39:50.237945+08:00 - CRITICAL - 
+Test set: Average loss: 1.2324, Accuracy: 5675/10000 (57%)
+
+2024-11-23T22:39:54.536650+08:00 - CRITICAL - Adaption Loss: 0.045058123767375946
+2024-11-23T22:39:54.623806+08:00 - CRITICAL - Train Iteration: [4160/12000 (35%)]	   Pseudo_AttackLoss: 0.011570   Pseudo_target_mseloss: 0.037489     Vanila_D_Loss: -12.437114    D_Loss: -12.159369     Dis_Pseudo_Loss: 3.863400     Dis_target_Loss: -16.300514   Target_AttackLoss: 0.009732
+2024-11-23T22:40:03.601035+08:00 - CRITICAL - Adaption Loss: 0.04021836817264557
+2024-11-23T22:40:12.487043+08:00 - CRITICAL - Adaption Loss: 0.03773098066449165
+2024-11-23T22:40:12.573674+08:00 - CRITICAL - Train Iteration: [4200/12000 (35%)]	   Pseudo_AttackLoss: 0.009370   Pseudo_target_mseloss: 0.038091     Vanila_D_Loss: -12.097413    D_Loss: -11.761443     Dis_Pseudo_Loss: 1.078174     Dis_target_Loss: -13.175587   Target_AttackLoss: 0.009410
+2024-11-23T22:40:13.840524+08:00 - CRITICAL - 
+Test set: Average loss: 1.1373, Accuracy: 5982/10000 (60%)
+
+2024-11-23T22:40:15.061612+08:00 - CRITICAL - 
+Test set: Average loss: 1.2546, Accuracy: 5574/10000 (56%)
+
+2024-11-23T22:40:23.901948+08:00 - CRITICAL - Adaption Loss: 0.04966173693537712
+2024-11-23T22:40:32.868219+08:00 - CRITICAL - Adaption Loss: 0.05685031786561012
+2024-11-23T22:40:32.954053+08:00 - CRITICAL - Train Iteration: [4240/12000 (35%)]	   Pseudo_AttackLoss: 0.010451   Pseudo_target_mseloss: 0.038678     Vanila_D_Loss: -11.044495    D_Loss: -10.646943     Dis_Pseudo_Loss: 1.109598     Dis_target_Loss: -12.154093   Target_AttackLoss: 0.008630
+2024-11-23T22:40:38.705746+08:00 - CRITICAL - 
+Test set: Average loss: 1.1260, Accuracy: 6058/10000 (61%)
+
+2024-11-23T22:40:39.923278+08:00 - CRITICAL - 
+Test set: Average loss: 1.2697, Accuracy: 5571/10000 (56%)
+
+2024-11-23T22:40:44.562871+08:00 - CRITICAL - Adaption Loss: 0.044418301433324814
+2024-11-23T22:40:53.514809+08:00 - CRITICAL - Adaption Loss: 0.04223543778061867
+2024-11-23T22:40:53.600862+08:00 - CRITICAL - Train Iteration: [4280/12000 (36%)]	   Pseudo_AttackLoss: 0.010974   Pseudo_target_mseloss: 0.041225     Vanila_D_Loss: -12.438675    D_Loss: -12.193115     Dis_Pseudo_Loss: 3.783583     Dis_target_Loss: -16.222258   Target_AttackLoss: 0.010189
+2024-11-23T22:41:02.582255+08:00 - CRITICAL - Adaption Loss: 0.044257503002882004
+2024-11-23T22:41:03.941980+08:00 - CRITICAL - 
+Test set: Average loss: 1.1541, Accuracy: 6019/10000 (60%)
+
+2024-11-23T22:41:05.159567+08:00 - CRITICAL - 
+Test set: Average loss: 1.3316, Accuracy: 5404/10000 (54%)
+
+2024-11-23T22:41:14.016994+08:00 - CRITICAL - Adaption Loss: 0.05164697393774986
+2024-11-23T22:41:14.103234+08:00 - CRITICAL - Train Iteration: [4320/12000 (36%)]	   Pseudo_AttackLoss: 0.012249   Pseudo_target_mseloss: 0.030893     Vanila_D_Loss: -11.953438    D_Loss: -11.386309     Dis_Pseudo_Loss: 7.098144     Dis_target_Loss: -19.051582   Target_AttackLoss: 0.010483
+2024-11-23T22:41:23.077111+08:00 - CRITICAL - Adaption Loss: 0.04493912681937218
+2024-11-23T22:41:28.890490+08:00 - CRITICAL - 
+Test set: Average loss: 1.1448, Accuracy: 6082/10000 (61%)
+
+2024-11-23T22:41:30.135812+08:00 - CRITICAL - 
+Test set: Average loss: 1.2901, Accuracy: 5576/10000 (56%)
+
+2024-11-23T22:41:34.531187+08:00 - CRITICAL - Adaption Loss: 0.04050001502037048
+2024-11-23T22:41:34.620055+08:00 - CRITICAL - Train Iteration: [4360/12000 (36%)]	   Pseudo_AttackLoss: 0.014652   Pseudo_target_mseloss: 0.038370     Vanila_D_Loss: -11.910419    D_Loss: -10.550714     Dis_Pseudo_Loss: -1.676290     Dis_target_Loss: -10.234128   Target_AttackLoss: 0.009514
+2024-11-23T22:41:43.675855+08:00 - CRITICAL - Adaption Loss: 0.04291943460702896
+2024-11-23T22:41:52.372815+08:00 - CRITICAL - Adaption Loss: 0.04656347632408142
+2024-11-23T22:41:52.423362+08:00 - CRITICAL - Train Iteration: [4400/12000 (37%)]	   Pseudo_AttackLoss: 0.009859   Pseudo_target_mseloss: 0.034197     Vanila_D_Loss: -11.506614    D_Loss: -11.162143     Dis_Pseudo_Loss: -4.013761     Dis_target_Loss: -7.492853   Target_AttackLoss: 0.011216
+2024-11-23T22:41:53.730548+08:00 - CRITICAL - 
+Test set: Average loss: 1.0875, Accuracy: 6260/10000 (63%)
+
+2024-11-23T22:41:54.969112+08:00 - CRITICAL - 
+Test set: Average loss: 1.2472, Accuracy: 5607/10000 (56%)
+
+2024-11-23T22:42:03.087401+08:00 - CRITICAL - Adaption Loss: 0.0417579784989357
+2024-11-23T22:42:11.272736+08:00 - CRITICAL - Adaption Loss: 0.04242490604519844
+2024-11-23T22:42:11.322858+08:00 - CRITICAL - Train Iteration: [4440/12000 (37%)]	   Pseudo_AttackLoss: 0.013213   Pseudo_target_mseloss: 0.032644     Vanila_D_Loss: -11.960054    D_Loss: -11.660110     Dis_Pseudo_Loss: 6.642958     Dis_target_Loss: -18.603012   Target_AttackLoss: 0.008269
+2024-11-23T22:42:16.798019+08:00 - CRITICAL - 
+Test set: Average loss: 1.1013, Accuracy: 6138/10000 (61%)
+
+2024-11-23T22:42:18.085987+08:00 - CRITICAL - 
+Test set: Average loss: 1.2154, Accuracy: 5774/10000 (58%)
+
+2024-11-23T22:42:22.705650+08:00 - CRITICAL - Adaption Loss: 0.0406980998814106
+2024-11-23T22:42:32.282554+08:00 - CRITICAL - Adaption Loss: 0.0427122600376606
+2024-11-23T22:42:32.369482+08:00 - CRITICAL - Train Iteration: [4480/12000 (37%)]	   Pseudo_AttackLoss: 0.010231   Pseudo_target_mseloss: 0.032782     Vanila_D_Loss: -11.452441    D_Loss: -11.218696     Dis_Pseudo_Loss: 2.810919     Dis_target_Loss: -14.263360   Target_AttackLoss: 0.008275
+2024-11-23T22:42:41.840146+08:00 - CRITICAL - Adaption Loss: 0.055620305240154266
+2024-11-23T22:42:43.235895+08:00 - CRITICAL - 
+Test set: Average loss: 1.1048, Accuracy: 6144/10000 (61%)
+
+2024-11-23T22:42:44.452414+08:00 - CRITICAL - 
+Test set: Average loss: 1.2046, Accuracy: 5780/10000 (58%)
+
+2024-11-23T22:42:53.236174+08:00 - CRITICAL - Adaption Loss: 0.038153816014528275
+2024-11-23T22:42:53.321468+08:00 - CRITICAL - Train Iteration: [4520/12000 (38%)]	   Pseudo_AttackLoss: 0.014652   Pseudo_target_mseloss: 0.040666     Vanila_D_Loss: -11.589170    D_Loss: -11.181484     Dis_Pseudo_Loss: -6.030714     Dis_target_Loss: -5.558455   Target_AttackLoss: 0.011318
+2024-11-23T22:43:02.363130+08:00 - CRITICAL - Adaption Loss: 0.0487830750644207
+2024-11-23T22:43:08.191153+08:00 - CRITICAL - 
+Test set: Average loss: 1.0754, Accuracy: 6254/10000 (63%)
+
+2024-11-23T22:43:09.417919+08:00 - CRITICAL - 
+Test set: Average loss: 1.2083, Accuracy: 5795/10000 (58%)
+
+2024-11-23T22:43:13.792458+08:00 - CRITICAL - Adaption Loss: 0.04389399290084839
+2024-11-23T22:43:13.878399+08:00 - CRITICAL - Train Iteration: [4560/12000 (38%)]	   Pseudo_AttackLoss: 0.015925   Pseudo_target_mseloss: 0.033421     Vanila_D_Loss: -11.488375    D_Loss: -11.175332     Dis_Pseudo_Loss: -2.489649     Dis_target_Loss: -8.998725   Target_AttackLoss: 0.009504
+2024-11-23T22:43:22.773020+08:00 - CRITICAL - Adaption Loss: 0.047783263027668
+2024-11-23T22:43:31.727979+08:00 - CRITICAL - Adaption Loss: 0.043079495429992676
+2024-11-23T22:43:31.814383+08:00 - CRITICAL - Train Iteration: [4600/12000 (38%)]	   Pseudo_AttackLoss: 0.009126   Pseudo_target_mseloss: 0.037155     Vanila_D_Loss: -11.534731    D_Loss: -11.285901     Dis_Pseudo_Loss: -3.722127     Dis_target_Loss: -7.812603   Target_AttackLoss: 0.009157
+2024-11-23T22:43:33.107018+08:00 - CRITICAL - 
+Test set: Average loss: 1.0965, Accuracy: 6231/10000 (62%)
+
+2024-11-23T22:43:34.435525+08:00 - CRITICAL - 
+Test set: Average loss: 1.2253, Accuracy: 5762/10000 (58%)
+
+2024-11-23T22:43:43.529206+08:00 - CRITICAL - Adaption Loss: 0.044864505529403687
+2024-11-23T22:43:52.439600+08:00 - CRITICAL - Adaption Loss: 0.0423235259950161
+2024-11-23T22:43:52.524914+08:00 - CRITICAL - Train Iteration: [4640/12000 (39%)]	   Pseudo_AttackLoss: 0.009817   Pseudo_target_mseloss: 0.034220     Vanila_D_Loss: -11.307586    D_Loss: -10.809500     Dis_Pseudo_Loss: -3.167403     Dis_target_Loss: -8.140182   Target_AttackLoss: 0.011680
+2024-11-23T22:43:58.375619+08:00 - CRITICAL - 
+Test set: Average loss: 1.1055, Accuracy: 6155/10000 (62%)
+
+2024-11-23T22:43:59.615555+08:00 - CRITICAL - 
+Test set: Average loss: 1.2796, Accuracy: 5594/10000 (56%)
+
+2024-11-23T22:44:04.002452+08:00 - CRITICAL - Adaption Loss: 0.04765773192048073
+2024-11-23T22:44:12.911979+08:00 - CRITICAL - Adaption Loss: 0.04039643704891205
+2024-11-23T22:44:12.964302+08:00 - CRITICAL - Train Iteration: [4680/12000 (39%)]	   Pseudo_AttackLoss: 0.009950   Pseudo_target_mseloss: 0.032703     Vanila_D_Loss: -11.784171    D_Loss: -11.309147     Dis_Pseudo_Loss: 4.261254     Dis_target_Loss: -16.045425   Target_AttackLoss: 0.008242
+2024-11-23T22:44:22.156553+08:00 - CRITICAL - Adaption Loss: 0.04069610685110092
+2024-11-23T22:44:23.497000+08:00 - CRITICAL - 
+Test set: Average loss: 1.0902, Accuracy: 6191/10000 (62%)
+
+2024-11-23T22:44:24.724969+08:00 - CRITICAL - 
+Test set: Average loss: 1.2200, Accuracy: 5768/10000 (58%)
+
+2024-11-23T22:44:33.779464+08:00 - CRITICAL - Adaption Loss: 0.04301217570900917
+2024-11-23T22:44:33.870547+08:00 - CRITICAL - Train Iteration: [4720/12000 (39%)]	   Pseudo_AttackLoss: 0.012249   Pseudo_target_mseloss: 0.036443     Vanila_D_Loss: -10.645245    D_Loss: -10.447758     Dis_Pseudo_Loss: -2.376942     Dis_target_Loss: -8.268303   Target_AttackLoss: 0.009767
+2024-11-23T22:44:42.695354+08:00 - CRITICAL - Adaption Loss: 0.041613783687353134
+2024-11-23T22:44:48.475486+08:00 - CRITICAL - 
+Test set: Average loss: 1.0887, Accuracy: 6243/10000 (62%)
+
+2024-11-23T22:44:49.732910+08:00 - CRITICAL - 
+Test set: Average loss: 1.2400, Accuracy: 5697/10000 (57%)
+
+2024-11-23T22:44:54.308206+08:00 - CRITICAL - Adaption Loss: 0.044938236474990845
+2024-11-23T22:44:54.394681+08:00 - CRITICAL - Train Iteration: [4760/12000 (40%)]	   Pseudo_AttackLoss: 0.011598   Pseudo_target_mseloss: 0.039659     Vanila_D_Loss: -11.104243    D_Loss: -10.728651     Dis_Pseudo_Loss: 8.864316     Dis_target_Loss: -19.968559   Target_AttackLoss: 0.009752
+2024-11-23T22:45:03.239459+08:00 - CRITICAL - Adaption Loss: 0.04114145785570145
+2024-11-23T22:45:12.356155+08:00 - CRITICAL - Adaption Loss: 0.03714346885681152
+2024-11-23T22:45:12.441762+08:00 - CRITICAL - Train Iteration: [4800/12000 (40%)]	   Pseudo_AttackLoss: 0.010954   Pseudo_target_mseloss: 0.034114     Vanila_D_Loss: -11.648847    D_Loss: -10.529226     Dis_Pseudo_Loss: 5.868575     Dis_target_Loss: -17.517422   Target_AttackLoss: 0.009327
+2024-11-23T22:45:13.749166+08:00 - CRITICAL - 
+Test set: Average loss: 1.1199, Accuracy: 6101/10000 (61%)
+
+2024-11-23T22:45:15.026250+08:00 - CRITICAL - 
+Test set: Average loss: 1.2596, Accuracy: 5602/10000 (56%)
+
+2024-11-23T22:45:23.800262+08:00 - CRITICAL - Adaption Loss: 0.03663749620318413
+2024-11-23T22:45:32.914339+08:00 - CRITICAL - Adaption Loss: 0.046375636011362076
+2024-11-23T22:45:33.001019+08:00 - CRITICAL - Train Iteration: [4840/12000 (40%)]	   Pseudo_AttackLoss: 0.012424   Pseudo_target_mseloss: 0.036461     Vanila_D_Loss: -11.833031    D_Loss: -10.777001     Dis_Pseudo_Loss: 2.105356     Dis_target_Loss: -13.938387   Target_AttackLoss: 0.009824
+2024-11-23T22:45:38.739205+08:00 - CRITICAL - 
+Test set: Average loss: 1.1350, Accuracy: 6136/10000 (61%)
+
+2024-11-23T22:45:39.958168+08:00 - CRITICAL - 
+Test set: Average loss: 1.3225, Accuracy: 5488/10000 (55%)
+
+2024-11-23T22:45:44.319151+08:00 - CRITICAL - Adaption Loss: 0.03875221312046051
+2024-11-23T22:45:53.404284+08:00 - CRITICAL - Adaption Loss: 0.03964925557374954
+2024-11-23T22:45:53.489860+08:00 - CRITICAL - Train Iteration: [4880/12000 (41%)]	   Pseudo_AttackLoss: 0.011786   Pseudo_target_mseloss: 0.042107     Vanila_D_Loss: -10.642508    D_Loss: -10.443744     Dis_Pseudo_Loss: -0.475069     Dis_target_Loss: -10.167439   Target_AttackLoss: 0.009700
+2024-11-23T22:46:02.322315+08:00 - CRITICAL - Adaption Loss: 0.04569544643163681
+2024-11-23T22:46:03.652900+08:00 - CRITICAL - 
+Test set: Average loss: 1.1094, Accuracy: 6176/10000 (62%)
+
+2024-11-23T22:46:04.885391+08:00 - CRITICAL - 
+Test set: Average loss: 1.3638, Accuracy: 5342/10000 (53%)
+
+2024-11-23T22:46:13.928090+08:00 - CRITICAL - Adaption Loss: 0.041235730051994324
+2024-11-23T22:46:14.013627+08:00 - CRITICAL - Train Iteration: [4920/12000 (41%)]	   Pseudo_AttackLoss: 0.012508   Pseudo_target_mseloss: 0.037506     Vanila_D_Loss: -11.325763    D_Loss: -10.899576     Dis_Pseudo_Loss: -1.285033     Dis_target_Loss: -10.040730   Target_AttackLoss: 0.009335
+2024-11-23T22:46:22.684406+08:00 - CRITICAL - Adaption Loss: 0.0387868769466877
+2024-11-23T22:46:28.490764+08:00 - CRITICAL - 
+Test set: Average loss: 1.0695, Accuracy: 6281/10000 (63%)
+
+2024-11-23T22:46:29.710089+08:00 - CRITICAL - 
+Test set: Average loss: 1.2891, Accuracy: 5631/10000 (56%)
+
+2024-11-23T22:46:34.288895+08:00 - CRITICAL - Adaption Loss: 0.04473769664764404
+2024-11-23T22:46:34.376184+08:00 - CRITICAL - Train Iteration: [4960/12000 (41%)]	   Pseudo_AttackLoss: 0.008268   Pseudo_target_mseloss: 0.033983     Vanila_D_Loss: -11.976358    D_Loss: -11.586727     Dis_Pseudo_Loss: -7.234679     Dis_target_Loss: -4.741680   Target_AttackLoss: 0.010134
+2024-11-23T22:46:43.173236+08:00 - CRITICAL - Adaption Loss: 0.03724738210439682
+2024-11-23T22:46:52.220055+08:00 - CRITICAL - Adaption Loss: 0.05901902914047241
+2024-11-23T22:46:52.305544+08:00 - CRITICAL - Train Iteration: [5000/12000 (42%)]	   Pseudo_AttackLoss: 0.010862   Pseudo_target_mseloss: 0.038665     Vanila_D_Loss: -10.838066    D_Loss: -10.374212     Dis_Pseudo_Loss: 4.941637     Dis_target_Loss: -15.779703   Target_AttackLoss: 0.010496
+2024-11-23T22:46:53.550628+08:00 - CRITICAL - 
+Test set: Average loss: 1.1067, Accuracy: 6133/10000 (61%)
+
+2024-11-23T22:46:54.785765+08:00 - CRITICAL - 
+Test set: Average loss: 1.2501, Accuracy: 5612/10000 (56%)
+
+2024-11-23T22:47:03.343606+08:00 - CRITICAL - Adaption Loss: 0.04045350104570389
+2024-11-23T22:47:12.417139+08:00 - CRITICAL - Adaption Loss: 0.04311676323413849
+2024-11-23T22:47:12.502989+08:00 - CRITICAL - Train Iteration: [5040/12000 (42%)]	   Pseudo_AttackLoss: 0.010138   Pseudo_target_mseloss: 0.043187     Vanila_D_Loss: -11.815088    D_Loss: -11.345373     Dis_Pseudo_Loss: 2.819879     Dis_target_Loss: -14.634968   Target_AttackLoss: 0.009916
+2024-11-23T22:47:17.993028+08:00 - CRITICAL - 
+Test set: Average loss: 1.0919, Accuracy: 6284/10000 (63%)
+
+2024-11-23T22:47:19.227409+08:00 - CRITICAL - 
+Test set: Average loss: 1.2315, Accuracy: 5714/10000 (57%)
+
+2024-11-23T22:47:23.457686+08:00 - CRITICAL - Adaption Loss: 0.039850864559412
+2024-11-23T22:47:32.468836+08:00 - CRITICAL - Adaption Loss: 0.04839335381984711
+2024-11-23T22:47:32.519099+08:00 - CRITICAL - Train Iteration: [5080/12000 (42%)]	   Pseudo_AttackLoss: 0.013637   Pseudo_target_mseloss: 0.037183     Vanila_D_Loss: -11.117350    D_Loss: -10.408616     Dis_Pseudo_Loss: -2.091105     Dis_target_Loss: -9.026244   Target_AttackLoss: 0.010227
+2024-11-23T22:47:40.665585+08:00 - CRITICAL - Adaption Loss: 0.03773918375372887
+2024-11-23T22:47:41.941383+08:00 - CRITICAL - 
+Test set: Average loss: 1.1002, Accuracy: 6201/10000 (62%)
+
+2024-11-23T22:47:43.177171+08:00 - CRITICAL - 
+Test set: Average loss: 1.2707, Accuracy: 5649/10000 (56%)
+
+2024-11-23T22:47:51.285974+08:00 - CRITICAL - Adaption Loss: 0.043046414852142334
+2024-11-23T22:47:51.338582+08:00 - CRITICAL - Train Iteration: [5120/12000 (43%)]	   Pseudo_AttackLoss: 0.011556   Pseudo_target_mseloss: 0.033529     Vanila_D_Loss: -12.664268    D_Loss: -11.393497     Dis_Pseudo_Loss: 1.936389     Dis_target_Loss: -14.600657   Target_AttackLoss: 0.009310
+2024-11-23T22:47:59.483590+08:00 - CRITICAL - Adaption Loss: 0.036967262625694275
+2024-11-23T22:48:05.036646+08:00 - CRITICAL - 
+Test set: Average loss: 1.0647, Accuracy: 6285/10000 (63%)
+
+2024-11-23T22:48:06.266065+08:00 - CRITICAL - 
+Test set: Average loss: 1.2065, Accuracy: 5844/10000 (58%)
+
+2024-11-23T22:48:10.491139+08:00 - CRITICAL - Adaption Loss: 0.04402252659201622
+2024-11-23T22:48:10.546092+08:00 - CRITICAL - Train Iteration: [5160/12000 (43%)]	   Pseudo_AttackLoss: 0.011477   Pseudo_target_mseloss: 0.033317     Vanila_D_Loss: -12.002668    D_Loss: -11.706802     Dis_Pseudo_Loss: -4.359913     Dis_target_Loss: -7.642756   Target_AttackLoss: 0.008281
+2024-11-23T22:48:19.141941+08:00 - CRITICAL - Adaption Loss: 0.03767257556319237
+2024-11-23T22:48:28.193359+08:00 - CRITICAL - Adaption Loss: 0.037167027592659
+2024-11-23T22:48:28.255198+08:00 - CRITICAL - Train Iteration: [5200/12000 (43%)]	   Pseudo_AttackLoss: 0.011635   Pseudo_target_mseloss: 0.032373     Vanila_D_Loss: -10.823702    D_Loss: -10.544227     Dis_Pseudo_Loss: 2.342643     Dis_target_Loss: -13.166346   Target_AttackLoss: 0.008994
+2024-11-23T22:48:29.541569+08:00 - CRITICAL - 
+Test set: Average loss: 1.0701, Accuracy: 6273/10000 (63%)
+
+2024-11-23T22:48:30.767240+08:00 - CRITICAL - 
+Test set: Average loss: 1.1752, Accuracy: 5968/10000 (60%)
+
+2024-11-23T22:48:39.220670+08:00 - CRITICAL - Adaption Loss: 0.04014365002512932
+2024-11-23T22:48:48.031450+08:00 - CRITICAL - Adaption Loss: 0.050536029040813446
+2024-11-23T22:48:48.079537+08:00 - CRITICAL - Train Iteration: [5240/12000 (44%)]	   Pseudo_AttackLoss: 0.010851   Pseudo_target_mseloss: 0.034898     Vanila_D_Loss: -10.024476    D_Loss: -9.626759     Dis_Pseudo_Loss: -2.329665     Dis_target_Loss: -7.694811   Target_AttackLoss: 0.008440
+2024-11-23T22:48:53.311310+08:00 - CRITICAL - 
+Test set: Average loss: 1.0621, Accuracy: 6291/10000 (63%)
+
+2024-11-23T22:48:54.528841+08:00 - CRITICAL - 
+Test set: Average loss: 1.2795, Accuracy: 5593/10000 (56%)
+
+2024-11-23T22:48:58.635999+08:00 - CRITICAL - Adaption Loss: 0.044670816510915756
+2024-11-23T22:49:07.662845+08:00 - CRITICAL - Adaption Loss: 0.045016516000032425
+2024-11-23T22:49:07.747976+08:00 - CRITICAL - Train Iteration: [5280/12000 (44%)]	   Pseudo_AttackLoss: 0.010901   Pseudo_target_mseloss: 0.036842     Vanila_D_Loss: -13.857626    D_Loss: -13.313889     Dis_Pseudo_Loss: -2.330957     Dis_target_Loss: -11.526670   Target_AttackLoss: 0.008827
+2024-11-23T22:49:16.475878+08:00 - CRITICAL - Adaption Loss: 0.037437163293361664
+2024-11-23T22:49:17.803569+08:00 - CRITICAL - 
+Test set: Average loss: 1.0524, Accuracy: 6391/10000 (64%)
+
+2024-11-23T22:49:19.068802+08:00 - CRITICAL - 
+Test set: Average loss: 1.2324, Accuracy: 5786/10000 (58%)
+
+2024-11-23T22:49:27.969905+08:00 - CRITICAL - Adaption Loss: 0.05102922394871712
+2024-11-23T22:49:28.055596+08:00 - CRITICAL - Train Iteration: [5320/12000 (44%)]	   Pseudo_AttackLoss: 0.009973   Pseudo_target_mseloss: 0.035864     Vanila_D_Loss: -11.122494    D_Loss: -10.430052     Dis_Pseudo_Loss: 8.449039     Dis_target_Loss: -19.571533   Target_AttackLoss: 0.011883
+2024-11-23T22:49:36.659505+08:00 - CRITICAL - Adaption Loss: 0.03775952011346817
+2024-11-23T22:49:42.157446+08:00 - CRITICAL - 
+Test set: Average loss: 1.0686, Accuracy: 6321/10000 (63%)
+
+2024-11-23T22:49:43.382979+08:00 - CRITICAL - 
+Test set: Average loss: 1.2289, Accuracy: 5738/10000 (57%)
+
+2024-11-23T22:49:47.295049+08:00 - CRITICAL - Adaption Loss: 0.039815694093704224
+2024-11-23T22:49:47.341827+08:00 - CRITICAL - Train Iteration: [5360/12000 (45%)]	   Pseudo_AttackLoss: 0.010248   Pseudo_target_mseloss: 0.033511     Vanila_D_Loss: -10.859760    D_Loss: -10.282100     Dis_Pseudo_Loss: -6.464547     Dis_target_Loss: -4.395213   Target_AttackLoss: 0.009627
+2024-11-23T22:49:55.230074+08:00 - CRITICAL - Adaption Loss: 0.0456232987344265
+2024-11-23T22:50:03.596020+08:00 - CRITICAL - Adaption Loss: 0.04221554473042488
+2024-11-23T22:50:03.678422+08:00 - CRITICAL - Train Iteration: [5400/12000 (45%)]	   Pseudo_AttackLoss: 0.011874   Pseudo_target_mseloss: 0.030635     Vanila_D_Loss: -11.358684    D_Loss: -11.060626     Dis_Pseudo_Loss: -2.924967     Dis_target_Loss: -8.433717   Target_AttackLoss: 0.008341
+2024-11-23T22:50:04.934181+08:00 - CRITICAL - 
+Test set: Average loss: 1.0481, Accuracy: 6398/10000 (64%)
+
+2024-11-23T22:50:06.148422+08:00 - CRITICAL - 
+Test set: Average loss: 1.2419, Accuracy: 5659/10000 (57%)
+
+2024-11-23T22:50:14.277124+08:00 - CRITICAL - Adaption Loss: 0.03987817093729973
+2024-11-23T22:50:22.668851+08:00 - CRITICAL - Adaption Loss: 0.0378483384847641
+2024-11-23T22:50:22.720002+08:00 - CRITICAL - Train Iteration: [5440/12000 (45%)]	   Pseudo_AttackLoss: 0.008676   Pseudo_target_mseloss: 0.029732     Vanila_D_Loss: -10.746922    D_Loss: -10.406592     Dis_Pseudo_Loss: 11.031628     Dis_target_Loss: -21.778549   Target_AttackLoss: 0.007985
+2024-11-23T22:50:28.162825+08:00 - CRITICAL - 
+Test set: Average loss: 1.0378, Accuracy: 6344/10000 (63%)
+
+2024-11-23T22:50:29.387799+08:00 - CRITICAL - 
+Test set: Average loss: 1.1819, Accuracy: 5883/10000 (59%)
+
+2024-11-23T22:50:33.211790+08:00 - CRITICAL - Adaption Loss: 0.05052024871110916
+2024-11-23T22:50:41.757395+08:00 - CRITICAL - Adaption Loss: 0.040498606860637665
+2024-11-23T22:50:41.804352+08:00 - CRITICAL - Train Iteration: [5480/12000 (46%)]	   Pseudo_AttackLoss: 0.009728   Pseudo_target_mseloss: 0.030583     Vanila_D_Loss: -12.233772    D_Loss: -11.917738     Dis_Pseudo_Loss: -2.370924     Dis_target_Loss: -9.862847   Target_AttackLoss: 0.007949
+2024-11-23T22:50:50.290317+08:00 - CRITICAL - Adaption Loss: 0.03934483975172043
+2024-11-23T22:50:51.638435+08:00 - CRITICAL - 
+Test set: Average loss: 1.0804, Accuracy: 6287/10000 (63%)
+
+2024-11-23T22:50:52.869389+08:00 - CRITICAL - 
+Test set: Average loss: 1.2723, Accuracy: 5698/10000 (57%)
+
+2024-11-23T22:51:00.965786+08:00 - CRITICAL - Adaption Loss: 0.04231174662709236
+2024-11-23T22:51:01.050190+08:00 - CRITICAL - Train Iteration: [5520/12000 (46%)]	   Pseudo_AttackLoss: 0.009763   Pseudo_target_mseloss: 0.033492     Vanila_D_Loss: -11.539345    D_Loss: -10.730777     Dis_Pseudo_Loss: -0.415778     Dis_target_Loss: -11.123568   Target_AttackLoss: 0.008502
+2024-11-23T22:51:09.885419+08:00 - CRITICAL - Adaption Loss: 0.048262402415275574
+2024-11-23T22:51:15.632438+08:00 - CRITICAL - 
+Test set: Average loss: 1.1007, Accuracy: 6343/10000 (63%)
+
+2024-11-23T22:51:16.845409+08:00 - CRITICAL - 
+Test set: Average loss: 1.2794, Accuracy: 5789/10000 (58%)
+
+2024-11-23T22:51:21.222682+08:00 - CRITICAL - Adaption Loss: 0.04377048462629318
+2024-11-23T22:51:21.308676+08:00 - CRITICAL - Train Iteration: [5560/12000 (46%)]	   Pseudo_AttackLoss: 0.009712   Pseudo_target_mseloss: 0.033163     Vanila_D_Loss: -11.485725    D_Loss: -11.146155     Dis_Pseudo_Loss: 2.374173     Dis_target_Loss: -13.859898   Target_AttackLoss: 0.010728
+2024-11-23T22:51:30.318545+08:00 - CRITICAL - Adaption Loss: 0.03880014643073082
+2024-11-23T22:51:39.118110+08:00 - CRITICAL - Adaption Loss: 0.046047430485486984
+2024-11-23T22:51:39.203490+08:00 - CRITICAL - Train Iteration: [5600/12000 (47%)]	   Pseudo_AttackLoss: 0.010246   Pseudo_target_mseloss: 0.031835     Vanila_D_Loss: -11.179515    D_Loss: -10.628057     Dis_Pseudo_Loss: -4.916818     Dis_target_Loss: -6.262697   Target_AttackLoss: 0.008137
+2024-11-23T22:51:40.441020+08:00 - CRITICAL - 
+Test set: Average loss: 1.1030, Accuracy: 6256/10000 (63%)
+
+2024-11-23T22:51:41.648023+08:00 - CRITICAL - 
+Test set: Average loss: 1.3405, Accuracy: 5502/10000 (55%)
+
+2024-11-23T22:51:50.657101+08:00 - CRITICAL - Adaption Loss: 0.03771388903260231
+2024-11-23T22:51:59.518961+08:00 - CRITICAL - Adaption Loss: 0.03853468969464302
+2024-11-23T22:51:59.593599+08:00 - CRITICAL - Train Iteration: [5640/12000 (47%)]	   Pseudo_AttackLoss: 0.012889   Pseudo_target_mseloss: 0.030908     Vanila_D_Loss: -10.315647    D_Loss: -10.081676     Dis_Pseudo_Loss: 10.007902     Dis_target_Loss: -20.323549   Target_AttackLoss: 0.009356
+2024-11-23T22:52:05.306243+08:00 - CRITICAL - 
+Test set: Average loss: 1.0493, Accuracy: 6364/10000 (64%)
+
+2024-11-23T22:52:06.510782+08:00 - CRITICAL - 
+Test set: Average loss: 1.2569, Accuracy: 5722/10000 (57%)
+
+2024-11-23T22:52:10.967863+08:00 - CRITICAL - Adaption Loss: 0.04411403834819794
+2024-11-23T22:52:19.800779+08:00 - CRITICAL - Adaption Loss: 0.051130037754774094
+2024-11-23T22:52:19.886179+08:00 - CRITICAL - Train Iteration: [5680/12000 (47%)]	   Pseudo_AttackLoss: 0.012874   Pseudo_target_mseloss: 0.032483     Vanila_D_Loss: -11.413686    D_Loss: -9.786677     Dis_Pseudo_Loss: -7.010161     Dis_target_Loss: -4.403524   Target_AttackLoss: 0.009577
+2024-11-23T22:52:28.670278+08:00 - CRITICAL - Adaption Loss: 0.04349904879927635
+2024-11-23T22:52:29.992846+08:00 - CRITICAL - 
+Test set: Average loss: 1.1016, Accuracy: 6264/10000 (63%)
+
+2024-11-23T22:52:31.224581+08:00 - CRITICAL - 
+Test set: Average loss: 1.2481, Accuracy: 5799/10000 (58%)
+
+2024-11-23T22:52:40.076890+08:00 - CRITICAL - Adaption Loss: 0.043602731078863144
+2024-11-23T22:52:40.162217+08:00 - CRITICAL - Train Iteration: [5720/12000 (48%)]	   Pseudo_AttackLoss: 0.009208   Pseudo_target_mseloss: 0.036119     Vanila_D_Loss: -10.721412    D_Loss: -9.710404     Dis_Pseudo_Loss: -6.447804     Dis_target_Loss: -4.273607   Target_AttackLoss: 0.008427
+2024-11-23T22:52:49.167984+08:00 - CRITICAL - Adaption Loss: 0.049035053700208664
+2024-11-23T22:52:55.030744+08:00 - CRITICAL - 
+Test set: Average loss: 1.0947, Accuracy: 6326/10000 (63%)
+
+2024-11-23T22:52:56.252827+08:00 - CRITICAL - 
+Test set: Average loss: 1.2922, Accuracy: 5755/10000 (58%)
+
+2024-11-23T22:53:00.634035+08:00 - CRITICAL - Adaption Loss: 0.03693182393908501
+2024-11-23T22:53:00.718681+08:00 - CRITICAL - Train Iteration: [5760/12000 (48%)]	   Pseudo_AttackLoss: 0.009857   Pseudo_target_mseloss: 0.038612     Vanila_D_Loss: -11.961189    D_Loss: -11.612916     Dis_Pseudo_Loss: 10.969379     Dis_target_Loss: -22.930569   Target_AttackLoss: 0.009400
+2024-11-23T22:53:09.579059+08:00 - CRITICAL - Adaption Loss: 0.03898245096206665
+2024-11-23T22:53:17.847558+08:00 - CRITICAL - Adaption Loss: 0.04365842044353485
+2024-11-23T22:53:17.924284+08:00 - CRITICAL - Train Iteration: [5800/12000 (48%)]	   Pseudo_AttackLoss: 0.010597   Pseudo_target_mseloss: 0.035749     Vanila_D_Loss: -10.619175    D_Loss: -10.245502     Dis_Pseudo_Loss: -5.106523     Dis_target_Loss: -5.512652   Target_AttackLoss: 0.008508
+2024-11-23T22:53:19.167238+08:00 - CRITICAL - 
+Test set: Average loss: 1.0834, Accuracy: 6295/10000 (63%)
+
+2024-11-23T22:53:20.418355+08:00 - CRITICAL - 
+Test set: Average loss: 1.2864, Accuracy: 5610/10000 (56%)
+
+2024-11-23T22:53:28.679978+08:00 - CRITICAL - Adaption Loss: 0.04061289504170418
+2024-11-23T22:53:36.872289+08:00 - CRITICAL - Adaption Loss: 0.03978249430656433
+2024-11-23T22:53:36.926805+08:00 - CRITICAL - Train Iteration: [5840/12000 (49%)]	   Pseudo_AttackLoss: 0.010375   Pseudo_target_mseloss: 0.030255     Vanila_D_Loss: -10.162891    D_Loss: -9.626542     Dis_Pseudo_Loss: -5.067060     Dis_target_Loss: -5.095831   Target_AttackLoss: 0.009113
+2024-11-23T22:53:42.215160+08:00 - CRITICAL - 
+Test set: Average loss: 1.0491, Accuracy: 6401/10000 (64%)
+
+2024-11-23T22:53:43.437309+08:00 - CRITICAL - 
+Test set: Average loss: 1.1969, Accuracy: 5905/10000 (59%)
+
+2024-11-23T22:53:47.574357+08:00 - CRITICAL - Adaption Loss: 0.040188901126384735
+2024-11-23T22:53:56.163747+08:00 - CRITICAL - Adaption Loss: 0.039499662816524506
+2024-11-23T22:53:56.249420+08:00 - CRITICAL - Train Iteration: [5880/12000 (49%)]	   Pseudo_AttackLoss: 0.008645   Pseudo_target_mseloss: 0.033821     Vanila_D_Loss: -11.332822    D_Loss: -11.083875     Dis_Pseudo_Loss: 1.451075     Dis_target_Loss: -12.783897   Target_AttackLoss: 0.010138
+2024-11-23T22:54:05.258260+08:00 - CRITICAL - Adaption Loss: 0.04167311266064644
+2024-11-23T22:54:06.574079+08:00 - CRITICAL - 
+Test set: Average loss: 1.0536, Accuracy: 6392/10000 (64%)
+
+2024-11-23T22:54:07.836702+08:00 - CRITICAL - 
+Test set: Average loss: 1.1705, Accuracy: 5995/10000 (60%)
+
+2024-11-23T22:54:16.671562+08:00 - CRITICAL - Adaption Loss: 0.039491746574640274
+2024-11-23T22:54:16.757538+08:00 - CRITICAL - Train Iteration: [5920/12000 (49%)]	   Pseudo_AttackLoss: 0.010677   Pseudo_target_mseloss: 0.030841     Vanila_D_Loss: -10.896577    D_Loss: -10.546394     Dis_Pseudo_Loss: -4.369214     Dis_target_Loss: -6.527363   Target_AttackLoss: 0.008415
+2024-11-23T22:54:25.756105+08:00 - CRITICAL - Adaption Loss: 0.03671102970838547
+2024-11-23T22:54:31.592250+08:00 - CRITICAL - 
+Test set: Average loss: 1.0597, Accuracy: 6352/10000 (64%)
+
+2024-11-23T22:54:32.817395+08:00 - CRITICAL - 
+Test set: Average loss: 1.1920, Accuracy: 5866/10000 (59%)
+
+2024-11-23T22:54:37.237434+08:00 - CRITICAL - Adaption Loss: 0.039298392832279205
+2024-11-23T22:54:37.324130+08:00 - CRITICAL - Train Iteration: [5960/12000 (50%)]	   Pseudo_AttackLoss: 0.009916   Pseudo_target_mseloss: 0.031284     Vanila_D_Loss: -11.121677    D_Loss: -10.497363     Dis_Pseudo_Loss: 6.010257     Dis_target_Loss: -17.131935   Target_AttackLoss: 0.009532
+2024-11-23T22:54:46.317184+08:00 - CRITICAL - Adaption Loss: 0.036765482276678085
+2024-11-23T22:54:55.313032+08:00 - CRITICAL - Adaption Loss: 0.037766892462968826
+2024-11-23T22:54:55.399205+08:00 - CRITICAL - Train Iteration: [6000/12000 (50%)]	   Pseudo_AttackLoss: 0.009763   Pseudo_target_mseloss: 0.030309     Vanila_D_Loss: -10.595522    D_Loss: -10.130222     Dis_Pseudo_Loss: -4.625708     Dis_target_Loss: -5.969814   Target_AttackLoss: 0.009139
+2024-11-23T22:54:56.654684+08:00 - CRITICAL - 
+Test set: Average loss: 1.0588, Accuracy: 6355/10000 (64%)
+
+2024-11-23T22:54:57.968545+08:00 - CRITICAL - 
+Test set: Average loss: 1.2261, Accuracy: 5847/10000 (58%)
+
+2024-11-23T22:55:06.986673+08:00 - CRITICAL - Adaption Loss: 0.04511014744639397
+2024-11-23T22:55:15.864664+08:00 - CRITICAL - Adaption Loss: 0.040978509932756424
+2024-11-23T22:55:15.952675+08:00 - CRITICAL - Train Iteration: [6040/12000 (50%)]	   Pseudo_AttackLoss: 0.008472   Pseudo_target_mseloss: 0.028617     Vanila_D_Loss: -10.680724    D_Loss: -10.366427     Dis_Pseudo_Loss: -3.183902     Dis_target_Loss: -7.496822   Target_AttackLoss: 0.008937
+2024-11-23T22:55:21.702665+08:00 - CRITICAL - 
+Test set: Average loss: 1.0732, Accuracy: 6395/10000 (64%)
+
+2024-11-23T22:55:22.967780+08:00 - CRITICAL - 
+Test set: Average loss: 1.1929, Accuracy: 5927/10000 (59%)
+
+2024-11-23T22:55:27.286307+08:00 - CRITICAL - Adaption Loss: 0.040476199239492416
+2024-11-23T22:55:36.173917+08:00 - CRITICAL - Adaption Loss: 0.04090319573879242
+2024-11-23T22:55:36.261388+08:00 - CRITICAL - Train Iteration: [6080/12000 (51%)]	   Pseudo_AttackLoss: 0.011015   Pseudo_target_mseloss: 0.027877     Vanila_D_Loss: -10.750974    D_Loss: -10.427615     Dis_Pseudo_Loss: 5.305486     Dis_target_Loss: -16.056459   Target_AttackLoss: 0.008316
+2024-11-23T22:55:45.255714+08:00 - CRITICAL - Adaption Loss: 0.037291161715984344
+2024-11-23T22:55:46.658174+08:00 - CRITICAL - 
+Test set: Average loss: 1.0339, Accuracy: 6415/10000 (64%)
+
+2024-11-23T22:55:47.946264+08:00 - CRITICAL - 
+Test set: Average loss: 1.1594, Accuracy: 6064/10000 (61%)
+
+2024-11-23T22:55:56.818236+08:00 - CRITICAL - Adaption Loss: 0.03545574098825455
+2024-11-23T22:55:56.904782+08:00 - CRITICAL - Train Iteration: [6120/12000 (51%)]	   Pseudo_AttackLoss: 0.010066   Pseudo_target_mseloss: 0.030515     Vanila_D_Loss: -9.940516    D_Loss: -9.649714     Dis_Pseudo_Loss: -2.648736     Dis_target_Loss: -7.291779   Target_AttackLoss: 0.009209
+2024-11-23T22:56:06.001192+08:00 - CRITICAL - Adaption Loss: 0.03302951157093048
+2024-11-23T22:56:11.803498+08:00 - CRITICAL - 
+Test set: Average loss: 1.0232, Accuracy: 6435/10000 (64%)
+
+2024-11-23T22:56:13.033567+08:00 - CRITICAL - 
+Test set: Average loss: 1.1826, Accuracy: 5881/10000 (59%)
+
+2024-11-23T22:56:17.314713+08:00 - CRITICAL - Adaption Loss: 0.041439253836870193
+2024-11-23T22:56:17.401990+08:00 - CRITICAL - Train Iteration: [6160/12000 (51%)]	   Pseudo_AttackLoss: 0.008451   Pseudo_target_mseloss: 0.032718     Vanila_D_Loss: -11.072967    D_Loss: -10.868419     Dis_Pseudo_Loss: 0.655735     Dis_target_Loss: -11.728702   Target_AttackLoss: 0.008792
+2024-11-23T22:56:26.508929+08:00 - CRITICAL - Adaption Loss: 0.0376049168407917
+2024-11-23T22:56:35.373972+08:00 - CRITICAL - Adaption Loss: 0.03423704206943512
+2024-11-23T22:56:35.460684+08:00 - CRITICAL - Train Iteration: [6200/12000 (52%)]	   Pseudo_AttackLoss: 0.010320   Pseudo_target_mseloss: 0.031190     Vanila_D_Loss: -9.983603    D_Loss: -9.743177     Dis_Pseudo_Loss: 1.319342     Dis_target_Loss: -11.302945   Target_AttackLoss: 0.008560
+2024-11-23T22:56:36.702003+08:00 - CRITICAL - 
+Test set: Average loss: 1.0033, Accuracy: 6541/10000 (65%)
+
+2024-11-23T22:56:37.939742+08:00 - CRITICAL - 
+Test set: Average loss: 1.1431, Accuracy: 6098/10000 (61%)
+
+2024-11-23T22:56:46.952888+08:00 - CRITICAL - Adaption Loss: 0.036136187613010406
+2024-11-23T22:56:55.911901+08:00 - CRITICAL - Adaption Loss: 0.04008273035287857
+2024-11-23T22:56:55.997771+08:00 - CRITICAL - Train Iteration: [6240/12000 (52%)]	   Pseudo_AttackLoss: 0.010399   Pseudo_target_mseloss: 0.026234     Vanila_D_Loss: -11.615147    D_Loss: -11.000239     Dis_Pseudo_Loss: -2.177561     Dis_target_Loss: -9.437586   Target_AttackLoss: 0.007696
+2024-11-23T22:57:02.221691+08:00 - CRITICAL - 
+Test set: Average loss: 1.0422, Accuracy: 6425/10000 (64%)
+
+2024-11-23T22:57:03.435783+08:00 - CRITICAL - 
+Test set: Average loss: 1.1812, Accuracy: 5926/10000 (59%)
+
+2024-11-23T22:57:07.764510+08:00 - CRITICAL - Adaption Loss: 0.033575236797332764
+2024-11-23T22:57:16.874197+08:00 - CRITICAL - Adaption Loss: 0.035389166325330734
+2024-11-23T22:57:16.965324+08:00 - CRITICAL - Train Iteration: [6280/12000 (52%)]	   Pseudo_AttackLoss: 0.008721   Pseudo_target_mseloss: 0.029426     Vanila_D_Loss: -11.155295    D_Loss: -10.996894     Dis_Pseudo_Loss: -0.157114     Dis_target_Loss: -10.998182   Target_AttackLoss: 0.010169
+2024-11-23T22:57:25.785874+08:00 - CRITICAL - Adaption Loss: 0.04254566505551338
+2024-11-23T22:57:27.115157+08:00 - CRITICAL - 
+Test set: Average loss: 1.0668, Accuracy: 6494/10000 (65%)
+
+2024-11-23T22:57:28.354988+08:00 - CRITICAL - 
+Test set: Average loss: 1.2193, Accuracy: 5967/10000 (60%)
+
+2024-11-23T22:57:37.331564+08:00 - CRITICAL - Adaption Loss: 0.03632618486881256
+2024-11-23T22:57:37.417535+08:00 - CRITICAL - Train Iteration: [6320/12000 (53%)]	   Pseudo_AttackLoss: 0.008618   Pseudo_target_mseloss: 0.029196     Vanila_D_Loss: -10.508379    D_Loss: -10.260062     Dis_Pseudo_Loss: 0.939106     Dis_target_Loss: -11.447485   Target_AttackLoss: 0.008936
+2024-11-23T22:57:46.094914+08:00 - CRITICAL - Adaption Loss: 0.03578680753707886
+2024-11-23T22:57:51.933023+08:00 - CRITICAL - 
+Test set: Average loss: 1.0814, Accuracy: 6472/10000 (65%)
+
+2024-11-23T22:57:53.145162+08:00 - CRITICAL - 
+Test set: Average loss: 1.2256, Accuracy: 5993/10000 (60%)
+
+2024-11-23T22:57:57.670106+08:00 - CRITICAL - Adaption Loss: 0.03676176071166992
+2024-11-23T22:57:57.757966+08:00 - CRITICAL - Train Iteration: [6360/12000 (53%)]	   Pseudo_AttackLoss: 0.008964   Pseudo_target_mseloss: 0.027833     Vanila_D_Loss: -10.889841    D_Loss: -10.641755     Dis_Pseudo_Loss: -3.788805     Dis_target_Loss: -7.101037   Target_AttackLoss: 0.008313
+2024-11-23T22:58:06.515498+08:00 - CRITICAL - Adaption Loss: 0.04096459224820137
+2024-11-23T22:58:15.627854+08:00 - CRITICAL - Adaption Loss: 0.03499021381139755
+2024-11-23T22:58:15.715981+08:00 - CRITICAL - Train Iteration: [6400/12000 (53%)]	   Pseudo_AttackLoss: 0.008062   Pseudo_target_mseloss: 0.028620     Vanila_D_Loss: -11.382731    D_Loss: -11.025904     Dis_Pseudo_Loss: 6.129155     Dis_target_Loss: -17.511887   Target_AttackLoss: 0.009184
+2024-11-23T22:58:16.967382+08:00 - CRITICAL - 
+Test set: Average loss: 1.1055, Accuracy: 6358/10000 (64%)
+
+2024-11-23T22:58:18.185014+08:00 - CRITICAL - 
+Test set: Average loss: 1.2010, Accuracy: 6010/10000 (60%)
+
+2024-11-23T22:58:26.982701+08:00 - CRITICAL - Adaption Loss: 0.03716370090842247
+2024-11-23T22:58:36.058595+08:00 - CRITICAL - Adaption Loss: 0.03307686001062393
+2024-11-23T22:58:36.145510+08:00 - CRITICAL - Train Iteration: [6440/12000 (54%)]	   Pseudo_AttackLoss: 0.009538   Pseudo_target_mseloss: 0.036117     Vanila_D_Loss: -11.237245    D_Loss: -10.918009     Dis_Pseudo_Loss: -10.112226     Dis_target_Loss: -1.125018   Target_AttackLoss: 0.013407
+2024-11-23T22:58:41.928692+08:00 - CRITICAL - 
+Test set: Average loss: 1.1022, Accuracy: 6357/10000 (64%)
+
+2024-11-23T22:58:43.204723+08:00 - CRITICAL - 
+Test set: Average loss: 1.1926, Accuracy: 6006/10000 (60%)
+
+2024-11-23T22:58:47.621641+08:00 - CRITICAL - Adaption Loss: 0.03456566110253334
+2024-11-23T22:58:56.389981+08:00 - CRITICAL - Adaption Loss: 0.047412946820259094
+2024-11-23T22:58:56.476037+08:00 - CRITICAL - Train Iteration: [6480/12000 (54%)]	   Pseudo_AttackLoss: 0.014272   Pseudo_target_mseloss: 0.035777     Vanila_D_Loss: -11.384901    D_Loss: -10.875180     Dis_Pseudo_Loss: 0.615637     Dis_target_Loss: -12.000538   Target_AttackLoss: 0.013609
+2024-11-23T22:59:04.859156+08:00 - CRITICAL - Adaption Loss: 0.043636176735162735
+2024-11-23T22:59:06.185650+08:00 - CRITICAL - 
+Test set: Average loss: 1.0725, Accuracy: 6436/10000 (64%)
+
+2024-11-23T22:59:07.429938+08:00 - CRITICAL - 
+Test set: Average loss: 1.2589, Accuracy: 5924/10000 (59%)
+
+2024-11-23T22:59:15.629025+08:00 - CRITICAL - Adaption Loss: 0.035902563482522964
+2024-11-23T22:59:15.677652+08:00 - CRITICAL - Train Iteration: [6520/12000 (54%)]	   Pseudo_AttackLoss: 0.010284   Pseudo_target_mseloss: 0.029249     Vanila_D_Loss: -10.078309    D_Loss: -9.718282     Dis_Pseudo_Loss: 2.979062     Dis_target_Loss: -13.057371   Target_AttackLoss: 0.008354
+2024-11-23T22:59:23.708627+08:00 - CRITICAL - Adaption Loss: 0.03786983713507652
+2024-11-23T22:59:29.014831+08:00 - CRITICAL - 
+Test set: Average loss: 1.0465, Accuracy: 6478/10000 (65%)
+
+2024-11-23T22:59:30.294940+08:00 - CRITICAL - 
+Test set: Average loss: 1.2021, Accuracy: 5960/10000 (60%)
+
+2024-11-23T22:59:34.707147+08:00 - CRITICAL - Adaption Loss: 0.0347430594265461
+2024-11-23T22:59:34.762951+08:00 - CRITICAL - Train Iteration: [6560/12000 (55%)]	   Pseudo_AttackLoss: 0.008358   Pseudo_target_mseloss: 0.028243     Vanila_D_Loss: -11.401090    D_Loss: -10.396906     Dis_Pseudo_Loss: -3.601898     Dis_target_Loss: -7.799191   Target_AttackLoss: 0.008510
+2024-11-23T22:59:43.578975+08:00 - CRITICAL - Adaption Loss: 0.03139176219701767
+2024-11-23T22:59:52.390249+08:00 - CRITICAL - Adaption Loss: 0.03325899317860603
+2024-11-23T22:59:52.476852+08:00 - CRITICAL - Train Iteration: [6600/12000 (55%)]	   Pseudo_AttackLoss: 0.009293   Pseudo_target_mseloss: 0.029785     Vanila_D_Loss: -11.688534    D_Loss: -11.502756     Dis_Pseudo_Loss: 6.403294     Dis_target_Loss: -18.091827   Target_AttackLoss: 0.009159
+2024-11-23T22:59:53.748799+08:00 - CRITICAL - 
+Test set: Average loss: 1.0534, Accuracy: 6443/10000 (64%)
+
+2024-11-23T22:59:54.960572+08:00 - CRITICAL - 
+Test set: Average loss: 1.1478, Accuracy: 6097/10000 (61%)
+
+2024-11-23T23:00:03.743021+08:00 - CRITICAL - Adaption Loss: 0.03777208924293518
+2024-11-23T23:00:12.883835+08:00 - CRITICAL - Adaption Loss: 0.036452773958444595
+2024-11-23T23:00:12.969619+08:00 - CRITICAL - Train Iteration: [6640/12000 (55%)]	   Pseudo_AttackLoss: 0.009191   Pseudo_target_mseloss: 0.029994     Vanila_D_Loss: -11.473952    D_Loss: -10.889413     Dis_Pseudo_Loss: -9.995617     Dis_target_Loss: -1.478335   Target_AttackLoss: 0.010654
+2024-11-23T23:00:18.695820+08:00 - CRITICAL - 
+Test set: Average loss: 1.0371, Accuracy: 6512/10000 (65%)
+
+2024-11-23T23:00:19.920568+08:00 - CRITICAL - 
+Test set: Average loss: 1.2382, Accuracy: 5885/10000 (59%)
+
+2024-11-23T23:00:24.276642+08:00 - CRITICAL - Adaption Loss: 0.03905018791556358
+2024-11-23T23:00:33.307257+08:00 - CRITICAL - Adaption Loss: 0.03575868159532547
+2024-11-23T23:00:33.393461+08:00 - CRITICAL - Train Iteration: [6680/12000 (56%)]	   Pseudo_AttackLoss: 0.009530   Pseudo_target_mseloss: 0.027822     Vanila_D_Loss: -10.275875    D_Loss: -9.869577     Dis_Pseudo_Loss: 8.498013     Dis_target_Loss: -18.773888   Target_AttackLoss: 0.007516
+2024-11-23T23:00:42.202911+08:00 - CRITICAL - Adaption Loss: 0.039536841213703156
+2024-11-23T23:00:43.546923+08:00 - CRITICAL - 
+Test set: Average loss: 1.0451, Accuracy: 6425/10000 (64%)
+
+2024-11-23T23:00:44.771267+08:00 - CRITICAL - 
+Test set: Average loss: 1.1728, Accuracy: 5961/10000 (60%)
+
+2024-11-23T23:00:53.740563+08:00 - CRITICAL - Adaption Loss: 0.03706752881407738
+2024-11-23T23:00:53.828327+08:00 - CRITICAL - Train Iteration: [6720/12000 (56%)]	   Pseudo_AttackLoss: 0.008111   Pseudo_target_mseloss: 0.030369     Vanila_D_Loss: -10.369806    D_Loss: -10.090043     Dis_Pseudo_Loss: -2.122407     Dis_target_Loss: -8.247399   Target_AttackLoss: 0.007921
+2024-11-23T23:01:02.775856+08:00 - CRITICAL - Adaption Loss: 0.04077707603573799
+2024-11-23T23:01:08.795372+08:00 - CRITICAL - 
+Test set: Average loss: 1.0566, Accuracy: 6478/10000 (65%)
+
+2024-11-23T23:01:10.023323+08:00 - CRITICAL - 
+Test set: Average loss: 1.2502, Accuracy: 5866/10000 (59%)
+
+2024-11-23T23:01:14.282206+08:00 - CRITICAL - Adaption Loss: 0.035724472254514694
+2024-11-23T23:01:14.368840+08:00 - CRITICAL - Train Iteration: [6760/12000 (56%)]	   Pseudo_AttackLoss: 0.008820   Pseudo_target_mseloss: 0.035294     Vanila_D_Loss: -11.328596    D_Loss: -10.204488     Dis_Pseudo_Loss: -8.307995     Dis_target_Loss: -3.020602   Target_AttackLoss: 0.008809
+2024-11-23T23:01:23.126040+08:00 - CRITICAL - Adaption Loss: 0.036095231771469116
+2024-11-23T23:01:32.218877+08:00 - CRITICAL - Adaption Loss: 0.03781181573867798
+2024-11-23T23:01:32.304822+08:00 - CRITICAL - Train Iteration: [6800/12000 (57%)]	   Pseudo_AttackLoss: 0.007641   Pseudo_target_mseloss: 0.036584     Vanila_D_Loss: -11.905720    D_Loss: -8.582479     Dis_Pseudo_Loss: 11.385754     Dis_target_Loss: -23.291473   Target_AttackLoss: 0.011028
+2024-11-23T23:01:33.548102+08:00 - CRITICAL - 
+Test set: Average loss: 1.0427, Accuracy: 6524/10000 (65%)
+
+2024-11-23T23:01:34.762619+08:00 - CRITICAL - 
+Test set: Average loss: 1.1646, Accuracy: 6073/10000 (61%)
+
+2024-11-23T23:01:43.564262+08:00 - CRITICAL - Adaption Loss: 0.0380396693944931
+2024-11-23T23:01:52.634830+08:00 - CRITICAL - Adaption Loss: 0.03366825729608536
+2024-11-23T23:01:52.721532+08:00 - CRITICAL - Train Iteration: [6840/12000 (57%)]	   Pseudo_AttackLoss: 0.008387   Pseudo_target_mseloss: 0.027277     Vanila_D_Loss: -10.358942    D_Loss: -9.875571     Dis_Pseudo_Loss: -0.294512     Dis_target_Loss: -10.064430   Target_AttackLoss: 0.008289
+2024-11-23T23:01:58.454130+08:00 - CRITICAL - 
+Test set: Average loss: 1.6310, Accuracy: 6308/10000 (63%)
+
+2024-11-23T23:01:59.711475+08:00 - CRITICAL - 
+Test set: Average loss: 2.0663, Accuracy: 5591/10000 (56%)
+
+2024-11-23T23:02:04.112467+08:00 - CRITICAL - Adaption Loss: 0.03768719360232353
+2024-11-23T23:02:13.206282+08:00 - CRITICAL - Adaption Loss: 0.037074968218803406
+2024-11-23T23:02:13.293834+08:00 - CRITICAL - Train Iteration: [6880/12000 (57%)]	   Pseudo_AttackLoss: 0.010097   Pseudo_target_mseloss: 0.026949     Vanila_D_Loss: -11.328747    D_Loss: -10.990067     Dis_Pseudo_Loss: -5.904703     Dis_target_Loss: -5.424044   Target_AttackLoss: 0.007560
+2024-11-23T23:02:22.184304+08:00 - CRITICAL - Adaption Loss: 0.04359382763504982
+2024-11-23T23:02:23.519944+08:00 - CRITICAL - 
+Test set: Average loss: 1.0305, Accuracy: 6456/10000 (65%)
+
+2024-11-23T23:02:24.739712+08:00 - CRITICAL - 
+Test set: Average loss: 1.1878, Accuracy: 5940/10000 (59%)
+
+2024-11-23T23:02:33.771460+08:00 - CRITICAL - Adaption Loss: 0.044379137456417084
+2024-11-23T23:02:33.857661+08:00 - CRITICAL - Train Iteration: [6920/12000 (58%)]	   Pseudo_AttackLoss: 0.010000   Pseudo_target_mseloss: 0.034268     Vanila_D_Loss: -10.992444    D_Loss: -10.338482     Dis_Pseudo_Loss: 3.331155     Dis_target_Loss: -14.323599   Target_AttackLoss: 0.010207
+2024-11-23T23:02:42.722558+08:00 - CRITICAL - Adaption Loss: 0.0345083624124527
+2024-11-23T23:02:48.770082+08:00 - CRITICAL - 
+Test set: Average loss: 1.0353, Accuracy: 6425/10000 (64%)
+
+2024-11-23T23:02:49.977035+08:00 - CRITICAL - 
+Test set: Average loss: 1.2117, Accuracy: 5970/10000 (60%)
+
+2024-11-23T23:02:54.282974+08:00 - CRITICAL - Adaption Loss: 0.041889529675245285
+2024-11-23T23:02:54.370920+08:00 - CRITICAL - Train Iteration: [6960/12000 (58%)]	   Pseudo_AttackLoss: 0.009134   Pseudo_target_mseloss: 0.032421     Vanila_D_Loss: -11.050690    D_Loss: -9.492917     Dis_Pseudo_Loss: -6.861370     Dis_target_Loss: -4.189320   Target_AttackLoss: 0.011198
+2024-11-23T23:03:03.197726+08:00 - CRITICAL - Adaption Loss: 0.04331392049789429
+2024-11-23T23:03:12.305607+08:00 - CRITICAL - Adaption Loss: 0.04524371773004532
+2024-11-23T23:03:12.392733+08:00 - CRITICAL - Train Iteration: [7000/12000 (58%)]	   Pseudo_AttackLoss: 0.008756   Pseudo_target_mseloss: 0.030132     Vanila_D_Loss: -10.396489    D_Loss: -10.074264     Dis_Pseudo_Loss: 9.113006     Dis_target_Loss: -19.509495   Target_AttackLoss: 0.008540
+2024-11-23T23:03:13.637495+08:00 - CRITICAL - 
+Test set: Average loss: 1.0009, Accuracy: 6551/10000 (66%)
+
+2024-11-23T23:03:14.859055+08:00 - CRITICAL - 
+Test set: Average loss: 1.2090, Accuracy: 5838/10000 (58%)
+
+2024-11-23T23:03:23.607959+08:00 - CRITICAL - Adaption Loss: 0.033176619559526443
+2024-11-23T23:03:32.819852+08:00 - CRITICAL - Adaption Loss: 0.0389559343457222
+2024-11-23T23:03:32.906086+08:00 - CRITICAL - Train Iteration: [7040/12000 (59%)]	   Pseudo_AttackLoss: 0.010027   Pseudo_target_mseloss: 0.028016     Vanila_D_Loss: -10.038735    D_Loss: -9.814313     Dis_Pseudo_Loss: 0.983222     Dis_target_Loss: -11.021957   Target_AttackLoss: 0.009106
+2024-11-23T23:03:38.515920+08:00 - CRITICAL - 
+Test set: Average loss: 1.0121, Accuracy: 6611/10000 (66%)
+
+2024-11-23T23:03:39.736444+08:00 - CRITICAL - 
+Test set: Average loss: 1.2061, Accuracy: 5955/10000 (60%)
+
+2024-11-23T23:03:44.292403+08:00 - CRITICAL - Adaption Loss: 0.045701030641794205
+2024-11-23T23:03:53.195033+08:00 - CRITICAL - Adaption Loss: 0.03827517852187157
+2024-11-23T23:03:53.281566+08:00 - CRITICAL - Train Iteration: [7080/12000 (59%)]	   Pseudo_AttackLoss: 0.009462   Pseudo_target_mseloss: 0.033122     Vanila_D_Loss: -9.663538    D_Loss: -9.159277     Dis_Pseudo_Loss: -8.368229     Dis_target_Loss: -1.295310   Target_AttackLoss: 0.009449
+2024-11-23T23:04:02.256271+08:00 - CRITICAL - Adaption Loss: 0.045594774186611176
+2024-11-23T23:04:03.588071+08:00 - CRITICAL - 
+Test set: Average loss: 1.0706, Accuracy: 6544/10000 (65%)
+
+2024-11-23T23:04:04.813991+08:00 - CRITICAL - 
+Test set: Average loss: 1.2367, Accuracy: 6076/10000 (61%)
+
+2024-11-23T23:04:13.695133+08:00 - CRITICAL - Adaption Loss: 0.03850429877638817
+2024-11-23T23:04:13.781691+08:00 - CRITICAL - Train Iteration: [7120/12000 (59%)]	   Pseudo_AttackLoss: 0.008665   Pseudo_target_mseloss: 0.032289     Vanila_D_Loss: -10.484932    D_Loss: -9.983855     Dis_Pseudo_Loss: -5.030221     Dis_target_Loss: -5.454711   Target_AttackLoss: 0.008213
+2024-11-23T23:04:22.812840+08:00 - CRITICAL - Adaption Loss: 0.0357472188770771
+2024-11-23T23:04:28.645452+08:00 - CRITICAL - 
+Test set: Average loss: 1.0515, Accuracy: 6620/10000 (66%)
+
+2024-11-23T23:04:29.880639+08:00 - CRITICAL - 
+Test set: Average loss: 1.2349, Accuracy: 5982/10000 (60%)
+
+2024-11-23T23:04:34.111584+08:00 - CRITICAL - Adaption Loss: 0.03621605411171913
+2024-11-23T23:04:34.161173+08:00 - CRITICAL - Train Iteration: [7160/12000 (60%)]	   Pseudo_AttackLoss: 0.008007   Pseudo_target_mseloss: 0.031513     Vanila_D_Loss: -11.107857    D_Loss: -10.899340     Dis_Pseudo_Loss: 2.806252     Dis_target_Loss: -13.914108   Target_AttackLoss: 0.007998
+2024-11-23T23:04:42.436889+08:00 - CRITICAL - Adaption Loss: 0.03765160217881203
+2024-11-23T23:04:50.650796+08:00 - CRITICAL - Adaption Loss: 0.03610798344016075
+2024-11-23T23:04:50.729144+08:00 - CRITICAL - Train Iteration: [7200/12000 (60%)]	   Pseudo_AttackLoss: 0.007370   Pseudo_target_mseloss: 0.028199     Vanila_D_Loss: -11.450583    D_Loss: -10.871655     Dis_Pseudo_Loss: -6.183937     Dis_target_Loss: -5.266646   Target_AttackLoss: 0.010352
+2024-11-23T23:04:52.008087+08:00 - CRITICAL - 
+Test set: Average loss: 1.0617, Accuracy: 6502/10000 (65%)
+
+2024-11-23T23:04:53.240063+08:00 - CRITICAL - 
+Test set: Average loss: 1.2577, Accuracy: 5909/10000 (59%)
+
+2024-11-23T23:05:01.549025+08:00 - CRITICAL - Adaption Loss: 0.038353290408849716
+2024-11-23T23:05:09.865375+08:00 - CRITICAL - Adaption Loss: 0.02753412164747715
+2024-11-23T23:05:09.953301+08:00 - CRITICAL - Train Iteration: [7240/12000 (60%)]	   Pseudo_AttackLoss: 0.007802   Pseudo_target_mseloss: 0.027170     Vanila_D_Loss: -10.394907    D_Loss: -10.153312     Dis_Pseudo_Loss: 5.326507     Dis_target_Loss: -15.721414   Target_AttackLoss: 0.008068
+2024-11-23T23:05:15.495155+08:00 - CRITICAL - 
+Test set: Average loss: 1.0417, Accuracy: 6521/10000 (65%)
+
+2024-11-23T23:05:16.776579+08:00 - CRITICAL - 
+Test set: Average loss: 1.2221, Accuracy: 6010/10000 (60%)
+
+2024-11-23T23:05:21.328428+08:00 - CRITICAL - Adaption Loss: 0.037434618920087814
+2024-11-23T23:05:30.212046+08:00 - CRITICAL - Adaption Loss: 0.038545675575733185
+2024-11-23T23:05:30.297769+08:00 - CRITICAL - Train Iteration: [7280/12000 (61%)]	   Pseudo_AttackLoss: 0.010255   Pseudo_target_mseloss: 0.025966     Vanila_D_Loss: -10.980083    D_Loss: -10.597048     Dis_Pseudo_Loss: -2.676209     Dis_target_Loss: -8.303875   Target_AttackLoss: 0.007686
+2024-11-23T23:05:39.289892+08:00 - CRITICAL - Adaption Loss: 0.03310459852218628
+2024-11-23T23:05:40.615459+08:00 - CRITICAL - 
+Test set: Average loss: 1.0760, Accuracy: 6446/10000 (64%)
+
+2024-11-23T23:05:41.864751+08:00 - CRITICAL - 
+Test set: Average loss: 1.2338, Accuracy: 6029/10000 (60%)
+
+2024-11-23T23:05:50.709270+08:00 - CRITICAL - Adaption Loss: 0.035555556416511536
+2024-11-23T23:05:50.795486+08:00 - CRITICAL - Train Iteration: [7320/12000 (61%)]	   Pseudo_AttackLoss: 0.010252   Pseudo_target_mseloss: 0.026238     Vanila_D_Loss: -11.115931    D_Loss: -10.723455     Dis_Pseudo_Loss: 5.808403     Dis_target_Loss: -16.924334   Target_AttackLoss: 0.007807
+2024-11-23T23:05:59.839024+08:00 - CRITICAL - Adaption Loss: 0.03418896347284317
+2024-11-23T23:06:05.667841+08:00 - CRITICAL - 
+Test set: Average loss: 1.0265, Accuracy: 6583/10000 (66%)
+
+2024-11-23T23:06:06.875409+08:00 - CRITICAL - 
+Test set: Average loss: 1.1192, Accuracy: 6270/10000 (63%)
+
+2024-11-23T23:06:11.203641+08:00 - CRITICAL - Adaption Loss: 0.0385582335293293
+2024-11-23T23:06:11.291875+08:00 - CRITICAL - Train Iteration: [7360/12000 (61%)]	   Pseudo_AttackLoss: 0.010456   Pseudo_target_mseloss: 0.027194     Vanila_D_Loss: -10.498636    D_Loss: -9.956265     Dis_Pseudo_Loss: -1.841427     Dis_target_Loss: -8.657209   Target_AttackLoss: 0.009010
+2024-11-23T23:06:20.170761+08:00 - CRITICAL - Adaption Loss: 0.03309056907892227
+2024-11-23T23:06:29.150570+08:00 - CRITICAL - Adaption Loss: 0.033686134964227676
+2024-11-23T23:06:29.236685+08:00 - CRITICAL - Train Iteration: [7400/12000 (62%)]	   Pseudo_AttackLoss: 0.008233   Pseudo_target_mseloss: 0.028318     Vanila_D_Loss: -11.498583    D_Loss: -11.272507     Dis_Pseudo_Loss: 0.519130     Dis_target_Loss: -12.017714   Target_AttackLoss: 0.010991
+2024-11-23T23:06:30.468430+08:00 - CRITICAL - 
+Test set: Average loss: 1.0568, Accuracy: 6461/10000 (65%)
+
+2024-11-23T23:06:31.675319+08:00 - CRITICAL - 
+Test set: Average loss: 1.1473, Accuracy: 6196/10000 (62%)
+
+2024-11-23T23:06:40.673653+08:00 - CRITICAL - Adaption Loss: 0.03857027366757393
+2024-11-23T23:06:49.657199+08:00 - CRITICAL - Adaption Loss: 0.03284282982349396
+2024-11-23T23:06:49.742497+08:00 - CRITICAL - Train Iteration: [7440/12000 (62%)]	   Pseudo_AttackLoss: 0.008816   Pseudo_target_mseloss: 0.029382     Vanila_D_Loss: -11.253384    D_Loss: -10.933875     Dis_Pseudo_Loss: 1.218393     Dis_target_Loss: -12.471777   Target_AttackLoss: 0.008567
+2024-11-23T23:06:55.572052+08:00 - CRITICAL - 
+Test set: Average loss: 1.0526, Accuracy: 6473/10000 (65%)
+
+2024-11-23T23:06:56.775827+08:00 - CRITICAL - 
+Test set: Average loss: 1.1063, Accuracy: 6236/10000 (62%)
+
+2024-11-23T23:07:01.080806+08:00 - CRITICAL - Adaption Loss: 0.03934484347701073
+2024-11-23T23:07:09.998229+08:00 - CRITICAL - Adaption Loss: 0.036118898540735245
+2024-11-23T23:07:10.084633+08:00 - CRITICAL - Train Iteration: [7480/12000 (62%)]	   Pseudo_AttackLoss: 0.010161   Pseudo_target_mseloss: 0.030008     Vanila_D_Loss: -11.075043    D_Loss: -8.737258     Dis_Pseudo_Loss: -5.424644     Dis_target_Loss: -5.650399   Target_AttackLoss: 0.008488
+2024-11-23T23:07:19.006787+08:00 - CRITICAL - Adaption Loss: 0.03784298896789551
+2024-11-23T23:07:20.344574+08:00 - CRITICAL - 
+Test set: Average loss: 1.0299, Accuracy: 6522/10000 (65%)
+
+2024-11-23T23:07:21.568020+08:00 - CRITICAL - 
+Test set: Average loss: 1.1899, Accuracy: 6097/10000 (61%)
+
+2024-11-23T23:07:30.412447+08:00 - CRITICAL - Adaption Loss: 0.039342187345027924
+2024-11-23T23:07:30.497865+08:00 - CRITICAL - Train Iteration: [7520/12000 (63%)]	   Pseudo_AttackLoss: 0.008793   Pseudo_target_mseloss: 0.032330     Vanila_D_Loss: -9.910295    D_Loss: -9.493419     Dis_Pseudo_Loss: -1.422664     Dis_target_Loss: -8.487632   Target_AttackLoss: 0.010982
+2024-11-23T23:07:39.551164+08:00 - CRITICAL - Adaption Loss: 0.03181854635477066
+2024-11-23T23:07:45.379609+08:00 - CRITICAL - 
+Test set: Average loss: 1.0443, Accuracy: 6483/10000 (65%)
+
+2024-11-23T23:07:46.609339+08:00 - CRITICAL - 
+Test set: Average loss: 1.1850, Accuracy: 6043/10000 (60%)
+
+2024-11-23T23:07:50.908809+08:00 - CRITICAL - Adaption Loss: 0.031083114445209503
+2024-11-23T23:07:50.994175+08:00 - CRITICAL - Train Iteration: [7560/12000 (63%)]	   Pseudo_AttackLoss: 0.008475   Pseudo_target_mseloss: 0.031687     Vanila_D_Loss: -11.184850    D_Loss: -10.988721     Dis_Pseudo_Loss: 0.217300     Dis_target_Loss: -11.402149   Target_AttackLoss: 0.009341
+2024-11-23T23:08:00.000112+08:00 - CRITICAL - Adaption Loss: 0.037685807794332504
+2024-11-23T23:08:08.632578+08:00 - CRITICAL - Adaption Loss: 0.033487435430288315
+2024-11-23T23:08:08.718342+08:00 - CRITICAL - Train Iteration: [7600/12000 (63%)]	   Pseudo_AttackLoss: 0.008977   Pseudo_target_mseloss: 0.028108     Vanila_D_Loss: -10.893982    D_Loss: -10.279145     Dis_Pseudo_Loss: 4.972896     Dis_target_Loss: -15.866878   Target_AttackLoss: 0.008291
+2024-11-23T23:08:09.959307+08:00 - CRITICAL - 
+Test set: Average loss: 1.0088, Accuracy: 6570/10000 (66%)
+
+2024-11-23T23:08:11.182430+08:00 - CRITICAL - 
+Test set: Average loss: 1.1684, Accuracy: 6111/10000 (61%)
+
+2024-11-23T23:08:20.193439+08:00 - CRITICAL - Adaption Loss: 0.03293905779719353
+2024-11-23T23:08:29.123143+08:00 - CRITICAL - Adaption Loss: 0.03563980758190155
+2024-11-23T23:08:29.208821+08:00 - CRITICAL - Train Iteration: [7640/12000 (64%)]	   Pseudo_AttackLoss: 0.009248   Pseudo_target_mseloss: 0.029994     Vanila_D_Loss: -10.534142    D_Loss: -10.292569     Dis_Pseudo_Loss: -7.218850     Dis_target_Loss: -3.315292   Target_AttackLoss: 0.009048
+2024-11-23T23:08:35.124119+08:00 - CRITICAL - 
+Test set: Average loss: 1.0208, Accuracy: 6612/10000 (66%)
+
+2024-11-23T23:08:36.346039+08:00 - CRITICAL - 
+Test set: Average loss: 1.1634, Accuracy: 6172/10000 (62%)
+
+2024-11-23T23:08:40.702662+08:00 - CRITICAL - Adaption Loss: 0.038286782801151276
+2024-11-23T23:08:49.539048+08:00 - CRITICAL - Adaption Loss: 0.03417875990271568
+2024-11-23T23:08:49.624706+08:00 - CRITICAL - Train Iteration: [7680/12000 (64%)]	   Pseudo_AttackLoss: 0.008500   Pseudo_target_mseloss: 0.030927     Vanila_D_Loss: -11.611415    D_Loss: -10.193974     Dis_Pseudo_Loss: 1.325786     Dis_target_Loss: -12.937201   Target_AttackLoss: 0.010028
+2024-11-23T23:08:58.504873+08:00 - CRITICAL - Adaption Loss: 0.038267120718955994
+2024-11-23T23:08:59.831762+08:00 - CRITICAL - 
+Test set: Average loss: 0.9901, Accuracy: 6597/10000 (66%)
+
+2024-11-23T23:09:01.072465+08:00 - CRITICAL - 
+Test set: Average loss: 1.1033, Accuracy: 6230/10000 (62%)
+
+2024-11-23T23:09:09.819307+08:00 - CRITICAL - Adaption Loss: 0.03538770228624344
+2024-11-23T23:09:09.906029+08:00 - CRITICAL - Train Iteration: [7720/12000 (64%)]	   Pseudo_AttackLoss: 0.011893   Pseudo_target_mseloss: 0.028018     Vanila_D_Loss: -10.523832    D_Loss: -9.793509     Dis_Pseudo_Loss: -0.217062     Dis_target_Loss: -10.306770   Target_AttackLoss: 0.010693
+2024-11-23T23:09:18.872793+08:00 - CRITICAL - Adaption Loss: 0.03571431338787079
+2024-11-23T23:09:24.665047+08:00 - CRITICAL - 
+Test set: Average loss: 0.9882, Accuracy: 6657/10000 (67%)
+
+2024-11-23T23:09:25.907252+08:00 - CRITICAL - 
+Test set: Average loss: 1.1308, Accuracy: 6210/10000 (62%)
+
+2024-11-23T23:09:30.305828+08:00 - CRITICAL - Adaption Loss: 0.04357275739312172
+2024-11-23T23:09:30.393500+08:00 - CRITICAL - Train Iteration: [7760/12000 (65%)]	   Pseudo_AttackLoss: 0.014764   Pseudo_target_mseloss: 0.025267     Vanila_D_Loss: -11.253912    D_Loss: -11.047323     Dis_Pseudo_Loss: 2.598474     Dis_target_Loss: -13.852386   Target_AttackLoss: 0.007824
+2024-11-23T23:09:39.455655+08:00 - CRITICAL - Adaption Loss: 0.041059479117393494
+2024-11-23T23:09:48.376256+08:00 - CRITICAL - Adaption Loss: 0.03603863716125488
+2024-11-23T23:09:48.464053+08:00 - CRITICAL - Train Iteration: [7800/12000 (65%)]	   Pseudo_AttackLoss: 0.008427   Pseudo_target_mseloss: 0.025776     Vanila_D_Loss: -10.532026    D_Loss: -10.323758     Dis_Pseudo_Loss: -11.415161     Dis_target_Loss: 0.883135   Target_AttackLoss: 0.008892
+2024-11-23T23:09:49.718732+08:00 - CRITICAL - 
+Test set: Average loss: 0.9759, Accuracy: 6634/10000 (66%)
+
+2024-11-23T23:09:50.941487+08:00 - CRITICAL - 
+Test set: Average loss: 1.1353, Accuracy: 6205/10000 (62%)
+
+2024-11-23T23:10:00.129185+08:00 - CRITICAL - Adaption Loss: 0.03220922127366066
+2024-11-23T23:10:08.992670+08:00 - CRITICAL - Adaption Loss: 0.03797297179698944
+2024-11-23T23:10:09.067952+08:00 - CRITICAL - Train Iteration: [7840/12000 (65%)]	   Pseudo_AttackLoss: 0.008958   Pseudo_target_mseloss: 0.023316     Vanila_D_Loss: -10.686228    D_Loss: -10.480042     Dis_Pseudo_Loss: 3.468071     Dis_target_Loss: -14.154300   Target_AttackLoss: 0.007057
+2024-11-23T23:10:14.571095+08:00 - CRITICAL - 
+Test set: Average loss: 1.0261, Accuracy: 6653/10000 (67%)
+
+2024-11-23T23:10:15.832137+08:00 - CRITICAL - 
+Test set: Average loss: 1.1698, Accuracy: 6191/10000 (62%)
+
+2024-11-23T23:10:20.477438+08:00 - CRITICAL - Adaption Loss: 0.037389859557151794
+2024-11-23T23:10:29.579373+08:00 - CRITICAL - Adaption Loss: 0.03522441163659096
+2024-11-23T23:10:29.634015+08:00 - CRITICAL - Train Iteration: [7880/12000 (66%)]	   Pseudo_AttackLoss: 0.009253   Pseudo_target_mseloss: 0.028858     Vanila_D_Loss: -11.719995    D_Loss: -11.237763     Dis_Pseudo_Loss: -4.505147     Dis_target_Loss: -7.214849   Target_AttackLoss: 0.008409
+2024-11-23T23:10:38.199042+08:00 - CRITICAL - Adaption Loss: 0.03381266072392464
+2024-11-23T23:10:39.503159+08:00 - CRITICAL - 
+Test set: Average loss: 1.0648, Accuracy: 6600/10000 (66%)
+
+2024-11-23T23:10:40.727841+08:00 - CRITICAL - 
+Test set: Average loss: 1.2489, Accuracy: 6010/10000 (60%)
+
+2024-11-23T23:10:49.027588+08:00 - CRITICAL - Adaption Loss: 0.03446215018630028
+2024-11-23T23:10:49.080396+08:00 - CRITICAL - Train Iteration: [7920/12000 (66%)]	   Pseudo_AttackLoss: 0.010447   Pseudo_target_mseloss: 0.026815     Vanila_D_Loss: -10.528546    D_Loss: -10.284063     Dis_Pseudo_Loss: 6.154037     Dis_target_Loss: -16.682583   Target_AttackLoss: 0.008733
+2024-11-23T23:10:57.533012+08:00 - CRITICAL - Adaption Loss: 0.03787080571055412
+2024-11-23T23:11:03.366477+08:00 - CRITICAL - 
+Test set: Average loss: 1.0684, Accuracy: 6560/10000 (66%)
+
+2024-11-23T23:11:04.591668+08:00 - CRITICAL - 
+Test set: Average loss: 1.1909, Accuracy: 6215/10000 (62%)
+
+2024-11-23T23:11:09.108584+08:00 - CRITICAL - Adaption Loss: 0.03511941432952881
+2024-11-23T23:11:09.196301+08:00 - CRITICAL - Train Iteration: [7960/12000 (66%)]	   Pseudo_AttackLoss: 0.007732   Pseudo_target_mseloss: 0.026036     Vanila_D_Loss: -11.134496    D_Loss: -10.955899     Dis_Pseudo_Loss: -10.096191     Dis_target_Loss: -1.038305   Target_AttackLoss: 0.009474
+2024-11-23T23:11:17.998507+08:00 - CRITICAL - Adaption Loss: 0.038947418332099915
+2024-11-23T23:11:27.148455+08:00 - CRITICAL - Adaption Loss: 0.038973938673734665
+2024-11-23T23:11:27.236361+08:00 - CRITICAL - Train Iteration: [8000/12000 (67%)]	   Pseudo_AttackLoss: 0.007955   Pseudo_target_mseloss: 0.027017     Vanila_D_Loss: -11.106622    D_Loss: -10.738583     Dis_Pseudo_Loss: 0.197486     Dis_target_Loss: -11.304108   Target_AttackLoss: 0.007969
+2024-11-23T23:11:28.494410+08:00 - CRITICAL - 
+Test set: Average loss: 1.0870, Accuracy: 6499/10000 (65%)
+
+2024-11-23T23:11:29.725280+08:00 - CRITICAL - 
+Test set: Average loss: 1.2148, Accuracy: 6192/10000 (62%)
+
+2024-11-23T23:11:38.579461+08:00 - CRITICAL - Adaption Loss: 0.038975369185209274
+2024-11-23T23:11:47.748599+08:00 - CRITICAL - Adaption Loss: 0.03682805597782135
+2024-11-23T23:11:47.833675+08:00 - CRITICAL - Train Iteration: [8040/12000 (67%)]	   Pseudo_AttackLoss: 0.020304   Pseudo_target_mseloss: 0.026406     Vanila_D_Loss: -11.659449    D_Loss: -10.634073     Dis_Pseudo_Loss: -1.014104     Dis_target_Loss: -10.645344   Target_AttackLoss: 0.010486
+2024-11-23T23:11:53.585529+08:00 - CRITICAL - 
+Test set: Average loss: 1.0445, Accuracy: 6559/10000 (66%)
+
+2024-11-23T23:11:54.819649+08:00 - CRITICAL - 
+Test set: Average loss: 1.3246, Accuracy: 5833/10000 (58%)
+
+2024-11-23T23:11:59.201456+08:00 - CRITICAL - Adaption Loss: 0.03511065989732742
+2024-11-23T23:12:08.222708+08:00 - CRITICAL - Adaption Loss: 0.031725939363241196
+2024-11-23T23:12:08.309231+08:00 - CRITICAL - Train Iteration: [8080/12000 (67%)]	   Pseudo_AttackLoss: 0.007794   Pseudo_target_mseloss: 0.022500     Vanila_D_Loss: -10.357865    D_Loss: -10.168943     Dis_Pseudo_Loss: -1.062991     Dis_target_Loss: -9.294874   Target_AttackLoss: 0.007189
+2024-11-23T23:12:17.198359+08:00 - CRITICAL - Adaption Loss: 0.03987251594662666
+2024-11-23T23:12:18.539106+08:00 - CRITICAL - 
+Test set: Average loss: 1.1095, Accuracy: 6516/10000 (65%)
+
+2024-11-23T23:12:19.754557+08:00 - CRITICAL - 
+Test set: Average loss: 1.2533, Accuracy: 6174/10000 (62%)
+
+2024-11-23T23:12:28.742070+08:00 - CRITICAL - Adaption Loss: 0.03374674916267395
+2024-11-23T23:12:28.829459+08:00 - CRITICAL - Train Iteration: [8120/12000 (68%)]	   Pseudo_AttackLoss: 0.007968   Pseudo_target_mseloss: 0.029734     Vanila_D_Loss: -10.899864    D_Loss: -10.645229     Dis_Pseudo_Loss: 1.348866     Dis_target_Loss: -12.248731   Target_AttackLoss: 0.010870
+2024-11-23T23:12:37.690037+08:00 - CRITICAL - Adaption Loss: 0.042176373302936554
+2024-11-23T23:12:43.436698+08:00 - CRITICAL - 
+Test set: Average loss: 1.0279, Accuracy: 6643/10000 (66%)
+
+2024-11-23T23:12:44.651826+08:00 - CRITICAL - 
+Test set: Average loss: 1.2742, Accuracy: 5868/10000 (59%)
+
+2024-11-23T23:12:49.136629+08:00 - CRITICAL - Adaption Loss: 0.0411333292722702
+2024-11-23T23:12:49.223710+08:00 - CRITICAL - Train Iteration: [8160/12000 (68%)]	   Pseudo_AttackLoss: 0.007937   Pseudo_target_mseloss: 0.025233     Vanila_D_Loss: -12.180970    D_Loss: -11.352907     Dis_Pseudo_Loss: -3.976845     Dis_target_Loss: -8.204125   Target_AttackLoss: 0.006902
+2024-11-23T23:12:58.057299+08:00 - CRITICAL - Adaption Loss: 0.03419747203588486
+2024-11-23T23:13:07.035333+08:00 - CRITICAL - Adaption Loss: 0.040769532322883606
+2024-11-23T23:13:07.089382+08:00 - CRITICAL - Train Iteration: [8200/12000 (68%)]	   Pseudo_AttackLoss: 0.008993   Pseudo_target_mseloss: 0.029655     Vanila_D_Loss: -11.525190    D_Loss: -10.495968     Dis_Pseudo_Loss: 4.180313     Dis_target_Loss: -15.705503   Target_AttackLoss: 0.008719
+2024-11-23T23:13:08.334018+08:00 - CRITICAL - 
+Test set: Average loss: 1.0207, Accuracy: 6620/10000 (66%)
+
+2024-11-23T23:13:09.572530+08:00 - CRITICAL - 
+Test set: Average loss: 1.1618, Accuracy: 6249/10000 (62%)
+
+2024-11-23T23:13:18.230646+08:00 - CRITICAL - Adaption Loss: 0.034148164093494415
+2024-11-23T23:13:27.126235+08:00 - CRITICAL - Adaption Loss: 0.03362765163183212
+2024-11-23T23:13:27.213174+08:00 - CRITICAL - Train Iteration: [8240/12000 (69%)]	   Pseudo_AttackLoss: 0.010604   Pseudo_target_mseloss: 0.025812     Vanila_D_Loss: -12.154400    D_Loss: -10.639826     Dis_Pseudo_Loss: -8.608953     Dis_target_Loss: -3.545446   Target_AttackLoss: 0.007727
+2024-11-23T23:13:32.859303+08:00 - CRITICAL - 
+Test set: Average loss: 1.0102, Accuracy: 6665/10000 (67%)
+
+2024-11-23T23:13:34.158449+08:00 - CRITICAL - 
+Test set: Average loss: 1.1926, Accuracy: 6120/10000 (61%)
+
+2024-11-23T23:13:38.450120+08:00 - CRITICAL - Adaption Loss: 0.03247606009244919
+2024-11-23T23:13:47.358642+08:00 - CRITICAL - Adaption Loss: 0.04458065330982208
+2024-11-23T23:13:47.446045+08:00 - CRITICAL - Train Iteration: [8280/12000 (69%)]	   Pseudo_AttackLoss: 0.007881   Pseudo_target_mseloss: 0.028939     Vanila_D_Loss: -11.337105    D_Loss: -10.778940     Dis_Pseudo_Loss: 2.002422     Dis_target_Loss: -13.339527   Target_AttackLoss: 0.011499
+2024-11-23T23:13:56.146814+08:00 - CRITICAL - Adaption Loss: 0.03262925148010254
+2024-11-23T23:13:57.491178+08:00 - CRITICAL - 
+Test set: Average loss: 1.0317, Accuracy: 6642/10000 (66%)
+
+2024-11-23T23:13:58.755945+08:00 - CRITICAL - 
+Test set: Average loss: 1.0961, Accuracy: 6384/10000 (64%)
+
+2024-11-23T23:14:07.699675+08:00 - CRITICAL - Adaption Loss: 0.033625926822423935
+2024-11-23T23:14:07.786148+08:00 - CRITICAL - Train Iteration: [8320/12000 (69%)]	   Pseudo_AttackLoss: 0.009646   Pseudo_target_mseloss: 0.023413     Vanila_D_Loss: -11.659760    D_Loss: -11.466751     Dis_Pseudo_Loss: -5.914853     Dis_target_Loss: -5.744906   Target_AttackLoss: 0.007890
+2024-11-23T23:14:16.560121+08:00 - CRITICAL - Adaption Loss: 0.03403560072183609
+2024-11-23T23:14:22.533254+08:00 - CRITICAL - 
+Test set: Average loss: 1.0452, Accuracy: 6522/10000 (65%)
+
+2024-11-23T23:14:23.775675+08:00 - CRITICAL - 
+Test set: Average loss: 1.1915, Accuracy: 6083/10000 (61%)
+
+2024-11-23T23:14:27.885891+08:00 - CRITICAL - Adaption Loss: 0.03381220996379852
+2024-11-23T23:14:27.969581+08:00 - CRITICAL - Train Iteration: [8360/12000 (70%)]	   Pseudo_AttackLoss: 0.007989   Pseudo_target_mseloss: 0.027327     Vanila_D_Loss: -11.399295    D_Loss: -11.153199     Dis_Pseudo_Loss: 7.385186     Dis_target_Loss: -18.784481   Target_AttackLoss: 0.008463
+2024-11-23T23:14:36.861168+08:00 - CRITICAL - Adaption Loss: 0.03175470605492592
+2024-11-23T23:14:45.867677+08:00 - CRITICAL - Adaption Loss: 0.05631503835320473
+2024-11-23T23:14:45.953405+08:00 - CRITICAL - Train Iteration: [8400/12000 (70%)]	   Pseudo_AttackLoss: 0.009446   Pseudo_target_mseloss: 0.025742     Vanila_D_Loss: -11.308496    D_Loss: -11.183759     Dis_Pseudo_Loss: -11.785739     Dis_target_Loss: 0.477243   Target_AttackLoss: 0.007871
+2024-11-23T23:14:47.183502+08:00 - CRITICAL - 
+Test set: Average loss: 0.9843, Accuracy: 6708/10000 (67%)
+
+2024-11-23T23:14:48.478836+08:00 - CRITICAL - 
+Test set: Average loss: 1.1491, Accuracy: 6206/10000 (62%)
+
+2024-11-23T23:14:57.268463+08:00 - CRITICAL - Adaption Loss: 0.03443639352917671
+2024-11-23T23:15:06.231095+08:00 - CRITICAL - Adaption Loss: 0.03599955141544342
+2024-11-23T23:15:06.316675+08:00 - CRITICAL - Train Iteration: [8440/12000 (70%)]	   Pseudo_AttackLoss: 0.007190   Pseudo_target_mseloss: 0.025197     Vanila_D_Loss: -11.528770    D_Loss: -10.931734     Dis_Pseudo_Loss: 5.790787     Dis_target_Loss: -17.319557   Target_AttackLoss: 0.007005
+2024-11-23T23:15:11.998211+08:00 - CRITICAL - 
+Test set: Average loss: 1.0072, Accuracy: 6669/10000 (67%)
+
+2024-11-23T23:15:13.289320+08:00 - CRITICAL - 
+Test set: Average loss: 1.1039, Accuracy: 6380/10000 (64%)
+
+2024-11-23T23:15:17.649825+08:00 - CRITICAL - Adaption Loss: 0.03003341518342495
+2024-11-23T23:15:26.678047+08:00 - CRITICAL - Adaption Loss: 0.03536771610379219
+2024-11-23T23:15:26.764848+08:00 - CRITICAL - Train Iteration: [8480/12000 (71%)]	   Pseudo_AttackLoss: 0.011670   Pseudo_target_mseloss: 0.026276     Vanila_D_Loss: -10.921844    D_Loss: -10.660278     Dis_Pseudo_Loss: -1.213128     Dis_target_Loss: -9.708717   Target_AttackLoss: 0.007598
+2024-11-23T23:15:35.627331+08:00 - CRITICAL - Adaption Loss: 0.035079121589660645
+2024-11-23T23:15:37.031217+08:00 - CRITICAL - 
+Test set: Average loss: 0.9973, Accuracy: 6659/10000 (67%)
+
+2024-11-23T23:15:38.330262+08:00 - CRITICAL - 
+Test set: Average loss: 1.1472, Accuracy: 6254/10000 (63%)
+
+2024-11-23T23:15:47.365913+08:00 - CRITICAL - Adaption Loss: 0.03779345750808716
+2024-11-23T23:15:47.452583+08:00 - CRITICAL - Train Iteration: [8520/12000 (71%)]	   Pseudo_AttackLoss: 0.008794   Pseudo_target_mseloss: 0.029302     Vanila_D_Loss: -9.975372    D_Loss: -9.704217     Dis_Pseudo_Loss: 5.414071     Dis_target_Loss: -15.389443   Target_AttackLoss: 0.011068
+2024-11-23T23:15:55.734655+08:00 - CRITICAL - Adaption Loss: 0.03926985710859299
+2024-11-23T23:16:01.254530+08:00 - CRITICAL - 
+Test set: Average loss: 1.0636, Accuracy: 6623/10000 (66%)
+
+2024-11-23T23:16:02.489307+08:00 - CRITICAL - 
+Test set: Average loss: 1.1736, Accuracy: 6342/10000 (63%)
+
+2024-11-23T23:16:06.464030+08:00 - CRITICAL - Adaption Loss: 0.041920408606529236
+2024-11-23T23:16:06.544288+08:00 - CRITICAL - Train Iteration: [8560/12000 (71%)]	   Pseudo_AttackLoss: 0.017483   Pseudo_target_mseloss: 0.029045     Vanila_D_Loss: -10.010824    D_Loss: -9.876681     Dis_Pseudo_Loss: -4.939469     Dis_target_Loss: -5.071355   Target_AttackLoss: 0.011348
+2024-11-23T23:16:14.594696+08:00 - CRITICAL - Adaption Loss: 0.03474733233451843
+2024-11-23T23:16:23.028301+08:00 - CRITICAL - Adaption Loss: 0.03212296962738037
+2024-11-23T23:16:23.081025+08:00 - CRITICAL - Train Iteration: [8600/12000 (72%)]	   Pseudo_AttackLoss: 0.007622   Pseudo_target_mseloss: 0.023370     Vanila_D_Loss: -10.702424    D_Loss: -10.485043     Dis_Pseudo_Loss: 2.431472     Dis_target_Loss: -13.133896   Target_AttackLoss: 0.007900
+2024-11-23T23:16:24.332601+08:00 - CRITICAL - 
+Test set: Average loss: 1.0187, Accuracy: 6619/10000 (66%)
+
+2024-11-23T23:16:25.600934+08:00 - CRITICAL - 
+Test set: Average loss: 1.1125, Accuracy: 6348/10000 (63%)
+
+2024-11-23T23:16:34.326500+08:00 - CRITICAL - Adaption Loss: 0.041364897042512894
+2024-11-23T23:16:43.276226+08:00 - CRITICAL - Adaption Loss: 0.039058245718479156
+2024-11-23T23:16:43.363011+08:00 - CRITICAL - Train Iteration: [8640/12000 (72%)]	   Pseudo_AttackLoss: 0.008538   Pseudo_target_mseloss: 0.026584     Vanila_D_Loss: -10.655875    D_Loss: -10.409552     Dis_Pseudo_Loss: -1.823690     Dis_target_Loss: -8.832186   Target_AttackLoss: 0.008391
+2024-11-23T23:16:49.094479+08:00 - CRITICAL - 
+Test set: Average loss: 1.0595, Accuracy: 6649/10000 (66%)
+
+2024-11-23T23:16:50.322778+08:00 - CRITICAL - 
+Test set: Average loss: 1.2798, Accuracy: 6011/10000 (60%)
+
+2024-11-23T23:16:55.224755+08:00 - CRITICAL - Adaption Loss: 0.041213370859622955
+2024-11-23T23:17:04.821280+08:00 - CRITICAL - Adaption Loss: 0.040182892233133316
+2024-11-23T23:17:04.906584+08:00 - CRITICAL - Train Iteration: [8680/12000 (72%)]	   Pseudo_AttackLoss: 0.008800   Pseudo_target_mseloss: 0.023725     Vanila_D_Loss: -5.145543    D_Loss: 9.205442     Dis_Pseudo_Loss: -1.333429     Dis_target_Loss: -3.812114   Target_AttackLoss: 0.008501
+2024-11-23T23:17:14.206673+08:00 - CRITICAL - Adaption Loss: 0.03334323316812515
+2024-11-23T23:17:15.554377+08:00 - CRITICAL - 
+Test set: Average loss: 1.0891, Accuracy: 6693/10000 (67%)
+
+2024-11-23T23:17:16.791180+08:00 - CRITICAL - 
+Test set: Average loss: 1.2915, Accuracy: 6199/10000 (62%)
+
+2024-11-23T23:17:26.896173+08:00 - CRITICAL - Adaption Loss: 0.0406392402946949
+2024-11-23T23:17:26.985572+08:00 - CRITICAL - Train Iteration: [8720/12000 (73%)]	   Pseudo_AttackLoss: 0.007656   Pseudo_target_mseloss: 0.023881     Vanila_D_Loss: -8.533867    D_Loss: -8.029925     Dis_Pseudo_Loss: 1.358241     Dis_target_Loss: -9.892108   Target_AttackLoss: 0.008317
+2024-11-23T23:17:37.293338+08:00 - CRITICAL - Adaption Loss: 0.04413903132081032
+2024-11-23T23:17:43.718139+08:00 - CRITICAL - 
+Test set: Average loss: 1.0650, Accuracy: 6577/10000 (66%)
+
+2024-11-23T23:17:44.996431+08:00 - CRITICAL - 
+Test set: Average loss: 1.2583, Accuracy: 6069/10000 (61%)
+
+2024-11-23T23:17:49.415515+08:00 - CRITICAL - Adaption Loss: 0.04190385341644287
+2024-11-23T23:17:49.504533+08:00 - CRITICAL - Train Iteration: [8760/12000 (73%)]	   Pseudo_AttackLoss: 0.009755   Pseudo_target_mseloss: 0.026684     Vanila_D_Loss: -9.067138    D_Loss: -8.638116     Dis_Pseudo_Loss: -0.751809     Dis_target_Loss: -8.315329   Target_AttackLoss: 0.007834
+2024-11-23T23:17:58.595628+08:00 - CRITICAL - Adaption Loss: 0.04456696659326553
+2024-11-23T23:18:07.511775+08:00 - CRITICAL - Adaption Loss: 0.03735322505235672
+2024-11-23T23:18:07.598027+08:00 - CRITICAL - Train Iteration: [8800/12000 (73%)]	   Pseudo_AttackLoss: 0.009712   Pseudo_target_mseloss: 0.028210     Vanila_D_Loss: -9.518979    D_Loss: -9.357593     Dis_Pseudo_Loss: -8.150116     Dis_target_Loss: -1.368863   Target_AttackLoss: 0.007629
+2024-11-23T23:18:08.913086+08:00 - CRITICAL - 
+Test set: Average loss: 1.0395, Accuracy: 6646/10000 (66%)
+
+2024-11-23T23:18:10.130237+08:00 - CRITICAL - 
+Test set: Average loss: 1.1811, Accuracy: 6264/10000 (63%)
+
+2024-11-23T23:18:19.207042+08:00 - CRITICAL - Adaption Loss: 0.032898616045713425
+2024-11-23T23:18:28.086550+08:00 - CRITICAL - Adaption Loss: 0.031247764825820923
+2024-11-23T23:18:28.173079+08:00 - CRITICAL - Train Iteration: [8840/12000 (74%)]	   Pseudo_AttackLoss: 0.008537   Pseudo_target_mseloss: 0.026422     Vanila_D_Loss: -9.761060    D_Loss: -9.188063     Dis_Pseudo_Loss: 6.093974     Dis_target_Loss: -15.855034   Target_AttackLoss: 0.007267
+2024-11-23T23:18:33.909140+08:00 - CRITICAL - 
+Test set: Average loss: 1.0370, Accuracy: 6635/10000 (66%)
+
+2024-11-23T23:18:35.117218+08:00 - CRITICAL - 
+Test set: Average loss: 1.1446, Accuracy: 6352/10000 (64%)
+
+2024-11-23T23:18:39.702160+08:00 - CRITICAL - Adaption Loss: 0.0402483269572258
+2024-11-23T23:18:48.545755+08:00 - CRITICAL - Adaption Loss: 0.035858966410160065
+2024-11-23T23:18:48.632168+08:00 - CRITICAL - Train Iteration: [8880/12000 (74%)]	   Pseudo_AttackLoss: 0.007832   Pseudo_target_mseloss: 0.029082     Vanila_D_Loss: -9.987655    D_Loss: -9.818367     Dis_Pseudo_Loss: -5.903792     Dis_target_Loss: -4.083862   Target_AttackLoss: 0.008025
+2024-11-23T23:18:57.578684+08:00 - CRITICAL - Adaption Loss: 0.03703279793262482
+2024-11-23T23:18:58.988733+08:00 - CRITICAL - 
+Test set: Average loss: 1.0539, Accuracy: 6707/10000 (67%)
+
+2024-11-23T23:19:00.232397+08:00 - CRITICAL - 
+Test set: Average loss: 1.3103, Accuracy: 6008/10000 (60%)
+
+2024-11-23T23:19:08.999204+08:00 - CRITICAL - Adaption Loss: 0.034651707857847214
+2024-11-23T23:19:09.088839+08:00 - CRITICAL - Train Iteration: [8920/12000 (74%)]	   Pseudo_AttackLoss: 0.008453   Pseudo_target_mseloss: 0.026758     Vanila_D_Loss: -10.268953    D_Loss: -9.874853     Dis_Pseudo_Loss: 1.685151     Dis_target_Loss: -11.954103   Target_AttackLoss: 0.007873
+2024-11-23T23:19:17.994834+08:00 - CRITICAL - Adaption Loss: 0.03674140200018883
+2024-11-23T23:19:23.839314+08:00 - CRITICAL - 
+Test set: Average loss: 1.0516, Accuracy: 6668/10000 (67%)
+
+2024-11-23T23:19:25.100183+08:00 - CRITICAL - 
+Test set: Average loss: 1.2494, Accuracy: 6147/10000 (61%)
+
+2024-11-23T23:19:29.520350+08:00 - CRITICAL - Adaption Loss: 0.03636980801820755
+2024-11-23T23:19:29.605762+08:00 - CRITICAL - Train Iteration: [8960/12000 (75%)]	   Pseudo_AttackLoss: 0.009388   Pseudo_target_mseloss: 0.029316     Vanila_D_Loss: -10.271828    D_Loss: -10.037096     Dis_Pseudo_Loss: -0.793936     Dis_target_Loss: -9.477892   Target_AttackLoss: 0.008679
+2024-11-23T23:19:38.653471+08:00 - CRITICAL - Adaption Loss: 0.03677748143672943
+2024-11-23T23:19:47.680997+08:00 - CRITICAL - Adaption Loss: 0.038563475012779236
+2024-11-23T23:19:47.768495+08:00 - CRITICAL - Train Iteration: [9000/12000 (75%)]	   Pseudo_AttackLoss: 0.009934   Pseudo_target_mseloss: 0.027480     Vanila_D_Loss: -10.076030    D_Loss: -9.863239     Dis_Pseudo_Loss: 3.357391     Dis_target_Loss: -13.433421   Target_AttackLoss: 0.008253
+2024-11-23T23:19:49.074135+08:00 - CRITICAL - 
+Test set: Average loss: 1.0550, Accuracy: 6646/10000 (66%)
+
+2024-11-23T23:19:50.345485+08:00 - CRITICAL - 
+Test set: Average loss: 1.2656, Accuracy: 6077/10000 (61%)
+
+2024-11-23T23:19:59.355260+08:00 - CRITICAL - Adaption Loss: 0.03725814074277878
+2024-11-23T23:20:08.105177+08:00 - CRITICAL - Adaption Loss: 0.042003992944955826
+2024-11-23T23:20:08.190368+08:00 - CRITICAL - Train Iteration: [9040/12000 (75%)]	   Pseudo_AttackLoss: 0.009012   Pseudo_target_mseloss: 0.030653     Vanila_D_Loss: -10.423573    D_Loss: -10.023181     Dis_Pseudo_Loss: 2.407966     Dis_target_Loss: -12.831539   Target_AttackLoss: 0.009400
+2024-11-23T23:20:14.083765+08:00 - CRITICAL - 
+Test set: Average loss: 0.9939, Accuracy: 6733/10000 (67%)
+
+2024-11-23T23:20:15.314041+08:00 - CRITICAL - 
+Test set: Average loss: 1.1154, Accuracy: 6330/10000 (63%)
+
+2024-11-23T23:20:19.731008+08:00 - CRITICAL - Adaption Loss: 0.03005720116198063
+2024-11-23T23:20:28.668715+08:00 - CRITICAL - Adaption Loss: 0.03642050921916962
+2024-11-23T23:20:28.754131+08:00 - CRITICAL - Train Iteration: [9080/12000 (76%)]	   Pseudo_AttackLoss: 0.008379   Pseudo_target_mseloss: 0.024305     Vanila_D_Loss: -10.411104    D_Loss: -10.087436     Dis_Pseudo_Loss: -0.233608     Dis_target_Loss: -10.177497   Target_AttackLoss: 0.007676
+2024-11-23T23:20:37.675988+08:00 - CRITICAL - Adaption Loss: 0.03392302244901657
+2024-11-23T23:20:39.032591+08:00 - CRITICAL - 
+Test set: Average loss: 1.0080, Accuracy: 6702/10000 (67%)
+
+2024-11-23T23:20:40.255756+08:00 - CRITICAL - 
+Test set: Average loss: 1.1521, Accuracy: 6271/10000 (63%)
+
+2024-11-23T23:20:48.997749+08:00 - CRITICAL - Adaption Loss: 0.03613836690783501
+2024-11-23T23:20:49.082469+08:00 - CRITICAL - Train Iteration: [9120/12000 (76%)]	   Pseudo_AttackLoss: 0.009499   Pseudo_target_mseloss: 0.027482     Vanila_D_Loss: -9.657952    D_Loss: -9.445879     Dis_Pseudo_Loss: -1.162774     Dis_target_Loss: -8.495178   Target_AttackLoss: 0.008088
+2024-11-23T23:20:57.936625+08:00 - CRITICAL - Adaption Loss: 0.03664029389619827
+2024-11-23T23:21:03.737027+08:00 - CRITICAL - 
+Test set: Average loss: 1.1951, Accuracy: 6583/10000 (66%)
+
+2024-11-23T23:21:05.029822+08:00 - CRITICAL - 
+Test set: Average loss: 1.2031, Accuracy: 6212/10000 (62%)
+
+2024-11-23T23:21:09.366350+08:00 - CRITICAL - Adaption Loss: 0.03368007019162178
+2024-11-23T23:21:09.451876+08:00 - CRITICAL - Train Iteration: [9160/12000 (76%)]	   Pseudo_AttackLoss: 0.011000   Pseudo_target_mseloss: 0.026426     Vanila_D_Loss: -10.730205    D_Loss: -10.529198     Dis_Pseudo_Loss: 2.254642     Dis_target_Loss: -12.984846   Target_AttackLoss: 0.008545
+2024-11-23T23:21:18.434975+08:00 - CRITICAL - Adaption Loss: 0.032936941832304
+2024-11-23T23:21:26.907943+08:00 - CRITICAL - Adaption Loss: 0.03213036432862282
+2024-11-23T23:21:26.993527+08:00 - CRITICAL - Train Iteration: [9200/12000 (77%)]	   Pseudo_AttackLoss: 0.010418   Pseudo_target_mseloss: 0.029679     Vanila_D_Loss: -10.830653    D_Loss: -10.504803     Dis_Pseudo_Loss: -6.495855     Dis_target_Loss: -4.334798   Target_AttackLoss: 0.008748
+2024-11-23T23:21:28.274850+08:00 - CRITICAL - 
+Test set: Average loss: 1.0256, Accuracy: 6692/10000 (67%)
+
+2024-11-23T23:21:29.496792+08:00 - CRITICAL - 
+Test set: Average loss: 1.2061, Accuracy: 6236/10000 (62%)
+
+2024-11-23T23:21:37.793116+08:00 - CRITICAL - Adaption Loss: 0.034822411835193634
+2024-11-23T23:21:45.733789+08:00 - CRITICAL - Adaption Loss: 0.03486789017915726
+2024-11-23T23:21:45.781662+08:00 - CRITICAL - Train Iteration: [9240/12000 (77%)]	   Pseudo_AttackLoss: 0.008184   Pseudo_target_mseloss: 0.024293     Vanila_D_Loss: -10.903565    D_Loss: -10.715630     Dis_Pseudo_Loss: 2.492826     Dis_target_Loss: -13.396391   Target_AttackLoss: 0.007980
+2024-11-23T23:21:51.278639+08:00 - CRITICAL - 
+Test set: Average loss: 1.0121, Accuracy: 6715/10000 (67%)
+
+2024-11-23T23:21:52.513775+08:00 - CRITICAL - 
+Test set: Average loss: 1.1301, Accuracy: 6363/10000 (64%)
+
+2024-11-23T23:21:56.523398+08:00 - CRITICAL - Adaption Loss: 0.036118995398283005
+2024-11-23T23:22:04.637391+08:00 - CRITICAL - Adaption Loss: 0.04268943518400192
+2024-11-23T23:22:04.725340+08:00 - CRITICAL - Train Iteration: [9280/12000 (77%)]	   Pseudo_AttackLoss: 0.009030   Pseudo_target_mseloss: 0.028660     Vanila_D_Loss: -10.453452    D_Loss: -10.023483     Dis_Pseudo_Loss: -1.136653     Dis_target_Loss: -9.316799   Target_AttackLoss: 0.009690
+2024-11-23T23:22:12.970343+08:00 - CRITICAL - Adaption Loss: 0.03768092766404152
+2024-11-23T23:22:14.312454+08:00 - CRITICAL - 
+Test set: Average loss: 1.0240, Accuracy: 6655/10000 (67%)
+
+2024-11-23T23:22:15.549238+08:00 - CRITICAL - 
+Test set: Average loss: 1.1950, Accuracy: 6079/10000 (61%)
+
+2024-11-23T23:22:24.263285+08:00 - CRITICAL - Adaption Loss: 0.036253489553928375
+2024-11-23T23:22:24.349052+08:00 - CRITICAL - Train Iteration: [9320/12000 (78%)]	   Pseudo_AttackLoss: 0.011154   Pseudo_target_mseloss: 0.027888     Vanila_D_Loss: -10.707081    D_Loss: -10.358551     Dis_Pseudo_Loss: -2.345458     Dis_target_Loss: -8.361623   Target_AttackLoss: 0.011366
+2024-11-23T23:22:33.104289+08:00 - CRITICAL - Adaption Loss: 0.03425676375627518
+2024-11-23T23:22:38.963168+08:00 - CRITICAL - 
+Test set: Average loss: 1.0160, Accuracy: 6704/10000 (67%)
+
+2024-11-23T23:22:40.204116+08:00 - CRITICAL - 
+Test set: Average loss: 1.1337, Accuracy: 6365/10000 (64%)
+
+2024-11-23T23:22:44.537948+08:00 - CRITICAL - Adaption Loss: 0.030232323333621025
+2024-11-23T23:22:44.625306+08:00 - CRITICAL - Train Iteration: [9360/12000 (78%)]	   Pseudo_AttackLoss: 0.008060   Pseudo_target_mseloss: 0.025879     Vanila_D_Loss: -10.006689    D_Loss: -9.831362     Dis_Pseudo_Loss: 7.264750     Dis_target_Loss: -17.271439   Target_AttackLoss: 0.008161
+2024-11-23T23:22:53.803019+08:00 - CRITICAL - Adaption Loss: 0.03614209592342377
+2024-11-23T23:23:02.899228+08:00 - CRITICAL - Adaption Loss: 0.0319507010281086
+2024-11-23T23:23:02.989846+08:00 - CRITICAL - Train Iteration: [9400/12000 (78%)]	   Pseudo_AttackLoss: 0.008006   Pseudo_target_mseloss: 0.026882     Vanila_D_Loss: -9.618483    D_Loss: -9.433560     Dis_Pseudo_Loss: -3.383844     Dis_target_Loss: -6.234639   Target_AttackLoss: 0.007790
+2024-11-23T23:23:04.235301+08:00 - CRITICAL - 
+Test set: Average loss: 1.0517, Accuracy: 6685/10000 (67%)
+
+2024-11-23T23:23:05.468254+08:00 - CRITICAL - 
+Test set: Average loss: 1.1948, Accuracy: 6305/10000 (63%)
+
+2024-11-23T23:23:14.224625+08:00 - CRITICAL - Adaption Loss: 0.03561093658208847
+2024-11-23T23:23:23.200178+08:00 - CRITICAL - Adaption Loss: 0.03493141010403633
+2024-11-23T23:23:23.286167+08:00 - CRITICAL - Train Iteration: [9440/12000 (79%)]	   Pseudo_AttackLoss: 0.008267   Pseudo_target_mseloss: 0.027227     Vanila_D_Loss: -10.475500    D_Loss: -10.242428     Dis_Pseudo_Loss: -7.026791     Dis_target_Loss: -3.448709   Target_AttackLoss: 0.008080
+2024-11-23T23:23:28.878541+08:00 - CRITICAL - 
+Test set: Average loss: 1.0775, Accuracy: 6762/10000 (68%)
+
+2024-11-23T23:23:30.120266+08:00 - CRITICAL - 
+Test set: Average loss: 1.2518, Accuracy: 6270/10000 (63%)
+
+2024-11-23T23:23:34.393075+08:00 - CRITICAL - Adaption Loss: 0.03582672402262688
+2024-11-23T23:23:43.244548+08:00 - CRITICAL - Adaption Loss: 0.050579193979501724
+2024-11-23T23:23:43.330004+08:00 - CRITICAL - Train Iteration: [9480/12000 (79%)]	   Pseudo_AttackLoss: 0.012370   Pseudo_target_mseloss: 0.030195     Vanila_D_Loss: -10.529646    D_Loss: -10.302472     Dis_Pseudo_Loss: 5.342569     Dis_target_Loss: -15.872215   Target_AttackLoss: 0.012031
+2024-11-23T23:23:52.163677+08:00 - CRITICAL - Adaption Loss: 0.03398090973496437
+2024-11-23T23:23:53.521173+08:00 - CRITICAL - 
+Test set: Average loss: 1.0893, Accuracy: 6649/10000 (66%)
+
+2024-11-23T23:23:54.759435+08:00 - CRITICAL - 
+Test set: Average loss: 1.2063, Accuracy: 6359/10000 (64%)
+
+2024-11-23T23:24:03.756564+08:00 - CRITICAL - Adaption Loss: 0.04015093296766281
+2024-11-23T23:24:03.841396+08:00 - CRITICAL - Train Iteration: [9520/12000 (79%)]	   Pseudo_AttackLoss: 0.008697   Pseudo_target_mseloss: 0.027782     Vanila_D_Loss: -9.335149    D_Loss: -8.933921     Dis_Pseudo_Loss: -2.122550     Dis_target_Loss: -7.212598   Target_AttackLoss: 0.007967
+2024-11-23T23:24:12.561733+08:00 - CRITICAL - Adaption Loss: 0.037278465926647186
+2024-11-23T23:24:18.278922+08:00 - CRITICAL - 
+Test set: Average loss: 1.0613, Accuracy: 6713/10000 (67%)
+
+2024-11-23T23:24:19.493250+08:00 - CRITICAL - 
+Test set: Average loss: 1.1958, Accuracy: 6328/10000 (63%)
+
+2024-11-23T23:24:24.037729+08:00 - CRITICAL - Adaption Loss: 0.0376991368830204
+2024-11-23T23:24:24.130926+08:00 - CRITICAL - Train Iteration: [9560/12000 (80%)]	   Pseudo_AttackLoss: 0.009489   Pseudo_target_mseloss: 0.026180     Vanila_D_Loss: -10.110311    D_Loss: -9.628428     Dis_Pseudo_Loss: 2.585369     Dis_target_Loss: -12.695680   Target_AttackLoss: 0.008507
+2024-11-23T23:24:32.754183+08:00 - CRITICAL - Adaption Loss: 0.03748481720685959
+2024-11-23T23:24:41.597255+08:00 - CRITICAL - Adaption Loss: 0.036807794123888016
+2024-11-23T23:24:41.684270+08:00 - CRITICAL - Train Iteration: [9600/12000 (80%)]	   Pseudo_AttackLoss: 0.008622   Pseudo_target_mseloss: 0.027987     Vanila_D_Loss: -11.102537    D_Loss: -10.467722     Dis_Pseudo_Loss: -1.564556     Dis_target_Loss: -9.537981   Target_AttackLoss: 0.008278
+2024-11-23T23:24:42.928587+08:00 - CRITICAL - 
+Test set: Average loss: 1.0521, Accuracy: 6741/10000 (67%)
+
+2024-11-23T23:24:44.202976+08:00 - CRITICAL - 
+Test set: Average loss: 1.2110, Accuracy: 6317/10000 (63%)
+
+2024-11-23T23:24:52.995009+08:00 - CRITICAL - Adaption Loss: 0.03291235491633415
+2024-11-23T23:25:02.123174+08:00 - CRITICAL - Adaption Loss: 0.03398905694484711
+2024-11-23T23:25:02.209800+08:00 - CRITICAL - Train Iteration: [9640/12000 (80%)]	   Pseudo_AttackLoss: 0.009684   Pseudo_target_mseloss: 0.022824     Vanila_D_Loss: -11.586238    D_Loss: -10.980110     Dis_Pseudo_Loss: -2.099649     Dis_target_Loss: -9.486589   Target_AttackLoss: 0.007601
+2024-11-23T23:25:07.978008+08:00 - CRITICAL - 
+Test set: Average loss: 1.0848, Accuracy: 6663/10000 (67%)
+
+2024-11-23T23:25:09.220358+08:00 - CRITICAL - 
+Test set: Average loss: 1.2138, Accuracy: 6386/10000 (64%)
+
+2024-11-23T23:25:13.584234+08:00 - CRITICAL - Adaption Loss: 0.04755839705467224
+2024-11-23T23:25:22.664447+08:00 - CRITICAL - Adaption Loss: 0.03756990283727646
+2024-11-23T23:25:22.751128+08:00 - CRITICAL - Train Iteration: [9680/12000 (81%)]	   Pseudo_AttackLoss: 0.008476   Pseudo_target_mseloss: 0.028695     Vanila_D_Loss: -10.445717    D_Loss: -10.068350     Dis_Pseudo_Loss: 1.126003     Dis_target_Loss: -11.571720   Target_AttackLoss: 0.007317
+2024-11-23T23:25:31.585856+08:00 - CRITICAL - Adaption Loss: 0.04683548957109451
+2024-11-23T23:25:32.925135+08:00 - CRITICAL - 
+Test set: Average loss: 1.0328, Accuracy: 6692/10000 (67%)
+
+2024-11-23T23:25:34.162636+08:00 - CRITICAL - 
+Test set: Average loss: 1.2298, Accuracy: 6185/10000 (62%)
+
+2024-11-23T23:25:43.141491+08:00 - CRITICAL - Adaption Loss: 0.040832411497831345
+2024-11-23T23:25:43.228166+08:00 - CRITICAL - Train Iteration: [9720/12000 (81%)]	   Pseudo_AttackLoss: 0.009158   Pseudo_target_mseloss: 0.025042     Vanila_D_Loss: -9.910124    D_Loss: -9.672522     Dis_Pseudo_Loss: 2.625812     Dis_target_Loss: -12.535935   Target_AttackLoss: 0.007431
+2024-11-23T23:25:52.075164+08:00 - CRITICAL - Adaption Loss: 0.0523359552025795
+2024-11-23T23:25:57.876318+08:00 - CRITICAL - 
+Test set: Average loss: 1.0294, Accuracy: 6814/10000 (68%)
+
+2024-11-23T23:25:59.112853+08:00 - CRITICAL - 
+Test set: Average loss: 1.2703, Accuracy: 6215/10000 (62%)
+
+2024-11-23T23:26:03.604639+08:00 - CRITICAL - Adaption Loss: 0.03898750990629196
+2024-11-23T23:26:03.692679+08:00 - CRITICAL - Train Iteration: [9760/12000 (81%)]	   Pseudo_AttackLoss: 0.009764   Pseudo_target_mseloss: 0.024358     Vanila_D_Loss: -10.998748    D_Loss: -6.112202     Dis_Pseudo_Loss: -8.474166     Dis_target_Loss: -2.524582   Target_AttackLoss: 0.007469
+2024-11-23T23:26:12.519858+08:00 - CRITICAL - Adaption Loss: 0.03860600292682648
+2024-11-23T23:26:21.566808+08:00 - CRITICAL - Adaption Loss: 0.043334074318408966
+2024-11-23T23:26:21.653897+08:00 - CRITICAL - Train Iteration: [9800/12000 (82%)]	   Pseudo_AttackLoss: 0.008449   Pseudo_target_mseloss: 0.026533     Vanila_D_Loss: -10.422987    D_Loss: -9.871496     Dis_Pseudo_Loss: 0.118387     Dis_target_Loss: -10.541374   Target_AttackLoss: 0.007885
+2024-11-23T23:26:22.897952+08:00 - CRITICAL - 
+Test set: Average loss: 1.0519, Accuracy: 6697/10000 (67%)
+
+2024-11-23T23:26:24.118642+08:00 - CRITICAL - 
+Test set: Average loss: 1.2247, Accuracy: 6320/10000 (63%)
+
+2024-11-23T23:26:33.000350+08:00 - CRITICAL - Adaption Loss: 0.03197729215025902
+2024-11-23T23:26:42.086978+08:00 - CRITICAL - Adaption Loss: 0.036752454936504364
+2024-11-23T23:26:42.173308+08:00 - CRITICAL - Train Iteration: [9840/12000 (82%)]	   Pseudo_AttackLoss: 0.009282   Pseudo_target_mseloss: 0.027676     Vanila_D_Loss: -11.190894    D_Loss: -10.969729     Dis_Pseudo_Loss: 1.559168     Dis_target_Loss: -12.750062   Target_AttackLoss: 0.007652
+2024-11-23T23:26:47.863173+08:00 - CRITICAL - 
+Test set: Average loss: 1.0373, Accuracy: 6719/10000 (67%)
+
+2024-11-23T23:26:49.078764+08:00 - CRITICAL - 
+Test set: Average loss: 1.1647, Accuracy: 6324/10000 (63%)
+
+2024-11-23T23:26:53.431398+08:00 - CRITICAL - Adaption Loss: 0.03512595221400261
+2024-11-23T23:27:02.395945+08:00 - CRITICAL - Adaption Loss: 0.03238603100180626
+2024-11-23T23:27:02.480633+08:00 - CRITICAL - Train Iteration: [9880/12000 (82%)]	   Pseudo_AttackLoss: 0.012989   Pseudo_target_mseloss: 0.024360     Vanila_D_Loss: -10.255597    D_Loss: -10.083683     Dis_Pseudo_Loss: -3.108999     Dis_target_Loss: -7.146597   Target_AttackLoss: 0.008734
+2024-11-23T23:27:11.269027+08:00 - CRITICAL - Adaption Loss: 0.03518529236316681
+2024-11-23T23:27:12.590230+08:00 - CRITICAL - 
+Test set: Average loss: 1.0210, Accuracy: 6720/10000 (67%)
+
+2024-11-23T23:27:13.812362+08:00 - CRITICAL - 
+Test set: Average loss: 1.1606, Accuracy: 6324/10000 (63%)
+
+2024-11-23T23:27:22.149930+08:00 - CRITICAL - Adaption Loss: 0.03732377290725708
+2024-11-23T23:27:22.211119+08:00 - CRITICAL - Train Iteration: [9920/12000 (83%)]	   Pseudo_AttackLoss: 0.008892   Pseudo_target_mseloss: 0.025134     Vanila_D_Loss: -10.554808    D_Loss: -10.190415     Dis_Pseudo_Loss: 2.925123     Dis_target_Loss: -13.479931   Target_AttackLoss: 0.008959
+2024-11-23T23:27:31.400133+08:00 - CRITICAL - Adaption Loss: 0.04597059264779091
+2024-11-23T23:27:37.319906+08:00 - CRITICAL - 
+Test set: Average loss: 1.0193, Accuracy: 6721/10000 (67%)
+
+2024-11-23T23:27:38.550349+08:00 - CRITICAL - 
+Test set: Average loss: 1.1945, Accuracy: 6239/10000 (62%)
+
+2024-11-23T23:27:43.185533+08:00 - CRITICAL - Adaption Loss: 0.03286200761795044
+2024-11-23T23:27:43.272556+08:00 - CRITICAL - Train Iteration: [9960/12000 (83%)]	   Pseudo_AttackLoss: 0.008532   Pseudo_target_mseloss: 0.026144     Vanila_D_Loss: -10.134355    D_Loss: -9.857323     Dis_Pseudo_Loss: -1.971828     Dis_target_Loss: -8.162527   Target_AttackLoss: 0.008910
+2024-11-23T23:27:52.405389+08:00 - CRITICAL - Adaption Loss: 0.036957886070013046
+2024-11-23T23:28:02.567761+08:00 - CRITICAL - Adaption Loss: 0.04192661866545677
+2024-11-23T23:28:02.655146+08:00 - CRITICAL - Train Iteration: [10000/12000 (83%)]	   Pseudo_AttackLoss: 0.007903   Pseudo_target_mseloss: 0.026717     Vanila_D_Loss: -11.199635    D_Loss: -11.030010     Dis_Pseudo_Loss: -1.181862     Dis_target_Loss: -10.017773   Target_AttackLoss: 0.009102
+2024-11-23T23:28:03.905583+08:00 - CRITICAL - 
+Test set: Average loss: 1.0255, Accuracy: 6737/10000 (67%)
+
+2024-11-23T23:28:05.113357+08:00 - CRITICAL - 
+Test set: Average loss: 1.2498, Accuracy: 6252/10000 (63%)
+
+2024-11-23T23:28:13.891247+08:00 - CRITICAL - Adaption Loss: 0.03738907724618912
+2024-11-23T23:28:23.091007+08:00 - CRITICAL - Adaption Loss: 0.03981992229819298
+2024-11-23T23:28:23.180385+08:00 - CRITICAL - Train Iteration: [10040/12000 (84%)]	   Pseudo_AttackLoss: 0.008884   Pseudo_target_mseloss: 0.025321     Vanila_D_Loss: -10.458391    D_Loss: -10.252609     Dis_Pseudo_Loss: -0.577804     Dis_target_Loss: -9.880588   Target_AttackLoss: 0.007843
+2024-11-23T23:28:28.900537+08:00 - CRITICAL - 
+Test set: Average loss: 1.0052, Accuracy: 6778/10000 (68%)
+
+2024-11-23T23:28:30.105551+08:00 - CRITICAL - 
+Test set: Average loss: 1.1341, Accuracy: 6422/10000 (64%)
+
+2024-11-23T23:28:34.460440+08:00 - CRITICAL - Adaption Loss: 0.03393595665693283
+2024-11-23T23:28:43.334856+08:00 - CRITICAL - Adaption Loss: 0.035964734852313995
+2024-11-23T23:28:43.421760+08:00 - CRITICAL - Train Iteration: [10080/12000 (84%)]	   Pseudo_AttackLoss: 0.008551   Pseudo_target_mseloss: 0.023182     Vanila_D_Loss: -9.861811    D_Loss: -9.462477     Dis_Pseudo_Loss: 1.554636     Dis_target_Loss: -11.416447   Target_AttackLoss: 0.007689
+2024-11-23T23:28:52.299545+08:00 - CRITICAL - Adaption Loss: 0.04517453908920288
+2024-11-23T23:28:53.659052+08:00 - CRITICAL - 
+Test set: Average loss: 1.0073, Accuracy: 6771/10000 (68%)
+
+2024-11-23T23:28:54.891767+08:00 - CRITICAL - 
+Test set: Average loss: 1.1398, Accuracy: 6414/10000 (64%)
+
+2024-11-23T23:29:03.911864+08:00 - CRITICAL - Adaption Loss: 0.029622379690408707
+2024-11-23T23:29:03.998106+08:00 - CRITICAL - Train Iteration: [10120/12000 (84%)]	   Pseudo_AttackLoss: 0.008815   Pseudo_target_mseloss: 0.025662     Vanila_D_Loss: -10.529205    D_Loss: -10.013435     Dis_Pseudo_Loss: 1.601293     Dis_target_Loss: -12.130498   Target_AttackLoss: 0.007767
+2024-11-23T23:29:12.910061+08:00 - CRITICAL - Adaption Loss: 0.038742098957300186
+2024-11-23T23:29:18.874915+08:00 - CRITICAL - 
+Test set: Average loss: 1.0001, Accuracy: 6739/10000 (67%)
+
+2024-11-23T23:29:20.104981+08:00 - CRITICAL - 
+Test set: Average loss: 1.1629, Accuracy: 6332/10000 (63%)
+
+2024-11-23T23:29:24.610942+08:00 - CRITICAL - Adaption Loss: 0.040468573570251465
+2024-11-23T23:29:24.697435+08:00 - CRITICAL - Train Iteration: [10160/12000 (85%)]	   Pseudo_AttackLoss: 0.008044   Pseudo_target_mseloss: 0.031570     Vanila_D_Loss: -10.439345    D_Loss: -10.122394     Dis_Pseudo_Loss: -1.742397     Dis_target_Loss: -8.696949   Target_AttackLoss: 0.009010
+2024-11-23T23:29:33.701118+08:00 - CRITICAL - Adaption Loss: 0.030420487746596336
+2024-11-23T23:29:42.633606+08:00 - CRITICAL - Adaption Loss: 0.03547099977731705
+2024-11-23T23:29:42.719697+08:00 - CRITICAL - Train Iteration: [10200/12000 (85%)]	   Pseudo_AttackLoss: 0.011045   Pseudo_target_mseloss: 0.030926     Vanila_D_Loss: -11.131864    D_Loss: -10.904415     Dis_Pseudo_Loss: -2.975173     Dis_target_Loss: -8.156691   Target_AttackLoss: 0.008929
+2024-11-23T23:29:43.983141+08:00 - CRITICAL - 
+Test set: Average loss: 1.0844, Accuracy: 6760/10000 (68%)
+
+2024-11-23T23:29:45.223345+08:00 - CRITICAL - 
+Test set: Average loss: 1.3065, Accuracy: 6160/10000 (62%)
+
+2024-11-23T23:29:54.187796+08:00 - CRITICAL - Adaption Loss: 0.03755563125014305
+2024-11-23T23:30:03.091528+08:00 - CRITICAL - Adaption Loss: 0.0350341722369194
+2024-11-23T23:30:03.178747+08:00 - CRITICAL - Train Iteration: [10240/12000 (85%)]	   Pseudo_AttackLoss: 0.008225   Pseudo_target_mseloss: 0.024376     Vanila_D_Loss: -11.688668    D_Loss: -11.331814     Dis_Pseudo_Loss: -9.856001     Dis_target_Loss: -1.832668   Target_AttackLoss: 0.010134
+2024-11-23T23:30:08.908439+08:00 - CRITICAL - 
+Test set: Average loss: 1.1228, Accuracy: 6694/10000 (67%)
+
+2024-11-23T23:30:10.198931+08:00 - CRITICAL - 
+Test set: Average loss: 1.2954, Accuracy: 6264/10000 (63%)
+
+2024-11-23T23:30:14.753734+08:00 - CRITICAL - Adaption Loss: 0.037926167249679565
+2024-11-23T23:30:23.785266+08:00 - CRITICAL - Adaption Loss: 0.0331231951713562
+2024-11-23T23:30:23.879371+08:00 - CRITICAL - Train Iteration: [10280/12000 (86%)]	   Pseudo_AttackLoss: 0.009347   Pseudo_target_mseloss: 0.025348     Vanila_D_Loss: -10.472482    D_Loss: -10.165157     Dis_Pseudo_Loss: -2.312363     Dis_target_Loss: -8.160118   Target_AttackLoss: 0.008011
+2024-11-23T23:30:32.244286+08:00 - CRITICAL - Adaption Loss: 0.04184740409255028
+2024-11-23T23:30:33.562061+08:00 - CRITICAL - 
+Test set: Average loss: 1.0929, Accuracy: 6743/10000 (67%)
+
+2024-11-23T23:30:34.791071+08:00 - CRITICAL - 
+Test set: Average loss: 1.2438, Accuracy: 6360/10000 (64%)
+
+2024-11-23T23:30:42.628686+08:00 - CRITICAL - Adaption Loss: 0.04147575795650482
+2024-11-23T23:30:42.675591+08:00 - CRITICAL - Train Iteration: [10320/12000 (86%)]	   Pseudo_AttackLoss: 0.009600   Pseudo_target_mseloss: 0.029936     Vanila_D_Loss: -9.434527    D_Loss: -8.315862     Dis_Pseudo_Loss: 8.174560     Dis_target_Loss: -17.609087   Target_AttackLoss: 0.009446
+2024-11-23T23:30:50.964863+08:00 - CRITICAL - Adaption Loss: 0.03708744794130325
+2024-11-23T23:30:56.468665+08:00 - CRITICAL - 
+Test set: Average loss: 1.1009, Accuracy: 6724/10000 (67%)
+
+2024-11-23T23:30:57.704042+08:00 - CRITICAL - 
+Test set: Average loss: 1.2750, Accuracy: 6249/10000 (62%)
+
+2024-11-23T23:31:01.876093+08:00 - CRITICAL - Adaption Loss: 0.03485956788063049
+2024-11-23T23:31:01.938842+08:00 - CRITICAL - Train Iteration: [10360/12000 (86%)]	   Pseudo_AttackLoss: 0.007838   Pseudo_target_mseloss: 0.026110     Vanila_D_Loss: -10.166161    D_Loss: -9.958035     Dis_Pseudo_Loss: -2.495137     Dis_target_Loss: -7.671023   Target_AttackLoss: 0.008442
+2024-11-23T23:31:10.204212+08:00 - CRITICAL - Adaption Loss: 0.03290759399533272
+2024-11-23T23:31:18.033834+08:00 - CRITICAL - Adaption Loss: 0.03471783176064491
+2024-11-23T23:31:18.080900+08:00 - CRITICAL - Train Iteration: [10400/12000 (87%)]	   Pseudo_AttackLoss: 0.009343   Pseudo_target_mseloss: 0.029817     Vanila_D_Loss: -10.140577    D_Loss: -9.806186     Dis_Pseudo_Loss: 1.938839     Dis_target_Loss: -12.079416   Target_AttackLoss: 0.008028
+2024-11-23T23:31:19.323555+08:00 - CRITICAL - 
+Test set: Average loss: 1.1201, Accuracy: 6622/10000 (66%)
+
+2024-11-23T23:31:20.545911+08:00 - CRITICAL - 
+Test set: Average loss: 1.2766, Accuracy: 6192/10000 (62%)
+
+2024-11-23T23:31:28.701515+08:00 - CRITICAL - Adaption Loss: 0.03269541263580322
+2024-11-23T23:31:36.955502+08:00 - CRITICAL - Adaption Loss: 0.039525821805000305
+2024-11-23T23:31:37.041269+08:00 - CRITICAL - Train Iteration: [10440/12000 (87%)]	   Pseudo_AttackLoss: 0.008748   Pseudo_target_mseloss: 0.022827     Vanila_D_Loss: -10.010542    D_Loss: -9.778502     Dis_Pseudo_Loss: 0.301600     Dis_target_Loss: -10.312141   Target_AttackLoss: 0.006731
+2024-11-23T23:31:42.683753+08:00 - CRITICAL - 
+Test set: Average loss: 1.1129, Accuracy: 6699/10000 (67%)
+
+2024-11-23T23:31:43.917588+08:00 - CRITICAL - 
+Test set: Average loss: 1.3348, Accuracy: 6182/10000 (62%)
+
+2024-11-23T23:31:48.278645+08:00 - CRITICAL - Adaption Loss: 0.03881167247891426
+2024-11-23T23:31:56.375262+08:00 - CRITICAL - Adaption Loss: 0.03342939913272858
+2024-11-23T23:31:56.458295+08:00 - CRITICAL - Train Iteration: [10480/12000 (87%)]	   Pseudo_AttackLoss: 0.007755   Pseudo_target_mseloss: 0.029568     Vanila_D_Loss: -10.870385    D_Loss: -10.584465     Dis_Pseudo_Loss: -2.489096     Dis_target_Loss: -8.381289   Target_AttackLoss: 0.010707
+2024-11-23T23:32:05.336306+08:00 - CRITICAL - Adaption Loss: 0.035857804119586945
+2024-11-23T23:32:06.676449+08:00 - CRITICAL - 
+Test set: Average loss: 1.0861, Accuracy: 6729/10000 (67%)
+
+2024-11-23T23:32:07.935462+08:00 - CRITICAL - 
+Test set: Average loss: 1.2843, Accuracy: 6149/10000 (61%)
+
+2024-11-23T23:32:16.725189+08:00 - CRITICAL - Adaption Loss: 0.045950695872306824
+2024-11-23T23:32:16.813056+08:00 - CRITICAL - Train Iteration: [10520/12000 (88%)]	   Pseudo_AttackLoss: 0.011425   Pseudo_target_mseloss: 0.025027     Vanila_D_Loss: -11.678608    D_Loss: -11.390144     Dis_Pseudo_Loss: -3.225793     Dis_target_Loss: -8.452815   Target_AttackLoss: 0.007674
+2024-11-23T23:32:25.777304+08:00 - CRITICAL - Adaption Loss: 0.03337767720222473
+2024-11-23T23:32:31.500149+08:00 - CRITICAL - 
+Test set: Average loss: 1.0639, Accuracy: 6727/10000 (67%)
+
+2024-11-23T23:32:32.732379+08:00 - CRITICAL - 
+Test set: Average loss: 1.1789, Accuracy: 6430/10000 (64%)
+
+2024-11-23T23:32:36.640904+08:00 - CRITICAL - Adaption Loss: 0.037796393036842346
+2024-11-23T23:32:36.691476+08:00 - CRITICAL - Train Iteration: [10560/12000 (88%)]	   Pseudo_AttackLoss: 0.008851   Pseudo_target_mseloss: 0.025352     Vanila_D_Loss: -10.024721    D_Loss: -9.577248     Dis_Pseudo_Loss: 5.850531     Dis_target_Loss: -15.875252   Target_AttackLoss: 0.007982
+2024-11-23T23:32:44.818752+08:00 - CRITICAL - Adaption Loss: 0.03188897669315338
+2024-11-23T23:32:52.981015+08:00 - CRITICAL - Adaption Loss: 0.03992803767323494
+2024-11-23T23:32:53.029031+08:00 - CRITICAL - Train Iteration: [10600/12000 (88%)]	   Pseudo_AttackLoss: 0.009417   Pseudo_target_mseloss: 0.024180     Vanila_D_Loss: -10.052249    D_Loss: -9.775662     Dis_Pseudo_Loss: -0.874747     Dis_target_Loss: -9.177502   Target_AttackLoss: 0.008111
+2024-11-23T23:32:54.269081+08:00 - CRITICAL - 
+Test set: Average loss: 1.1042, Accuracy: 6732/10000 (67%)
+
+2024-11-23T23:32:55.540844+08:00 - CRITICAL - 
+Test set: Average loss: 1.2544, Accuracy: 6258/10000 (63%)
+
+2024-11-23T23:33:03.883389+08:00 - CRITICAL - Adaption Loss: 0.0425838902592659
+2024-11-23T23:33:11.967768+08:00 - CRITICAL - Adaption Loss: 0.03886840492486954
+2024-11-23T23:33:12.020199+08:00 - CRITICAL - Train Iteration: [10640/12000 (89%)]	   Pseudo_AttackLoss: 0.008104   Pseudo_target_mseloss: 0.025833     Vanila_D_Loss: -10.155150    D_Loss: -9.603410     Dis_Pseudo_Loss: 3.495494     Dis_target_Loss: -13.650644   Target_AttackLoss: 0.007483
+2024-11-23T23:33:17.657639+08:00 - CRITICAL - 
+Test set: Average loss: 1.0840, Accuracy: 6742/10000 (67%)
+
+2024-11-23T23:33:18.886296+08:00 - CRITICAL - 
+Test set: Average loss: 1.2423, Accuracy: 6286/10000 (63%)
+
+2024-11-23T23:33:22.925616+08:00 - CRITICAL - Adaption Loss: 0.03367055952548981
+2024-11-23T23:33:31.092388+08:00 - CRITICAL - Adaption Loss: 0.03859986364841461
+2024-11-23T23:33:31.151683+08:00 - CRITICAL - Train Iteration: [10680/12000 (89%)]	   Pseudo_AttackLoss: 0.008316   Pseudo_target_mseloss: 0.024661     Vanila_D_Loss: -11.217298    D_Loss: -10.748004     Dis_Pseudo_Loss: -4.265090     Dis_target_Loss: -6.952208   Target_AttackLoss: 0.007058
+2024-11-23T23:33:39.269085+08:00 - CRITICAL - Adaption Loss: 0.035119205713272095
+2024-11-23T23:33:40.580826+08:00 - CRITICAL - 
+Test set: Average loss: 1.0535, Accuracy: 6772/10000 (68%)
+
+2024-11-23T23:33:41.800776+08:00 - CRITICAL - 
+Test set: Average loss: 1.2131, Accuracy: 6354/10000 (64%)
+
+2024-11-23T23:33:50.613331+08:00 - CRITICAL - Adaption Loss: 0.037140000611543655
+2024-11-23T23:33:50.697755+08:00 - CRITICAL - Train Iteration: [10720/12000 (89%)]	   Pseudo_AttackLoss: 0.009152   Pseudo_target_mseloss: 0.026868     Vanila_D_Loss: -11.704436    D_Loss: -11.451590     Dis_Pseudo_Loss: 0.264658     Dis_target_Loss: -11.969094   Target_AttackLoss: 0.007115
+2024-11-23T23:33:59.332917+08:00 - CRITICAL - Adaption Loss: 0.029063105583190918
+2024-11-23T23:34:04.744849+08:00 - CRITICAL - 
+Test set: Average loss: 1.0975, Accuracy: 6690/10000 (67%)
+
+2024-11-23T23:34:06.074718+08:00 - CRITICAL - 
+Test set: Average loss: 1.1903, Accuracy: 6429/10000 (64%)
+
+2024-11-23T23:34:10.435183+08:00 - CRITICAL - Adaption Loss: 0.03594355285167694
+2024-11-23T23:34:10.521456+08:00 - CRITICAL - Train Iteration: [10760/12000 (90%)]	   Pseudo_AttackLoss: 0.008020   Pseudo_target_mseloss: 0.027169     Vanila_D_Loss: -10.778024    D_Loss: -10.609902     Dis_Pseudo_Loss: -1.880975     Dis_target_Loss: -8.897049   Target_AttackLoss: 0.009693
+2024-11-23T23:34:18.790175+08:00 - CRITICAL - Adaption Loss: 0.03481476753950119
+2024-11-23T23:34:27.658633+08:00 - CRITICAL - Adaption Loss: 0.040111590176820755
+2024-11-23T23:34:27.745628+08:00 - CRITICAL - Train Iteration: [10800/12000 (90%)]	   Pseudo_AttackLoss: 0.008431   Pseudo_target_mseloss: 0.033458     Vanila_D_Loss: -11.055553    D_Loss: -10.769937     Dis_Pseudo_Loss: 4.623882     Dis_target_Loss: -15.679435   Target_AttackLoss: 0.015122
+2024-11-23T23:34:28.995000+08:00 - CRITICAL - 
+Test set: Average loss: 1.0608, Accuracy: 6728/10000 (67%)
+
+2024-11-23T23:34:30.210553+08:00 - CRITICAL - 
+Test set: Average loss: 1.2089, Accuracy: 6265/10000 (63%)
+
+2024-11-23T23:34:38.956270+08:00 - CRITICAL - Adaption Loss: 0.03604436293244362
+2024-11-23T23:34:47.336264+08:00 - CRITICAL - Adaption Loss: 0.03865101560950279
+2024-11-23T23:34:47.419438+08:00 - CRITICAL - Train Iteration: [10840/12000 (90%)]	   Pseudo_AttackLoss: 0.011315   Pseudo_target_mseloss: 0.023707     Vanila_D_Loss: -10.832373    D_Loss: -10.648120     Dis_Pseudo_Loss: 0.484863     Dis_target_Loss: -11.317236   Target_AttackLoss: 0.007672
+2024-11-23T23:34:53.362174+08:00 - CRITICAL - 
+Test set: Average loss: 1.0069, Accuracy: 6784/10000 (68%)
+
+2024-11-23T23:34:54.672754+08:00 - CRITICAL - 
+Test set: Average loss: 1.1278, Accuracy: 6475/10000 (65%)
+
+2024-11-23T23:34:59.036994+08:00 - CRITICAL - Adaption Loss: 0.03716666251420975
+2024-11-23T23:35:07.947490+08:00 - CRITICAL - Adaption Loss: 0.03457036241889
+2024-11-23T23:35:08.016376+08:00 - CRITICAL - Train Iteration: [10880/12000 (91%)]	   Pseudo_AttackLoss: 0.008654   Pseudo_target_mseloss: 0.023826     Vanila_D_Loss: -9.680410    D_Loss: -9.492596     Dis_Pseudo_Loss: 1.839785     Dis_target_Loss: -11.520196   Target_AttackLoss: 0.007559
+2024-11-23T23:35:16.703128+08:00 - CRITICAL - Adaption Loss: 0.03426264971494675
+2024-11-23T23:35:18.025647+08:00 - CRITICAL - 
+Test set: Average loss: 1.0709, Accuracy: 6754/10000 (68%)
+
+2024-11-23T23:35:19.242379+08:00 - CRITICAL - 
+Test set: Average loss: 1.3059, Accuracy: 6121/10000 (61%)
+
+2024-11-23T23:35:27.531707+08:00 - CRITICAL - Adaption Loss: 0.03471016883850098
+2024-11-23T23:35:27.607874+08:00 - CRITICAL - Train Iteration: [10920/12000 (91%)]	   Pseudo_AttackLoss: 0.008334   Pseudo_target_mseloss: 0.024162     Vanila_D_Loss: -10.639645    D_Loss: -10.329816     Dis_Pseudo_Loss: -6.713345     Dis_target_Loss: -3.926300   Target_AttackLoss: 0.006967
+2024-11-23T23:35:36.032691+08:00 - CRITICAL - Adaption Loss: 0.037983402609825134
+2024-11-23T23:35:41.762411+08:00 - CRITICAL - 
+Test set: Average loss: 1.0493, Accuracy: 6817/10000 (68%)
+
+2024-11-23T23:35:43.042841+08:00 - CRITICAL - 
+Test set: Average loss: 1.2162, Accuracy: 6390/10000 (64%)
+
+2024-11-23T23:35:47.089255+08:00 - CRITICAL - Adaption Loss: 0.034212205559015274
+2024-11-23T23:35:47.138086+08:00 - CRITICAL - Train Iteration: [10960/12000 (91%)]	   Pseudo_AttackLoss: 0.009108   Pseudo_target_mseloss: 0.021046     Vanila_D_Loss: -11.339727    D_Loss: -10.875391     Dis_Pseudo_Loss: 2.540804     Dis_target_Loss: -13.880532   Target_AttackLoss: 0.006419
+2024-11-23T23:35:55.832169+08:00 - CRITICAL - Adaption Loss: 0.03067634627223015
+2024-11-23T23:36:04.850024+08:00 - CRITICAL - Adaption Loss: 0.035697124898433685
+2024-11-23T23:36:04.930986+08:00 - CRITICAL - Train Iteration: [11000/12000 (92%)]	   Pseudo_AttackLoss: 0.007984   Pseudo_target_mseloss: 0.024969     Vanila_D_Loss: -11.037445    D_Loss: -10.747323     Dis_Pseudo_Loss: -6.291226     Dis_target_Loss: -4.746219   Target_AttackLoss: 0.007302
+2024-11-23T23:36:06.197398+08:00 - CRITICAL - 
+Test set: Average loss: 1.1470, Accuracy: 6785/10000 (68%)
+
+2024-11-23T23:36:07.421313+08:00 - CRITICAL - 
+Test set: Average loss: 1.3610, Accuracy: 6238/10000 (62%)
+
+2024-11-23T23:36:16.213094+08:00 - CRITICAL - Adaption Loss: 0.04235219955444336
+2024-11-23T23:36:25.253942+08:00 - CRITICAL - Adaption Loss: 0.03454326093196869
+2024-11-23T23:36:25.338012+08:00 - CRITICAL - Train Iteration: [11040/12000 (92%)]	   Pseudo_AttackLoss: 0.011970   Pseudo_target_mseloss: 0.026177     Vanila_D_Loss: -10.807993    D_Loss: -10.386775     Dis_Pseudo_Loss: 1.430342     Dis_target_Loss: -12.238335   Target_AttackLoss: 0.007402
+2024-11-23T23:36:30.953830+08:00 - CRITICAL - 
+Test set: Average loss: 1.1878, Accuracy: 6747/10000 (67%)
+
+2024-11-23T23:36:32.178496+08:00 - CRITICAL - 
+Test set: Average loss: 1.4011, Accuracy: 6243/10000 (62%)
+
+2024-11-23T23:36:36.412220+08:00 - CRITICAL - Adaption Loss: 0.033935435116291046
+2024-11-23T23:36:45.444874+08:00 - CRITICAL - Adaption Loss: 0.030322596430778503
+2024-11-23T23:36:45.532601+08:00 - CRITICAL - Train Iteration: [11080/12000 (92%)]	   Pseudo_AttackLoss: 0.008233   Pseudo_target_mseloss: 0.023284     Vanila_D_Loss: -10.318781    D_Loss: -9.652831     Dis_Pseudo_Loss: -3.409908     Dis_target_Loss: -6.908873   Target_AttackLoss: 0.008619
+2024-11-23T23:36:54.377354+08:00 - CRITICAL - Adaption Loss: 0.03792957961559296
+2024-11-23T23:36:55.721384+08:00 - CRITICAL - 
+Test set: Average loss: 1.1518, Accuracy: 6715/10000 (67%)
+
+2024-11-23T23:36:56.944222+08:00 - CRITICAL - 
+Test set: Average loss: 1.3433, Accuracy: 6090/10000 (61%)
+
+2024-11-23T23:37:05.902796+08:00 - CRITICAL - Adaption Loss: 0.03555187210440636
+2024-11-23T23:37:05.963427+08:00 - CRITICAL - Train Iteration: [11120/12000 (93%)]	   Pseudo_AttackLoss: 0.009045   Pseudo_target_mseloss: 0.026208     Vanila_D_Loss: -12.049791    D_Loss: -10.912006     Dis_Pseudo_Loss: -10.775751     Dis_target_Loss: -1.274040   Target_AttackLoss: 0.007791
+2024-11-23T23:37:14.329983+08:00 - CRITICAL - Adaption Loss: 0.03452559560537338
+2024-11-23T23:37:19.867517+08:00 - CRITICAL - 
+Test set: Average loss: 1.1268, Accuracy: 6725/10000 (67%)
+
+2024-11-23T23:37:21.092611+08:00 - CRITICAL - 
+Test set: Average loss: 1.2631, Accuracy: 6399/10000 (64%)
+
+2024-11-23T23:37:25.649448+08:00 - CRITICAL - Adaption Loss: 0.04449259862303734
+2024-11-23T23:37:25.737192+08:00 - CRITICAL - Train Iteration: [11160/12000 (93%)]	   Pseudo_AttackLoss: 0.009296   Pseudo_target_mseloss: 0.026166     Vanila_D_Loss: -10.674284    D_Loss: -10.379485     Dis_Pseudo_Loss: 4.769392     Dis_target_Loss: -15.443676   Target_AttackLoss: 0.008376
+2024-11-23T23:37:34.630732+08:00 - CRITICAL - Adaption Loss: 0.033686280250549316
+2024-11-23T23:37:43.756917+08:00 - CRITICAL - Adaption Loss: 0.03686371445655823
+2024-11-23T23:37:43.842047+08:00 - CRITICAL - Train Iteration: [11200/12000 (93%)]	   Pseudo_AttackLoss: 0.008883   Pseudo_target_mseloss: 0.030568     Vanila_D_Loss: -10.947419    D_Loss: -10.677663     Dis_Pseudo_Loss: -13.658239     Dis_target_Loss: 2.710820   Target_AttackLoss: 0.008710
+2024-11-23T23:37:45.085610+08:00 - CRITICAL - 
+Test set: Average loss: 1.1246, Accuracy: 6681/10000 (67%)
+
+2024-11-23T23:37:46.352854+08:00 - CRITICAL - 
+Test set: Average loss: 1.3225, Accuracy: 6196/10000 (62%)
+
+2024-11-23T23:37:55.150073+08:00 - CRITICAL - Adaption Loss: 0.03248806297779083
+2024-11-23T23:38:04.184821+08:00 - CRITICAL - Adaption Loss: 0.033627040684223175
+2024-11-23T23:38:04.273129+08:00 - CRITICAL - Train Iteration: [11240/12000 (94%)]	   Pseudo_AttackLoss: 0.008869   Pseudo_target_mseloss: 0.024453     Vanila_D_Loss: -10.815183    D_Loss: -10.631319     Dis_Pseudo_Loss: 3.973870     Dis_target_Loss: -14.789053   Target_AttackLoss: 0.008550
+2024-11-23T23:38:10.032274+08:00 - CRITICAL - 
+Test set: Average loss: 1.1102, Accuracy: 6771/10000 (68%)
+
+2024-11-23T23:38:11.303200+08:00 - CRITICAL - 
+Test set: Average loss: 1.2682, Accuracy: 6373/10000 (64%)
+
+2024-11-23T23:38:15.701184+08:00 - CRITICAL - Adaption Loss: 0.040175918489694595
+2024-11-23T23:38:24.681523+08:00 - CRITICAL - Adaption Loss: 0.04050126671791077
+2024-11-23T23:38:24.770444+08:00 - CRITICAL - Train Iteration: [11280/12000 (94%)]	   Pseudo_AttackLoss: 0.012041   Pseudo_target_mseloss: 0.026456     Vanila_D_Loss: -10.330671    D_Loss: -10.124410     Dis_Pseudo_Loss: -4.188687     Dis_target_Loss: -6.141985   Target_AttackLoss: 0.009114
+2024-11-23T23:38:33.530710+08:00 - CRITICAL - Adaption Loss: 0.03323156386613846
+2024-11-23T23:38:34.820275+08:00 - CRITICAL - 
+Test set: Average loss: 1.1417, Accuracy: 6707/10000 (67%)
+
+2024-11-23T23:38:36.061374+08:00 - CRITICAL - 
+Test set: Average loss: 1.3211, Accuracy: 6231/10000 (62%)
+
+2024-11-23T23:38:44.420288+08:00 - CRITICAL - Adaption Loss: 0.03541987016797066
+2024-11-23T23:38:44.502783+08:00 - CRITICAL - Train Iteration: [11320/12000 (94%)]	   Pseudo_AttackLoss: 0.007954   Pseudo_target_mseloss: 0.025166     Vanila_D_Loss: -10.124660    D_Loss: -9.979502     Dis_Pseudo_Loss: 3.701231     Dis_target_Loss: -13.825891   Target_AttackLoss: 0.008670
+2024-11-23T23:38:52.740592+08:00 - CRITICAL - Adaption Loss: 0.04026094079017639
+2024-11-23T23:38:58.253299+08:00 - CRITICAL - 
+Test set: Average loss: 1.1741, Accuracy: 6635/10000 (66%)
+
+2024-11-23T23:38:59.494460+08:00 - CRITICAL - 
+Test set: Average loss: 1.3528, Accuracy: 6221/10000 (62%)
+
+2024-11-23T23:39:03.554168+08:00 - CRITICAL - Adaption Loss: 0.034407831728458405
+2024-11-23T23:39:03.632033+08:00 - CRITICAL - Train Iteration: [11360/12000 (95%)]	   Pseudo_AttackLoss: 0.007547   Pseudo_target_mseloss: 0.026238     Vanila_D_Loss: -10.687162    D_Loss: -10.303221     Dis_Pseudo_Loss: -7.009279     Dis_target_Loss: -3.677884   Target_AttackLoss: 0.008056
+2024-11-23T23:39:11.728948+08:00 - CRITICAL - Adaption Loss: 0.03902849555015564
+2024-11-23T23:39:20.787685+08:00 - CRITICAL - Adaption Loss: 0.040632061660289764
+2024-11-23T23:39:20.881067+08:00 - CRITICAL - Train Iteration: [11400/12000 (95%)]	   Pseudo_AttackLoss: 0.010330   Pseudo_target_mseloss: 0.032504     Vanila_D_Loss: -11.218054    D_Loss: -10.831596     Dis_Pseudo_Loss: 2.135822     Dis_target_Loss: -13.353876   Target_AttackLoss: 0.009249
+2024-11-23T23:39:22.137735+08:00 - CRITICAL - 
+Test set: Average loss: 1.1428, Accuracy: 6626/10000 (66%)
+
+2024-11-23T23:39:23.389349+08:00 - CRITICAL - 
+Test set: Average loss: 1.4177, Accuracy: 5969/10000 (60%)
+
+2024-11-23T23:39:32.243538+08:00 - CRITICAL - Adaption Loss: 0.03373383730649948
+2024-11-23T23:39:41.351914+08:00 - CRITICAL - Adaption Loss: 0.04951419681310654
+2024-11-23T23:39:41.439701+08:00 - CRITICAL - Train Iteration: [11440/12000 (95%)]	   Pseudo_AttackLoss: 0.008695   Pseudo_target_mseloss: 0.024510     Vanila_D_Loss: -9.885956    D_Loss: -9.658728     Dis_Pseudo_Loss: -3.579108     Dis_target_Loss: -6.306849   Target_AttackLoss: 0.006835
+2024-11-23T23:39:47.179319+08:00 - CRITICAL - 
+Test set: Average loss: 1.0863, Accuracy: 6712/10000 (67%)
+
+2024-11-23T23:39:48.422950+08:00 - CRITICAL - 
+Test set: Average loss: 1.2516, Accuracy: 6233/10000 (62%)
+
+2024-11-23T23:39:52.882032+08:00 - CRITICAL - Adaption Loss: 0.032460879534482956
+2024-11-23T23:40:01.960573+08:00 - CRITICAL - Adaption Loss: 0.02851177006959915
+2024-11-23T23:40:02.053319+08:00 - CRITICAL - Train Iteration: [11480/12000 (96%)]	   Pseudo_AttackLoss: 0.008055   Pseudo_target_mseloss: 0.025717     Vanila_D_Loss: -10.759705    D_Loss: -10.579625     Dis_Pseudo_Loss: -3.657963     Dis_target_Loss: -7.101742   Target_AttackLoss: 0.007847
+2024-11-23T23:40:10.818818+08:00 - CRITICAL - Adaption Loss: 0.03790665045380592
+2024-11-23T23:40:12.145220+08:00 - CRITICAL - 
+Test set: Average loss: 1.0953, Accuracy: 6684/10000 (67%)
+
+2024-11-23T23:40:13.357207+08:00 - CRITICAL - 
+Test set: Average loss: 1.2456, Accuracy: 6280/10000 (63%)
+
+2024-11-23T23:40:22.360664+08:00 - CRITICAL - Adaption Loss: 0.044004276394844055
+2024-11-23T23:40:22.446254+08:00 - CRITICAL - Train Iteration: [11520/12000 (96%)]	   Pseudo_AttackLoss: 0.011388   Pseudo_target_mseloss: 0.026333     Vanila_D_Loss: -11.818966    D_Loss: -11.440298     Dis_Pseudo_Loss: -2.543419     Dis_target_Loss: -9.275547   Target_AttackLoss: 0.009065
+2024-11-23T23:40:31.271134+08:00 - CRITICAL - Adaption Loss: 0.038349051028490067
+2024-11-23T23:40:37.190797+08:00 - CRITICAL - 
+Test set: Average loss: 1.0696, Accuracy: 6735/10000 (67%)
+
+2024-11-23T23:40:38.431384+08:00 - CRITICAL - 
+Test set: Average loss: 1.2129, Accuracy: 6359/10000 (64%)
+
+2024-11-23T23:40:42.809815+08:00 - CRITICAL - Adaption Loss: 0.036403290927410126
+2024-11-23T23:40:42.897143+08:00 - CRITICAL - Train Iteration: [11560/12000 (96%)]	   Pseudo_AttackLoss: 0.007463   Pseudo_target_mseloss: 0.025946     Vanila_D_Loss: -11.034618    D_Loss: -10.882585     Dis_Pseudo_Loss: 1.107514     Dis_target_Loss: -12.142133   Target_AttackLoss: 0.007767
+2024-11-23T23:40:51.447767+08:00 - CRITICAL - Adaption Loss: 0.03850225359201431
+2024-11-23T23:41:00.547481+08:00 - CRITICAL - Adaption Loss: 0.041679657995700836
+2024-11-23T23:41:00.633912+08:00 - CRITICAL - Train Iteration: [11600/12000 (97%)]	   Pseudo_AttackLoss: 0.008924   Pseudo_target_mseloss: 0.025139     Vanila_D_Loss: -10.667919    D_Loss: -10.424127     Dis_Pseudo_Loss: -6.280720     Dis_target_Loss: -4.387199   Target_AttackLoss: 0.008674
+2024-11-23T23:41:01.895990+08:00 - CRITICAL - 
+Test set: Average loss: 1.0595, Accuracy: 6807/10000 (68%)
+
+2024-11-23T23:41:03.103442+08:00 - CRITICAL - 
+Test set: Average loss: 1.3070, Accuracy: 6201/10000 (62%)
+
+2024-11-23T23:41:11.723855+08:00 - CRITICAL - Adaption Loss: 0.035867415368556976
+2024-11-23T23:41:19.900607+08:00 - CRITICAL - Adaption Loss: 0.04347703978419304
+2024-11-23T23:41:19.947910+08:00 - CRITICAL - Train Iteration: [11640/12000 (97%)]	   Pseudo_AttackLoss: 0.008245   Pseudo_target_mseloss: 0.026285     Vanila_D_Loss: -9.745009    D_Loss: -9.418448     Dis_Pseudo_Loss: 0.222413     Dis_target_Loss: -9.967422   Target_AttackLoss: 0.007496
+2024-11-23T23:41:25.105453+08:00 - CRITICAL - 
+Test set: Average loss: 1.1001, Accuracy: 6704/10000 (67%)
+
+2024-11-23T23:41:26.399787+08:00 - CRITICAL - 
+Test set: Average loss: 1.2729, Accuracy: 6253/10000 (63%)
+
+2024-11-23T23:41:30.273199+08:00 - CRITICAL - Adaption Loss: 0.032217927277088165
+2024-11-23T23:41:38.334882+08:00 - CRITICAL - Adaption Loss: 0.030922116711735725
+2024-11-23T23:41:38.382296+08:00 - CRITICAL - Train Iteration: [11680/12000 (97%)]	   Pseudo_AttackLoss: 0.008162   Pseudo_target_mseloss: 0.025517     Vanila_D_Loss: -10.848814    D_Loss: -10.403642     Dis_Pseudo_Loss: -1.919743     Dis_target_Loss: -8.929071   Target_AttackLoss: 0.007392
+2024-11-23T23:41:46.195633+08:00 - CRITICAL - Adaption Loss: 0.03145565837621689
+2024-11-23T23:41:47.558128+08:00 - CRITICAL - 
+Test set: Average loss: 1.0563, Accuracy: 6761/10000 (68%)
+
+2024-11-23T23:41:48.800912+08:00 - CRITICAL - 
+Test set: Average loss: 1.2855, Accuracy: 6161/10000 (62%)
+
+2024-11-23T23:41:57.762707+08:00 - CRITICAL - Adaption Loss: 0.031628649681806564
+2024-11-23T23:41:57.849622+08:00 - CRITICAL - Train Iteration: [11720/12000 (98%)]	   Pseudo_AttackLoss: 0.008095   Pseudo_target_mseloss: 0.024213     Vanila_D_Loss: -10.484902    D_Loss: -10.181993     Dis_Pseudo_Loss: -9.950184     Dis_target_Loss: -0.534718   Target_AttackLoss: 0.010731
+2024-11-23T23:42:06.086309+08:00 - CRITICAL - Adaption Loss: 0.033018097281455994
+2024-11-23T23:42:11.299340+08:00 - CRITICAL - 
+Test set: Average loss: 1.1213, Accuracy: 6785/10000 (68%)
+
+2024-11-23T23:42:12.507055+08:00 - CRITICAL - 
+Test set: Average loss: 1.2544, Accuracy: 6474/10000 (65%)
+
+2024-11-23T23:42:16.785855+08:00 - CRITICAL - Adaption Loss: 0.036683324724435806
+2024-11-23T23:42:16.872401+08:00 - CRITICAL - Train Iteration: [11760/12000 (98%)]	   Pseudo_AttackLoss: 0.010538   Pseudo_target_mseloss: 0.025664     Vanila_D_Loss: -9.901949    D_Loss: -9.706446     Dis_Pseudo_Loss: 3.355301     Dis_target_Loss: -13.257250   Target_AttackLoss: 0.009521
+2024-11-23T23:42:25.887667+08:00 - CRITICAL - Adaption Loss: 0.03642025589942932
+2024-11-23T23:42:34.769995+08:00 - CRITICAL - Adaption Loss: 0.031651247292757034
+2024-11-23T23:42:34.853053+08:00 - CRITICAL - Train Iteration: [11800/12000 (98%)]	   Pseudo_AttackLoss: 0.009163   Pseudo_target_mseloss: 0.024560     Vanila_D_Loss: -10.760341    D_Loss: -10.568677     Dis_Pseudo_Loss: -6.441376     Dis_target_Loss: -4.318965   Target_AttackLoss: 0.008132
+2024-11-23T23:42:36.155532+08:00 - CRITICAL - 
+Test set: Average loss: 1.2565, Accuracy: 6612/10000 (66%)
+
+2024-11-23T23:42:37.469529+08:00 - CRITICAL - 
+Test set: Average loss: 1.3578, Accuracy: 6385/10000 (64%)
+
+2024-11-23T23:42:46.187856+08:00 - CRITICAL - Adaption Loss: 0.03660036250948906
+2024-11-23T23:42:54.791188+08:00 - CRITICAL - Adaption Loss: 0.03489694744348526
+2024-11-23T23:42:54.877387+08:00 - CRITICAL - Train Iteration: [11840/12000 (99%)]	   Pseudo_AttackLoss: 0.008272   Pseudo_target_mseloss: 0.023523     Vanila_D_Loss: -10.486816    D_Loss: -10.134657     Dis_Pseudo_Loss: 6.307677     Dis_target_Loss: -16.794493   Target_AttackLoss: 0.007643
+2024-11-23T23:43:00.595306+08:00 - CRITICAL - 
+Test set: Average loss: 1.1820, Accuracy: 6682/10000 (67%)
+
+2024-11-23T23:43:01.815983+08:00 - CRITICAL - 
+Test set: Average loss: 1.2735, Accuracy: 6425/10000 (64%)
+
+2024-11-23T23:43:06.366405+08:00 - CRITICAL - Adaption Loss: 0.03423217684030533
+2024-11-23T23:43:15.201545+08:00 - CRITICAL - Adaption Loss: 0.03471846133470535
+2024-11-23T23:43:15.288274+08:00 - CRITICAL - Train Iteration: [11880/12000 (99%)]	   Pseudo_AttackLoss: 0.009457   Pseudo_target_mseloss: 0.023080     Vanila_D_Loss: -10.970428    D_Loss: -10.338911     Dis_Pseudo_Loss: -4.512410     Dis_target_Loss: -6.458019   Target_AttackLoss: 0.007327
+2024-11-23T23:43:24.302337+08:00 - CRITICAL - Adaption Loss: 0.04566982388496399
+2024-11-23T23:43:25.646865+08:00 - CRITICAL - 
+Test set: Average loss: 1.1296, Accuracy: 6759/10000 (68%)
+
+2024-11-23T23:43:26.874043+08:00 - CRITICAL - 
+Test set: Average loss: 1.2538, Accuracy: 6447/10000 (64%)
+
+2024-11-23T23:43:35.673873+08:00 - CRITICAL - Adaption Loss: 0.04237011447548866
+2024-11-23T23:43:35.760428+08:00 - CRITICAL - Train Iteration: [11920/12000 (99%)]	   Pseudo_AttackLoss: 0.007757   Pseudo_target_mseloss: 0.028688     Vanila_D_Loss: -10.587011    D_Loss: -10.412849     Dis_Pseudo_Loss: 3.169511     Dis_target_Loss: -13.756523   Target_AttackLoss: 0.009596
+2024-11-23T23:43:44.738735+08:00 - CRITICAL - Adaption Loss: 0.030971884727478027
+2024-11-23T23:43:50.518877+08:00 - CRITICAL - 
+Test set: Average loss: 1.2054, Accuracy: 6748/10000 (67%)
+
+2024-11-23T23:43:51.741909+08:00 - CRITICAL - 
+Test set: Average loss: 1.3806, Accuracy: 6344/10000 (63%)
+
+2024-11-23T23:43:56.115703+08:00 - CRITICAL - Adaption Loss: 0.03619004413485527
+2024-11-23T23:43:56.167541+08:00 - CRITICAL - Train Iteration: [11960/12000 (100%)]	   Pseudo_AttackLoss: 0.008276   Pseudo_target_mseloss: 0.023120     Vanila_D_Loss: -11.067146    D_Loss: -10.699763     Dis_Pseudo_Loss: 2.370818     Dis_target_Loss: -13.437963   Target_AttackLoss: 0.007107
+2024-11-23T23:44:05.154846+08:00 - CRITICAL - Adaption Loss: 0.03706115856766701
+2024-11-23T23:44:14.009114+08:00 - CRITICAL - Adaption Loss: 0.037286169826984406
+2024-11-23T23:44:14.062327+08:00 - CRITICAL - Train Iteration: [12000/12000 (100%)]	   Pseudo_AttackLoss: 0.009642   Pseudo_target_mseloss: 0.024845     Vanila_D_Loss: -10.437762    D_Loss: -10.197703     Dis_Pseudo_Loss: -2.051787     Dis_target_Loss: -8.385975   Target_AttackLoss: 0.007144
+2024-11-23T23:44:15.352405+08:00 - CRITICAL - 
+Test set: Average loss: 1.1468, Accuracy: 6762/10000 (68%)
+
+2024-11-23T23:44:16.611417+08:00 - CRITICAL - 
+Test set: Average loss: 1.3113, Accuracy: 6421/10000 (64%)
+
