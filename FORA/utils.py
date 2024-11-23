@@ -132,12 +132,12 @@ def pseudo_training(target_splitnn, target_invmodel, target_invmodel_optimizer,
     pseudo_output = pseudo_model(shadow_data)
 
     # MK-MMD Loss,训练mkmmd模型
-    # mkmmd_loss.train()
-    # target = target_splitnn_intermidiate.detach().view(pseudo_output.size(0),-1)
-    # source = pseudo_output.view(pseudo_output.size(0),-1)
-    # mkmmd_loss_item = mkmmd_loss(target,source)
-    # if n % 20 == 0:
-    #     print('MK_MMD Loss: {}'.format(mkmmd_loss_item))
+    mkmmd_loss.train()
+    target = target_splitnn_intermidiate.detach().view(pseudo_output.size(0),-1)
+    source = pseudo_output.view(pseudo_output.size(0),-1)
+    mkmmd_loss_item = mkmmd_loss(target,source)
+    if n % 20 == 0:
+        print('MK_MMD Loss: {}'.format(mkmmd_loss_item))
 
      # correlation alignment loss
     # coral_loss.train()
@@ -151,7 +151,7 @@ def pseudo_training(target_splitnn, target_invmodel, target_invmodel_optimizer,
     d_input_pseudo = pseudo_output
     d_output_pseudo = discriminator(d_input_pseudo)
     # 总的损失函数：鉴别器对抗+MK-MMD
-    # pseudo_d_loss = (1-a)*torch.mean(d_output_pseudo)+a*mkmmd_loss_item
+    pseudo_d_loss = (1-a)*torch.mean(d_output_pseudo)+a*mkmmd_loss_item
     pseudo_d_loss = torch.mean(d_output_pseudo)
 
     pseudo_d_loss.backward()

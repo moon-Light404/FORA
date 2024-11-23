@@ -36,7 +36,7 @@ def main():
     parser.add_argument('--save_path', type=str, default='attack_model.pth', help="")
     parser.add_argument('--gid', type=str, default='0', help="gpu id")
     parser.add_argument('--layer_id', type=str, default='2', help="layer id")
-    parser.add_argument('--a', type=float, default=1, help='hyperparameter of loss')
+    parser.add_argument('--a', type=float, default=0.5, help='hyperparameter of loss')
     parser.add_argument('--batch_size', type=int, default=64, help='')
     parser.add_argument('--dataset', type=str, default='cifar10', help='')
     parser.add_argument('--dataset_num', type=int, default=2500, help='size of auxiliary data')
