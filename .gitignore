@@ -2,4 +2,4 @@
 FORA/data/
 dev
 __pycache__
-FORA/log/
+FORA/log/attack*
