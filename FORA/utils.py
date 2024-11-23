@@ -545,6 +545,8 @@ class GaussianKernel(nn.Module):
         return torch.exp(-l2_distance_square / (2 * self.sigma_square))
 
 
+
+
 class CorrelationAlignmentLoss(nn.Module):
     r"""The `Correlation Alignment Loss` in
     `Deep CORAL: Correlation Alignment for Deep Domain Adaptation (ECCV 2016) <https://arxiv.org/pdf/1607.01719.pdf>`_.
