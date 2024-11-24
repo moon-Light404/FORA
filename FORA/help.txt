@@ -7,3 +7,13 @@ $ git remote add origin https://github.com/moon-Light404/FORA.git
 
 origin	https://github.com/moon-Light404/FORA.git (fetch)
 origin	https://github.com/moon-Light404/FORA.git (push)
+
+git config --global http.https://github.com.proxy socks5://127.0.0.1:51837
+git config --global http.proxy http://127.0.0.1:7890
+git config --global https.proxy https://127.0.0.1:7890
+
+git config --global  --unset https.https://github.com.proxy
+git config --global  --unset http.https://github.com.proxy
+
+
+
