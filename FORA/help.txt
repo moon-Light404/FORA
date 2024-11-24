@@ -18,7 +18,6 @@ git config --global  --unset http.https://github.com.proxy
 git config --global http.version HTTP/1.1
 git config --global http.version HTTP/2
 
-git config --global http.proxy 13.75.113.101:53026
-
+git config --global http.proxy http://m2JlSoSaYo:dCT1dTeLEs@13.75.113.101:53026
 
 
