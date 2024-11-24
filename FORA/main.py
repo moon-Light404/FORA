@@ -13,7 +13,7 @@ import copy
 import torchvision.utils as vutils
 # from model_ import Discriminator, resnet18,AE_Model,CINIC_Inversion, vgg16
 from model import cifar_decoder, cifar_discriminator_model, vgg16, cifar_mobilenet, vgg16
-from torch.utils.tensorboard import SummaryWriter
+# from torch.utils.tensorboard import SummaryWriter
 from splitnn import Client, Server, SplitNN
 from utils import Crop, DeNormalize, cla_train, cla_test,  attack_test, pseudo_training
 import numpy as np
@@ -182,11 +182,11 @@ def main():
     inv_psnr_log_path = os.path.join("./log/{}/inv_psnr".format(args.save_path),args.save_path)
     os.makedirs(inv_psnr_log_path, exist_ok=True)
 
-    writer_target = SummaryWriter(taregt_log_path)
-    writer_shadow = SummaryWriter(shadow_log_path)
-    writer_inv_mse = SummaryWriter(inv_mse_log_path)
-    writer_inv_ssim = SummaryWriter(inv_ssim_log_path)
-    writer_inv_psnr = SummaryWriter(inv_psnr_log_path)
+    # writer_target = SummaryWriter(taregt_log_path)
+    # writer_shadow = SummaryWriter(shadow_log_path)
+    # writer_inv_mse = SummaryWriter(inv_mse_log_path)
+    # writer_inv_ssim = SummaryWriter(inv_ssim_log_path)
+    # writer_inv_psnr = SummaryWriter(inv_psnr_log_path)
     # writer_inv_lpips = SummaryWriter(inv_lpips_log_path)
 
 
