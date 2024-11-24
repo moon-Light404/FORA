@@ -87,7 +87,7 @@ def gradient_penalty(discriminator, x, x_gen,device):
 def pseudo_training(target_splitnn, target_invmodel, target_invmodel_optimizer, 
                    pseudo_model, pseudo_invmodel, pseudo_invmodel_optimizer,target_server_pseudo_optimizer,pseudo_optimizer,
                    discriminator, discriminator_optimizer,
-                   target_data, target_label, shadow_data, shadow_label, device, n, args, loss_func):
+                   target_data, target_label, shadow_data, shadow_label, device, n, args, mkkd_loss):
     
 
     target_splitnn.train()
@@ -132,22 +132,21 @@ def pseudo_training(target_splitnn, target_invmodel, target_invmodel_optimizer,
     target_server_pseudo_optimizer.zero_grad()
     pseudo_output = pseudo_model(shadow_data)
 
-    # MK-MMD Loss,训练mkmmd模型
-    if args.mkkd == True or args.coral == True:
-        loss_func.train()
-        target = target_splitnn_intermidiate.detach().view(pseudo_output.size(0),-1)
-        source = pseudo_output.view(pseudo_output.size(0),-1)
-        mkmmd_loss_item = loss_func(target,source).item()
-        if n % 20 == 0:
-            logging.critical('Adaption Loss: {}'.format(mkmmd_loss_item))
+    # # MK-MMD Loss,训练mkmmd模型
+    # if args.mkkd == True or args.coral == True:
+    mkkd_loss.train()
+    target = target_splitnn_intermidiate.detach().view(pseudo_output.size(0),-1)
+    source = pseudo_output.view(pseudo_output.size(0),-1)
+    mkmmd_loss_item = mkkd_loss(target,source)
+    if n % 20 == 0:
+        logging.critical('Adaption Loss: {}'.format(mkmmd_loss_item))
 
     d_input_pseudo = pseudo_output
     d_output_pseudo = discriminator(d_input_pseudo)
     # 总的损失函数：鉴别器对抗+MK-MMD
-    if args.mkkd == True or args.coral == True:
-        pseudo_d_loss = (1-args.a)*torch.mean(d_output_pseudo)+args.a*mkmmd_loss_item
-    else:
-        pseudo_d_loss = torch.mean(d_output_pseudo)
+    # if args.mkkd == True or args.coral == True:
+    pseudo_d_loss = (1-args.a)*torch.mean(d_output_pseudo)+args.a*mkmmd_loss_item
+    
 
     pseudo_d_loss.backward()
     pseudo_optimizer.step()
