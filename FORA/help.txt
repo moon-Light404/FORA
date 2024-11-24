@@ -3,7 +3,7 @@ git config --global --unset https.proxy
 
 
 $ git remote rm origin
-$ git remote add origin add https://github.com/moon-Light404/FORA.git
+$ git remote add origin https://github.com/moon-Light404/FORA.git
 
 origin	https://github.com/moon-Light404/FORA.git (fetch)
 origin	https://github.com/moon-Light404/FORA.git (push)
