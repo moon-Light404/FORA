@@ -230,7 +230,7 @@ def main():
             kernels=[GaussianKernel(alpha=2 ** k) for k in range(-3, 2)],
                 linear=False)
         
-        coral_loss = CorrelationAlignmentLoss()
+        coral_loss = CorrelationAlignmentLoss().to(device)
         # loss_func = None
         # if args.mkkd == True:
         #     loss_func = mkmmd_loss
