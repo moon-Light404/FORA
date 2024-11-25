@@ -132,20 +132,33 @@ def pseudo_training(target_splitnn, target_invmodel, target_invmodel_optimizer,
     target_server_pseudo_optimizer.zero_grad()
     pseudo_output = pseudo_model(shadow_data)
 
+    n_domins = 4
+    indices = [range(i, i + 16) for i in range(0, 64, 64 // n_domins)]
     # # MK-MMD Loss,训练mkmmd模型
     # if args.mkkd == True or args.coral == True:
     mkkd_loss.train()
-    target = target_splitnn_intermidiate.detach().view(pseudo_output.size(0),-1)
-    source = pseudo_output.view(pseudo_output.size(0),-1)
-    mkmmd_loss_item = mkkd_loss(target,source)
+    loss_penalty = 0.0
+    target = target_splitnn_intermidiate.detach()
+    source = pseudo_output
+    for domin_i in range(n_domins):
+        for domin_j in range(domin_i + 1, n_domins):
+            for i in range(64 // n_domins):
+                f_i = indices[]
+
+            # for i in range(pseudo_output.size(0)):
+            #     f_i= target[i, :, :, :].view(pseudo_output.size(1),-1)
+            #     f_j = pseudo_output[i, :, :, :].view(pseudo_output.size(1),-1)
+            #     loss_penalty += mkkd_loss(f_i,f_j)
+    loss_penalty /= pseudo_output.size(0)
+    
     if n % 20 == 0:
-        logging.critical('Adaption Loss: {}'.format(mkmmd_loss_item))
+        logging.critical('Adaption Loss: {}'.format(loss_penalty.item()))
 
     d_input_pseudo = pseudo_output
     d_output_pseudo = discriminator(d_input_pseudo)
     # 总的损失函数：鉴别器对抗+MK-MMD
     # if args.mkkd == True or args.coral == True:
-    pseudo_d_loss = (1-args.a)*torch.mean(d_output_pseudo)+args.a*mkmmd_loss_item
+    pseudo_d_loss = (1-args.a)*torch.mean(d_output_pseudo)+args.a*loss_penalty
     
 
     pseudo_d_loss.backward()
