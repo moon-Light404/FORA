@@ -132,7 +132,7 @@ def pseudo_training(target_splitnn, target_invmodel, target_invmodel_optimizer,
     target_server_pseudo_optimizer.zero_grad()
     pseudo_output = pseudo_model(shadow_data)
 
-    n_domins = 8
+    n_domins = 4
     indices = [range(i, i + 16) for i in range(0, 64, 64 // n_domins)]
     # # MK-MMD Loss,训练mkmmd模型
     # if args.mkkd == True or args.coral == True:
@@ -146,7 +146,6 @@ def pseudo_training(target_splitnn, target_invmodel, target_invmodel_optimizer,
                 f_i = target[indices[domin_i][i], :, :, :].view(target.size(1),-1)
                 f_j = pseudo_output[indices[domin_j][i], :, :, :].view(target.size(1),-1)
                 loss_penalty += mkkd_loss(f_i,f_j)
-    
     loss_penalty /= n_domins * n_domins * (64 // n_domins)
     
     if n % 20 == 0:
