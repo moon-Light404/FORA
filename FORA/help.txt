@@ -18,6 +18,13 @@ git config --global  --unset http.https://github.com.proxy
 git config --global http.version HTTP/1.1
 git config --global http.version HTTP/2
 
-git config --global http.proxy http://iEJONwqgFf:Nebmg8sL5E@13.75.113.101:53026
+git config --global http.proxy http:13.75.113.101:53026
+
+git clone https://moon-Light404:1472583690adc@github.com/moon-Light404/FORA.git
+
+git remote -version
+git remote show
+
+git remote rm origin
 
 
