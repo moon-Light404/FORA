@@ -17,10 +17,9 @@
 
 # python main.py --iteration 30000 --layer_id 2 --dataset_num 5000 --dlr 3e-4 --a 0.6 --coral
 
-python main.py --iteration 15000 --layer_id 2 --dataset_num 2500 --dlr 3e-4 --a 0.7 --coral
-
 # python main.py --iteration 15000 --layer_id 2 --dataset_num 5000 --dlr 3e-4 --a 0.2 --mkkd
 
+python main.py --iteration 40000 --layer_id 2 --dataset_num 3000 --dlr 3e-4 --a 0.8 --coral
 
-
+  
 
