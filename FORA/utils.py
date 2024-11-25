@@ -140,15 +140,15 @@ def pseudo_training(target_splitnn, target_invmodel, target_invmodel_optimizer,
     loss_penalty = 0.0
     target = target_splitnn_intermidiate.detach()
     source = pseudo_output
-    for domin_i in range(n_domins):
-        for domin_j in range(domin_i + 1, n_domins):
-            for i in range(64 // n_domins):
-                f_i = indices[]
+    # for domin_i in range(n_domins):
+    #     for domin_j in range(domin_i + 1, n_domins):
+    #         for i in range(64 // n_domins):
+    #             f_i = indices[]
 
-            # for i in range(pseudo_output.size(0)):
-            #     f_i= target[i, :, :, :].view(pseudo_output.size(1),-1)
-            #     f_j = pseudo_output[i, :, :, :].view(pseudo_output.size(1),-1)
-            #     loss_penalty += mkkd_loss(f_i,f_j)
+    for i in range(pseudo_output.size(0)):
+        f_i= target[i, :, :, :].view(pseudo_output.size(1),-1)
+        f_j = pseudo_output[i, :, :, :].view(pseudo_output.size(1),-1)
+        loss_penalty += mkkd_loss(f_i,f_j)
     loss_penalty /= pseudo_output.size(0)
     
     if n % 20 == 0:
