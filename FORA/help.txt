@@ -26,4 +26,6 @@ git remote show
 
 git remote rm origin
 
+-i http://pypi.tuna.tsinghua.edu.cn/simple/
+
 
