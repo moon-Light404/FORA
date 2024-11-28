@@ -112,8 +112,8 @@ def main():
             ])
 
 
-    train_dataset = torchvision.datasets.CIFAR10(root='./data', train = True, transform=cinic_transform, download=True)
-    test_dataset = torchvision.datasets.CIFAR10(root='./data', train = False, transform=cinic_transform, download=True)
+    train_dataset = torchvision.datasets.CIFAR10(root='./data', train = True, transform=cinic_transform, download=False)
+    test_dataset = torchvision.datasets.CIFAR10(root='./data', train = False, transform=cinic_transform, download=False)
     # 取5000个私有数据
     shadow_dataset = Subset(test_dataset, range(0,args.dataset_num))
 
@@ -241,7 +241,7 @@ def main():
         target_splitnn_intermidiate = pseudo_training(target_splitnn, target_invmodel, target_invmodel_optimizer, 
                     pseudo_model, pseudo_invmodel, pseudo_invmodel_optimizer,target_server_pseudo_optimizer,pseudo_optimizer,
                     discriminator, discriminator_optimizer,
-                    target_data, target_label, shadow_data, shadow_label, device, n, args, coral_loss)
+                    target_data, target_label, shadow_data, shadow_label, device, n, args, mkmmd_loss)
 
         # target_pseudo_mse, target_mseloss,shadow_mseloss,pseudo_mseloss,target_ssim,target_psnr,shadow_ssim,shadow_psnr,pseudo_ssim,pseudo_psnr,baseline_mse,baseline_ssim,baseline_psnr,pseudo_lpips = attack_test(target_invmodel, pseudo_invmodel, target_data, target_splitnn_intermidiate, 
         #                                                                                                                                                         device, args.layer_id, n, args.save_path, args.dataset, target_bottom, pseudo_model)
