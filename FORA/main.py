@@ -12,7 +12,7 @@ import torchvision.transforms.functional as F_1
 import copy
 import torchvision.utils as vutils
 # from model_ import Discriminator, resnet18,AE_Model,CINIC_Inversion, vgg16
-from model import cifar_decoder, cifar_discriminator_model, vgg16, cifar_mobilenet, vgg16
+from model import *
 # from torch.utils.tensorboard import SummaryWriter
 from splitnn import Client, Server, SplitNN
 from utils import Crop, DeNormalize, cla_train, cla_test,  attack_test, pseudo_training
@@ -65,10 +65,10 @@ def main():
     parser.add_argument('--iteration', type=int, default=10000, help="")
     parser.add_argument('--lr', type=float, default=1e-4, help="")
     parser.add_argument('--server_pseudo_lr', type=float, default=1e-4, help="")
-    parser.add_argument('--dlr', type=float, default=1e-5, help="")
+    parser.add_argument('--dlr', type=float, default=5e-5, help="")
     # parser.add_argument('--dlr', type=float, default=1e-4, help="")
 
-    parser.add_argument('--print_freq', type=int, default=40, help="")
+    parser.add_argument('--print_freq', type=int, default=25, help="")
     parser.add_argument('--save_path', type=str, default='attack_model.pth', help="")
     parser.add_argument('--gid', type=str, default='0', help="gpu id")
     parser.add_argument('--layer_id', type=str, default='2', help="layer id")
@@ -110,12 +110,30 @@ def main():
                 transforms.ToTensor(),
                 transforms.Normalize((0.5,0.5,0.5), (0.5,0.5,0.5)),
             ])
+    
+    tiny_normalize = transforms.Normalize(mean=[0.485, 0.456, 0.406],
+                                     std=[0.229, 0.224, 0.225])
 
-
-    train_dataset = torchvision.datasets.CIFAR10(root='./data', train = True, transform=cinic_transform, download=False)
-    test_dataset = torchvision.datasets.CIFAR10(root='./data', train = False, transform=cinic_transform, download=False)
-    # 取5000个私有数据
-    shadow_dataset = Subset(test_dataset, range(0,args.dataset_num))
+    if args.dataset == 'cifar10':
+        train_dataset = torchvision.datasets.CIFAR10(root='./data', train = True, transform=cinic_transform, download=False)
+        test_dataset = torchvision.datasets.CIFAR10(root='./data', train = False, transform=cinic_transform, download=False)
+        # 取5000个私有数据
+        shadow_dataset = Subset(test_dataset, range(0,args.dataset_num))
+    elif args.dataset == 'tinyImagenet':
+        train_dataset = torchvision.datasets.ImageFolder(root='./data/tiny-imagenet-200/train', 
+                                                         transform=transforms.Compose([transforms.ToTensor(),
+                                                          tiny_normalize])
+                                                         )
+        test_dataset = torchvision.datasets.ImageFolder(root='./data/tiny-imagenet-200/val', 
+                                                        transform= transforms.Compose([transforms.ToTensor(),
+                                                            tiny_normalize])
+                                                        )
+        # shadow_dataset = torchvision.datasets.ImageFolder(root='./data/tiny-imagenet-200/test', 
+        #                                                 transform= transforms.Compose([transforms.ToTensor(),
+        #                                                     tiny_normalize])
+        #                                                 )
+        
+        shadow_dataset = Subset(test_dataset, range(0, args.dataset_num))
 
     logging.info("DataSet:%s",args.dataset)
     logging.info("Train Dataset:%d",len(train_dataset))
@@ -125,30 +143,42 @@ def main():
     train_dataloader = torch.utils.data.DataLoader(train_dataset, batch_size=args.batch_size, shuffle=True, num_workers = 4, pin_memory = True)
     test_dataloader = torch.utils.data.DataLoader(test_dataset, batch_size=args.batch_size, shuffle=False, num_workers = 4, pin_memory = True)
     shadow_dataloader = torch.utils.data.DataLoader(shadow_dataset, batch_size=args.batch_size, shuffle=True, num_workers = 4, pin_memory = True)
-    dataset_shape = train_dataset[0][0].shape
+    
+    if args.dataset == 'cifar10':
+        target_bottom,target_top = cifar_mobilenet(level=int(args.layer_id))
+        # split the model to target_bottom and target_top
+        target_bottom, target_top = target_bottom.to(device), target_top.to(device) 
 
-    target_bottom,target_top = cifar_mobilenet(level=int(args.layer_id))
-    # split the model to target_bottom and target_top
-    target_bottom, target_top = target_bottom.to(device), target_top.to(device) 
+        dataset_shape = train_dataset[0][0].shape
+        # 伪造的底部模型
+        pseudo_model,_ = vgg16(level=int(args.layer_id), batch_norm=True)
+        pseudo_model = pseudo_model.to(device)
 
-    dataset_shape = train_dataset[0][0].shape
-    # 伪造的底部模型
-    pseudo_model,_ = vgg16(level=int(args.layer_id), batch_norm=True)
-    pseudo_model = pseudo_model.to(device)
-
-    test_data = torch.ones(1,dataset_shape[0], dataset_shape[1], dataset_shape[2]).to(device)
-    with torch.no_grad():
-        test_data_output = pseudo_model(test_data)
-        discriminator_input_shape = test_data_output.shape[1:] # 除去第0维以后的维度
-    print(discriminator_input_shape)
-    # 鉴别器
-    discriminator = cifar_discriminator_model(discriminator_input_shape,level=int(args.layer_id))
-    discriminator = discriminator.to(device)
-    # 伪模型的逆网络
-    target_invmodel = cifar_decoder(discriminator_input_shape,int(args.layer_id),dataset_shape[0])
-    pseudo_invmodel = cifar_decoder(discriminator_input_shape,int(args.layer_id),dataset_shape[0])
-
-    target_invmodel, pseudo_invmodel = target_invmodel.to(device), pseudo_invmodel.to(device)
+        test_data = torch.ones(1,dataset_shape[0], dataset_shape[1], dataset_shape[2]).to(device)
+        with torch.no_grad():
+            test_data_output = pseudo_model(test_data)
+            discriminator_input_shape = test_data_output.shape[1:] # 除去第0维以后的维度
+        print(discriminator_input_shape)
+        # 鉴别器
+        discriminator = cifar_discriminator_model(discriminator_input_shape,level=int(args.layer_id))
+        discriminator = discriminator.to(device)
+        # 伪模型的逆网络
+        target_invmodel = cifar_decoder(discriminator_input_shape,int(args.layer_id),dataset_shape[0])
+        pseudo_invmodel = cifar_decoder(discriminator_input_shape,int(args.layer_id),dataset_shape[0])
+    elif args.dataset == 'tinyImagenet':
+        target_bottom, target_top = Resnet(level=int(args.layer_id))
+        data_shape = train_dataset[0][0].shape
+        test_data = torch.ones(1,data_shape[0], data_shape[1], data_shape[2])
+        pseudo_model, _ = vgg16_64(level=args.level, batch_norm=True)
+        with torch.no_grad():
+            test_data_output = pseudo_model(test_data)
+            discriminator_input_shape = test_data_output.shape[1:]
+        print(discriminator_input_shape)
+        d_input_shape = discriminator_input_shape[0]
+        discriminator = resnet_discriminator(d_input_shape, args.level)
+        pseudo_invmodel = resnet_decoder(d_input_shape, args.level, 3)
+        
+    pseudo_invmodel = pseudo_invmodel.to(device)
   
     target_client = Client(target_bottom)
     target_server = Server(target_top)
@@ -238,8 +268,7 @@ def main():
         #     loss_func = coral_loss
         
 
-        target_splitnn_intermidiate = pseudo_training(target_splitnn, target_invmodel, target_invmodel_optimizer, 
-                    pseudo_model, pseudo_invmodel, pseudo_invmodel_optimizer,target_server_pseudo_optimizer,pseudo_optimizer,
+        target_splitnn_intermidiate = pseudo_training(target_splitnn, pseudo_model, pseudo_invmodel, pseudo_invmodel_optimizer,pseudo_optimizer,
                     discriminator, discriminator_optimizer,
                     target_data, target_label, shadow_data, shadow_label, device, n, args, mkmmd_loss)
 

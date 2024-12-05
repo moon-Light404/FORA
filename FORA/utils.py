@@ -84,14 +84,11 @@ def gradient_penalty(discriminator, x, x_gen,device):
     return penalty
 
 
-def pseudo_training(target_splitnn, target_invmodel, target_invmodel_optimizer, 
-                   pseudo_model, pseudo_invmodel, pseudo_invmodel_optimizer,target_server_pseudo_optimizer,pseudo_optimizer,
+def pseudo_training(target_splitnn,  pseudo_model, pseudo_invmodel, pseudo_invmodel_optimizer,pseudo_optimizer,
                    discriminator, discriminator_optimizer,
                    target_data, target_label, shadow_data, shadow_label, device, n, args, mkkd_loss):
     
-
     target_splitnn.train()
-    target_invmodel.train()
 
     target_data = target_data.to(device)
     target_label = target_label.to(device)
@@ -104,22 +101,11 @@ def pseudo_training(target_splitnn, target_invmodel, target_invmodel_optimizer,
     else:
         target_splitnn_celoss = F.cross_entropy(target_splitnn_output,target_label)
     target_splitnn_celoss.backward()
-
     target_splitnn.backward()
-
     target_splitnn.step()
-
     # 防止客户端模型更新
     for para in target_splitnn.client.client_model.parameters():
         para.requires_grad = False
-    target_invmodel_optimizer.zero_grad()
-    target_inv_input = target_splitnn_intermidiate.detach()
-    target_inv_output = target_invmodel(target_inv_input) 
-    # target_invmodel直接对私有原始数据进行重构
-    target_inv_loss = F.mse_loss(target_inv_output,target_data)
-    target_inv_loss.backward()
-    target_invmodel_optimizer.step()
-
 
     pseudo_model.train()
     pseudo_invmodel.train()
@@ -129,7 +115,7 @@ def pseudo_training(target_splitnn, target_invmodel, target_invmodel_optimizer,
     shadow_label = shadow_label.to(device)
         
     pseudo_optimizer.zero_grad()
-    target_server_pseudo_optimizer.zero_grad()
+    # target_server_pseudo_optimizer.zero_grad()
     pseudo_output = pseudo_model(shadow_data)
 
     n_domins = 4
@@ -164,8 +150,6 @@ def pseudo_training(target_splitnn, target_invmodel, target_invmodel_optimizer,
     pseudo_d_loss.backward()
     pseudo_optimizer.step()
 
-
-
     for para in pseudo_model.parameters():
         para.requires_grad = False
 
@@ -177,8 +161,6 @@ def pseudo_training(target_splitnn, target_invmodel, target_invmodel_optimizer,
     pseudo_invmodel_optimizer.zero_grad()
     pseudo_inv_loss.backward()
     pseudo_invmodel_optimizer.step()
-
-
 
     discriminator_optimizer.zero_grad()
     
@@ -192,7 +174,6 @@ def pseudo_training(target_splitnn, target_invmodel, target_invmodel_optimizer,
     vanila_D_loss = loss_discr_true + loss_discr_fake
 
     D_loss = vanila_D_loss + 1000*gradient_penalty(discriminator,pseudo_output.detach(), target_splitnn_intermidiate.detach(), device)
-
     D_loss.backward()
     discriminator_optimizer.step()
 
@@ -209,12 +190,12 @@ def pseudo_training(target_splitnn, target_invmodel, target_invmodel_optimizer,
         para.requires_grad = True
 
     if n % args.print_freq == 0:
-        logging.critical('Train Iteration: [{}/{} ({:.0f}%)]\t   Pseudo_AttackLoss: {:.6f}   Pseudo_target_mseloss: {:.6f}     Vanila_D_Loss: {:.6f}    D_Loss: {:.6f}     Dis_Pseudo_Loss: {:.6f}     Dis_target_Loss: {:.6f}   Target_AttackLoss: {:.6f}'.format(
-            n, args.iteration, 100. * n / args.iteration, pseudo_inv_loss.item(), pseudo_target_mseloss.item(), vanila_D_loss.item(), D_loss.item(), loss_discr_fake.item(), loss_discr_true.item(), target_inv_loss.item()))
+        logging.critical('Train Iteration: [{}/{} ({:.0f}%)]\t   Pseudo_AttackLoss: {:.6f}   Pseudo_target_mseloss: {:.6f}     Vanila_D_Loss: {:.6f}    D_Loss: {:.6f}     Dis_Pseudo_Loss: {:.6f}     Dis_target_Loss: {:.6f} '.format(
+            n, args.iteration, 100. * n / args.iteration, pseudo_inv_loss.item(), pseudo_target_mseloss.item(), vanila_D_loss.item(), D_loss.item(), loss_discr_fake.item(), loss_discr_true.item(),))
     
     return target_splitnn_intermidiate.detach()
 
-def pseudo_training(target_splitnn, target_invmodel, target_invmodel_optimizer, 
+def pseudo_training2(target_splitnn, target_invmodel, target_invmodel_optimizer, 
                    pseudo_model, pseudo_invmodel, pseudo_invmodel_optimizer,target_server_pseudo_optimizer,pseudo_optimizer,
                    discriminator, discriminator_optimizer,
                    target_data, target_label, shadow_data, shadow_label, device, n, args, mkkd_loss):
@@ -370,7 +351,6 @@ def cla_test(target_splitnn, pseudo_model, test_loader, device, dataset):
         100. * correct / len(test_loader.dataset)))
     return test_loss, 100. * correct / len(test_loader.dataset)
 
-# def discriminator_train()
 
 
 def attack_test(target_invmodel, pseudo_invmodel, target_data, target_splitnn_intermidiate, device, layer_id, n, save_path, dataset, target_model, pseudo_model):
@@ -401,10 +381,10 @@ def attack_test(target_invmodel, pseudo_invmodel, target_data, target_splitnn_in
     pseudo_model_.train()
 
 
-    if dataset == 'mnist':
-        denorm = DeNormalize(mean=(0.5), std=(0.5))
-    else:
+    if dataset == 'cifar10':
         denorm = DeNormalize(mean=(0.5, 0.5, 0.5), std=(0.5, 0.5, 0.5))
+    else:
+        denorm = DeNormalize(mean=(0.485, 0.456, 0.406), std=(0.229, 0.224, 0.225))
 
 
     dataset_shape = target_data[0].shape
@@ -434,51 +414,10 @@ def attack_test(target_invmodel, pseudo_invmodel, target_data, target_splitnn_in
         target_pseudo_mse += F.mse_loss(pseudo_inter,target_inter,reduction='sum').item()
 
 
-        if n % 100 == 0: # save the reconstructed images
-
-            if plot:
-                truth = target_data[0:32]
-
-                inverse_pseudo = pseudo_inv_output[0:32]
-                out_pseudo = torch.cat((inverse_pseudo, truth))
-
-                inverse_target = target_inv_output[0:32]
-                out_target = torch.cat((inverse_target,truth))
-                for i in range(4):
-                    out_pseudo[i * 16:i * 16 + 8] = inverse_pseudo[i * 8:i * 8 + 8]
-                    out_pseudo[i * 16 + 8:i * 16 + 16] = truth[i * 8:i * 8 + 8]
-                for i in range(4):
-                    out_target[i * 16:i * 16 + 8] = inverse_target[i * 8:i * 8 + 8]
-                    out_target[i * 16 + 8:i * 16 + 16] = truth[i * 8:i * 8 + 8]
-
-                out_pseudo = denorm(out_pseudo.detach())
-                out_target = denorm(out_target.detach())
-
-                save_path = str(save_path).strip('.pth')
-                # pic_save_path = 'pcat_recon_pics/'+str(save_path)
-                pic_save_path = 'recon_pics/'+str(save_path)
-                os.makedirs('{}/{}/target'.format(pic_save_path, layer_id),exist_ok=True)
-                os.makedirs('{}/{}/shadow'.format(pic_save_path, layer_id),exist_ok=True)
-                os.makedirs('{}/{}/pseudo'.format(pic_save_path, layer_id),exist_ok=True)
-                vutils.save_image(out_pseudo, '{}/{}/pseudo/recon_{}.png'.format(pic_save_path,layer_id,n), normalize=False)
-                vutils.save_image(out_target, '{}/{}/target/recon_{}.png'.format(pic_save_path,layer_id,n), normalize=False)
-
-                plot = False
-
-    baseline_loss = baseline_loss/(len(target_data) * dataset_shape[0] * dataset_shape[1] * dataset_shape[2])
-    target_pseudo_mse = target_pseudo_mse/(len(target_data)*pseudo_inter.shape[1]*pseudo_inter.shape[2]*pseudo_inter.shape[3])
-
-    target_ssim /=len(target_data)
-    target_psnr /=len(target_data)
-    shadow_ssim /=len(target_data)
-    shadow_psnr /=len(target_data)
     pseudo_ssim /=len(target_data)
     pseudo_psnr /=len(target_data)
-    baseline_ssim /=len(target_data)
-    baseline_psnr /=len(target_data)
-    pseudo_lpips /=len(target_data)
-
-    return target_pseudo_mse, target_loss,shadow_loss,pseudo_loss,target_ssim,target_psnr,shadow_ssim,shadow_psnr,pseudo_ssim,pseudo_psnr,baseline_loss,baseline_ssim,baseline_psnr,pseudo_lpips
+    
+    return pseudo_ssim, pseudo_psnr
 
 class MultipleKernelMaximumMeanDiscrepancy(nn.Module):
     """
