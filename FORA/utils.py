@@ -195,14 +195,11 @@ def pseudo_training(target_splitnn,  pseudo_model, pseudo_invmodel, pseudo_invmo
     
     return target_splitnn_intermidiate.detach()
 
-def pseudo_training2(target_splitnn, target_invmodel, target_invmodel_optimizer, 
-                   pseudo_model, pseudo_invmodel, pseudo_invmodel_optimizer,target_server_pseudo_optimizer,pseudo_optimizer,
-                   discriminator, discriminator_optimizer,
-                   target_data, target_label, shadow_data, shadow_label, device, n, args, mkkd_loss):
+def pseudo_training2(target_splitnn, pseudo_model, pseudo_invmodel, pseudo_invmodel_optimizer,pseudo_optimizer,
+                   target_data, target_label, shadow_data, shadow_label, device, n, args):
     
 
     target_splitnn.train()
-    target_invmodel.train()
 
     target_data = target_data.to(device)
     target_label = target_label.to(device)
@@ -221,28 +218,15 @@ def pseudo_training2(target_splitnn, target_invmodel, target_invmodel_optimizer,
     # 防止客户端模型更新
     for para in target_splitnn.client.client_model.parameters():
         para.requires_grad = False
-    target_invmodel_optimizer.zero_grad()
-    target_inv_input = target_splitnn_intermidiate.detach()
-    target_inv_output = target_invmodel(target_inv_input) 
-    # target_invmodel直接对私有原始数据进行重构
-    target_inv_loss = F.mse_loss(target_inv_output,target_data)
-    target_inv_loss.backward()
-    target_invmodel_optimizer.step()
-
-
-    pseudo_model.train()
-    pseudo_invmodel.train()
-    discriminator.train()
-
-    shadow_data = shadow_data.to(device)
-    shadow_label = shadow_label.to(device)
-        
-    pseudo_optimizer.zero_grad()
-    target_server_pseudo_optimizer.zero_grad()
-    pseudo_output = pseudo_model(shadow_data)
-
-    for para in pseudo_model.parameters():
+    for para in target_splitnn.server.server_model.parameters():
         para.requires_grad = False
+   
+
+    pseudo_invmodel.train()
+    shadow_data = shadow_data.to(device)
+    shadow_label = shadow_label.to(device)  
+    pseudo_optimizer.zero_grad()
+
 
     # pseudo_model只知道影子数据，所以pseudo_invmodel对影子模型的输出进行重构
     with torch.no_grad():
@@ -252,24 +236,18 @@ def pseudo_training2(target_splitnn, target_invmodel, target_invmodel_optimizer,
     pseudo_invmodel_optimizer.zero_grad()
     pseudo_inv_loss.backward()
     pseudo_invmodel_optimizer.step()
-
-
-
-    discriminator_optimizer.zero_grad()
     
-    pseudo_output_ = pseudo_output.detach()
-    target_client_output_ = target_splitnn_intermidiate.detach()
+    pseudo_model.train()
+    target_splitnn.zero_grads()
+    pseudo_optimizer.zero_grad()
+    target_splitnn.eval()
+    classfier_output = pseudo_model(shadow_data)
+    target_splitnn_output = target_splitnn.server(classfier_output)
+    classfier_loss = F.cross_entropy(target_splitnn_output,shadow_label)
+    classfier_loss.backward()
+    pseudo_optimizer.step() # 利用服务器更新伪模型
 
-    adv_target_logits = discriminator(target_client_output_)
-    adv_ae_logits = discriminator(pseudo_output_)
-    loss_discr_true = torch.mean(adv_target_logits)
-    loss_discr_fake = -torch.mean(adv_ae_logits)
-    vanila_D_loss = loss_discr_true + loss_discr_fake
 
-    D_loss = vanila_D_loss + 1000*gradient_penalty(discriminator,pseudo_output.detach(), target_splitnn_intermidiate.detach(), device)
-
-    D_loss.backward()
-    discriminator_optimizer.step()
 
     with torch.no_grad():
         pseudo_attack_result = pseudo_invmodel(target_splitnn_intermidiate.detach())
@@ -284,8 +262,8 @@ def pseudo_training2(target_splitnn, target_invmodel, target_invmodel_optimizer,
         para.requires_grad = True
 
     if n % args.print_freq == 0:
-        logging.critical('Train Iteration: [{}/{} ({:.0f}%)]\t   Pseudo_AttackLoss: {:.6f}   Pseudo_target_mseloss: {:.6f}     Vanila_D_Loss: {:.6f}    D_Loss: {:.6f}     Dis_Pseudo_Loss: {:.6f}     Dis_target_Loss: {:.6f}   Target_AttackLoss: {:.6f}'.format(
-            n, args.iteration, 100. * n / args.iteration, pseudo_inv_loss.item(), pseudo_target_mseloss.item(), vanila_D_loss.item(), D_loss.item(), loss_discr_fake.item(), loss_discr_true.item(), target_inv_loss.item()))
+        logging.critical('Train Iteration: [{}/{} ({:.0f}%)]\t   Pseudo_AttackLoss: {:.6f}   Pseudo_target_mseloss: {:.6f} '.format(
+            n, args.iteration, 100. * n / args.iteration, pseudo_inv_loss.item(), pseudo_target_mseloss.item(), ))
     
     return target_splitnn_intermidiate.detach()
 
